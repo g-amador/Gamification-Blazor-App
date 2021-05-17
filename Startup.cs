@@ -10,7 +10,7 @@ using System.Reflection;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
 using GamificationApi.Models;
-
+using GamificationApi.Models.Context;
 
 namespace GamificationAPI
 {

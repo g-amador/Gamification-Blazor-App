@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GamificationApi.Models;
+using GamificationApi.Models.Context;
 
 namespace GamificationAPI.Controllers
 {
@@ -20,6 +21,7 @@ namespace GamificationAPI.Controllers
             _context = context;
         }
 
+        /*
         /// <summary>
         /// Get list of badges.
         /// </summary>
@@ -108,19 +110,19 @@ namespace GamificationAPI.Controllers
 
             return CreatedAtAction("GetBadge", new { id = badge.Id }, badge);
         }
+        */
 
         /// <summary>
         /// Delete a badge.
         /// 
         /// Delete a badge, all link to this badge by rules will be set to null.
         /// </summary>
-        /// <param name="id"></param>
         /// <returns></returns>
         // DELETE: api/Badges/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Badge>> DeleteBadge(long id)
+        [HttpDelete()]
+        public static async Task<ActionResult<Badge>> DeleteBadge([FromHeader] string apiKey, [FromHeader] string apiSecret)
         {
-            var badge = await _context.BadgeItems.FindAsync(id);
+            /*var badge = await _context.BadgeItems.FindAsync(id);
             if (badge == null)
             {
                 return NotFound();
@@ -129,12 +131,15 @@ namespace GamificationAPI.Controllers
             _context.BadgeItems.Remove(badge);
             await _context.SaveChangesAsync();
 
-            return badge;
+            return badge;*/
+            return null;
         }
 
+        /*
         private bool BadgeExists(long id)
         {
             return _context.BadgeItems.Any(e => e.Id == id);
         }
+        */
     }
 }

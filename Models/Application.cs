@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GamificationApi.Models
 {
@@ -7,6 +8,7 @@ namespace GamificationApi.Models
     {
         public long Id { get; set; }
 
+        [Required]
         public String Name { get; set; }
 
         public String Description { get; set; }

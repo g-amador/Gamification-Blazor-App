@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GamificationApi.Models;
+using GamificationApi.Models.Context;
 
 namespace GamificationAPI.Controllers
 {
@@ -20,6 +21,7 @@ namespace GamificationAPI.Controllers
             _context = context;
         }
 
+        /*
         /// <summary>
         /// Get LeaderBoard. 
         /// </summary>
@@ -31,5 +33,6 @@ namespace GamificationAPI.Controllers
             //TODO: implement method
             return await _context.PlayerItems.ToListAsync();
         }
+        */
     }
 }

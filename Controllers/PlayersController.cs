@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GamificationApi.Models;
+using GamificationApi.Models.Context;
 
 namespace GamificationAPI.Controllers
 {
@@ -20,18 +21,21 @@ namespace GamificationAPI.Controllers
             _context = context;
         }
 
+
         /// <summary>
         /// Get list of players.
         /// </summary>
+        /// <param name="apiKey"></param>
+        /// <param name="apiSecret"></param>
         /// <returns>The list of all players of an application.</returns>
         // GET: api/Players
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Player>>> GetPlayerItems()
+        public async Task<ActionResult<IEnumerable<Player>>> GetPlayerItems([FromHeader] string apiKey, [FromHeader] string apiSecret)
         {
-            return await _context.PlayerItems.ToListAsync();
+            return await _context.PlayerItems.Where(p => p.Application.ApiKey == apiKey && p.Application.ApiSecret == apiSecret).ToListAsync();
         }
 
-
+        /*
         /// <summary>
         /// Get player details.
         /// </summary>
@@ -109,7 +113,7 @@ namespace GamificationAPI.Controllers
 
             return CreatedAtAction("GetPlayer", new { id = player.Id }, player);
         }
-
+        */
 
         /// <summary>
         /// Delete a player
@@ -119,10 +123,10 @@ namespace GamificationAPI.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         // DELETE: api/Players/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Player>> DeletePlayer(long id)
+        /*[HttpDelete()]
+        public async Task<ActionResult<Player>> DeletePlayer([FromHeader] string apiKey, [FromHeader] string apiSecret)
         {
-            var player = await _context.PlayerItems.FindAsync(id);
+            /*var player = await _context.PlayerItems.FindAsync(id);
             if (player == null)
             {
                 return NotFound();
@@ -132,11 +136,14 @@ namespace GamificationAPI.Controllers
             await _context.SaveChangesAsync();
 
             return player;
-        }
+            return null;
+        }*/
 
+        /*
         private bool PlayerExists(long id)
         {
             return _context.PlayerItems.Any(e => e.Id == id);
         }
+        */
     }
 }

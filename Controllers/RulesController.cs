@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GamificationApi.Models;
+using GamificationApi.Models.Context;
 
 namespace GamificationAPI.Controllers
 {
@@ -20,6 +21,7 @@ namespace GamificationAPI.Controllers
             _context = context;
         }
 
+        /*
         /// <summary>
         /// Get list of rules.
         /// </summary>
@@ -108,6 +110,7 @@ namespace GamificationAPI.Controllers
 
             return CreatedAtAction("GetRule", new { id = rule.Id }, rule);
         }
+        */
 
         /// <summary>
         /// Delete a rule.
@@ -117,10 +120,10 @@ namespace GamificationAPI.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         // DELETE: api/Rules/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Rule>> DeleteRule(long id)
+        [HttpDelete()]
+        public static async Task<ActionResult<Rule>> DeleteRule([FromHeader] string apiKey, [FromHeader] string apiSecret)
         {
-            var rule = await _context.RuleItems.FindAsync(id);
+            /*var rule = await _context.RuleItems.FindAsync(id);
             if (rule == null)
             {
                 return NotFound();
@@ -129,12 +132,15 @@ namespace GamificationAPI.Controllers
             _context.RuleItems.Remove(rule);
             await _context.SaveChangesAsync();
 
-            return rule;
+            return rule;*/
+            return null;
         }
 
+        /*
         private bool RuleExists(long id)
         {
             return _context.RuleItems.Any(e => e.Id == id);
         }
+        */
     }
 }

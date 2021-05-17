@@ -1,12 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace GamificationApi.Models
+namespace GamificationApi.Models.DTO
 {
     public class ApplicationDTO
     {
-        public long Id { get; set; }
-
         [Required]
         public String Name { get; set; }
 
@@ -14,6 +12,5 @@ namespace GamificationApi.Models
 
         [Key]
         public String ApiKey { get; set; }
-
     }
 }

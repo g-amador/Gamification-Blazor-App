@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using GamificationApi.Models;
 
-namespace GamificationApi.Models
+namespace GamificationApi.Models.Context
 {
     public class ApplicationContext : DbContext
     {

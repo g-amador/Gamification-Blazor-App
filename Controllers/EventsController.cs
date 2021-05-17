@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GamificationApi.Models;
+using GamificationApi.Models.Context;
 
 namespace GamificationAPI.Controllers
 {
@@ -20,6 +21,7 @@ namespace GamificationAPI.Controllers
             _context = context;
         }
 
+        /*
         /// <summary>
         /// Get list of Events.
         /// </summary>
@@ -95,21 +97,20 @@ namespace GamificationAPI.Controllers
         // POST: api/Events
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
+        /*[HttpPost]
         public async Task<ActionResult<Event>> PostEvent(Event @event)
         {
             _context.Event.Add(@event);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetEvent", new { id = @event.Id }, @event);
-        }
+        }*/
 
-        /*
         // DELETE: api/Events/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Event>> DeleteEvent(long id)
+        /*[HttpDelete()]
+        public async Task<ActionResult<Event>> DeleteEvent([FromHeader] string apiKey, [FromHeader] string apiSecret)
         {
-            var @event = await _context.Event.FindAsync(id);
+            /*var @event = await _context.Event.FindAsync(id);
             if (@event == null)
             {
                 return NotFound();
@@ -119,12 +120,14 @@ namespace GamificationAPI.Controllers
             await _context.SaveChangesAsync();
 
             return @event;
-        }
-        */
+            return null;
+        }*/
 
+        /*
         private bool EventExists(long id)
         {
             return _context.Event.Any(e => e.Id == id);
         }
+        */
     }
 }

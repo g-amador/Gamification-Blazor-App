@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GamificationApi.Models;
+using GamificationApi.Models.DTO;
+using GamificationApi.Models.Context;
+using System.Net.Http.Headers;
 
 namespace GamificationAPI.Controllers
 {
@@ -18,17 +21,7 @@ namespace GamificationAPI.Controllers
         public ApplicationsController(ApplicationContext context)
         {
             _context = context;
-        }
-
-        // GET: api/Applications
-        /*[HttpGet]
-        public async Task<ActionResult<IEnumerable<ApplicationDTO>>> GetApplicationItems()
-        {
-            //return await _context.ApplicationItems.ToListAsync();            
-            return await _context.ApplicationItems
-                .Select(x => ItemToDTO(x))
-                .ToListAsync();
-        }*/
+        }        
 
         /// <summary>
         /// Get application.
@@ -36,20 +29,27 @@ namespace GamificationAPI.Controllers
         /// You must provide the apiKey and apiPassword in the http header.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="apiKey"></param>
+        /// <param name="apiSecret"></param>
         /// <returns>The name, description and the key of an application.</returns>
         // GET: api/Applications/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ApplicationDTO>> GetApplication(long id)
+        public async Task<ActionResult<ApplicationDTO>> GetApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret)
         {
             var application = await _context.ApplicationItems.FindAsync(id);
-
+            
             if (application == null)
             {
                 return NotFound();
             }
 
+            if (application.ApiKey != apiKey || application.ApiSecret != apiSecret)
+            {
+                return BadRequest();
+            }                    
+
             //return application;
-            return ItemToDTO(application);
+            return ApplicationToDTO(application);
         }
 
         /// <summary>
@@ -58,44 +58,30 @@ namespace GamificationAPI.Controllers
         /// You can update all informations of your application (including apiKey and apiPassword).
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="applicationDTO"></param>
+        /// <param name="apiKey"></param>
+        /// <param name="apiSecret"></param>
+        /// <param name="application"></param>
         /// <returns></returns>
         // PUT: api/Applications/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutApplication(long id, ApplicationDTO applicationDTO)
+        public async Task<IActionResult> PutApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret, Application application)
         {
-            if (id != applicationDTO.Id)
+            if (id != application.Id)
+            {
+                return BadRequest();
+            }
+            
+            bool isNotUniqueApiKey = await _context.ApplicationItems.AnyAsync(a => a.Id != id && a.ApiKey == apiKey);
+            bool isNotAuthToModify = await _context.ApplicationItems.AnyAsync(a => a.Id == id && (a.ApiKey != apiKey || a.ApiSecret != apiSecret));
+            if (isNotUniqueApiKey || isNotAuthToModify) 
             {
                 return BadRequest();
             }
 
-            //_context.Entry(applicationDTO).State = EntityState.Modified;
-            var application = await _context.ApplicationItems.FindAsync(id);
-            if (application == null)
-            {
-                return NotFound();
-            }
 
-            application.Name = applicationDTO.Name;
-            application.Description = applicationDTO.Description;
-
-            /*try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ApplicationExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }*/
+            _context.Entry(application).State = EntityState.Modified;
 
             try
             {
@@ -103,8 +89,16 @@ namespace GamificationAPI.Controllers
             }
             catch (DbUpdateConcurrencyException) when (!ApplicationExists(id))
             {
-                return NotFound();
+                return NotFound();                
             }
+
+            //TODO: Change badges, etc and all if needed
+            /*
+            _ = await BadgesController.PutBadge(apiKey, apiSecret);
+            _ = await EventsController.PutEvent(apiKey, apiSecret);
+            _ = await PlayersController.PutPlayer(apiKey, apiSecret);
+            _ = await RulesController.PutRule(apiKey, apiSecret);
+            */
 
             return NoContent();
         }
@@ -114,25 +108,24 @@ namespace GamificationAPI.Controllers
         /// 
         /// This is the first thing you must do to use this API. Give a name, a description and a unique key and a secure password. 
         /// </summary>
-        /// <param name="applicationDTO"></param>
+        /// <param name="application"></param>
         /// <returns>The application id.</returns>
         // POST: api/Applications
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<ApplicationDTO>> PostApplication(ApplicationDTO applicationDTO)
+        public async Task<ActionResult<String>> PostApplication(Application application)
         {
-            var application = new Application
+            bool isNotUniqueApiKey = await _context.ApplicationItems.AnyAsync(a => a.ApiKey == application.ApiKey);
+            if (isNotUniqueApiKey)
             {
-                Description = applicationDTO.Description,
-                Name = applicationDTO.Name
-            };
+                return BadRequest();
+            }
 
             _context.ApplicationItems.Add(application);
             await _context.SaveChangesAsync();
 
-            //return CreatedAtAction("GetApplication", new { id = application.Id }, application);
-            return CreatedAtAction(nameof(GetApplication), new { id = application.Id }, ItemToDTO(application));
+            return CreatedAtAction(nameof(GetApplication), new { id = application.Id }, application.Id);
         }
 
         /// <summary>
@@ -141,11 +134,12 @@ namespace GamificationAPI.Controllers
         /// Be careful, when an application is deleted, all the attach resources are deleted in cascade!
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="apiKey"></param>
+        /// <param name="apiSecret"></param>
         /// <returns></returns>
         // DELETE: api/Applications/5
         [HttpDelete("{id}")]
-        //public async Task<ActionResult<ApplicationDTO>> DeleteApplication(long id)
-        public async Task<IActionResult> DeleteApplication(long id)
+        public async Task<IActionResult> DeleteApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret)
         {
             var application = await _context.ApplicationItems.FindAsync(id);
             if (application == null)
@@ -153,26 +147,37 @@ namespace GamificationAPI.Controllers
                 return NotFound();
             }
 
+            if (application.ApiKey != apiKey || application.ApiSecret != apiSecret)
+            {
+                return BadRequest();
+            }
+
+            //TODO: implement latter
+           /*
+           _ = await BadgesController.DeleteBadge(apiKey, apiSecret);
+            _ = await EventsController.DeleteEvent(apiKey, apiSecret);
+            _ = await PlayersController.DeletePlayer(apiKey, apiSecret);
+            _ = await RulesController.DeleteRule(apiKey, apiSecret);
+           */
+
             _context.ApplicationItems.Remove(application);
             await _context.SaveChangesAsync();
             
             return NoContent();
         }
 
-        /*private bool ApplicationExists(long id)
-        {
-            return _context.ApplicationItems.Any(e => e.Id == id);
-        }*/
-
         private bool ApplicationExists(long id) =>
             _context.ApplicationItems.Any(e => e.Id == id);
 
-        private static ApplicationDTO ItemToDTO(Application applicationItem) =>
+        /*private bool ApplicationExistsAndAuthValid(long id, string apiKey, string apiSecret) =>
+            _context.ApplicationItems.Any(e => e.Id == id && e.ApiKey == apiKey && e.ApiSecret == apiSecret);*/
+
+        private static ApplicationDTO ApplicationToDTO(Application applicationItem) =>
             new ApplicationDTO
             {
-                Id = applicationItem.Id,
                 Name = applicationItem.Name,
-                Description = applicationItem.Description                
+                Description = applicationItem.Description,
+                ApiKey = applicationItem.ApiKey
             };
         }
 }

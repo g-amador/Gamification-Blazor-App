@@ -1,0 +1,2 @@
+{"message":"No project detected for extracting metadata.","source":"MetadataCommand.ExtractMetadata","date_time":"2021-05-17T15:50:13.5342127Z","message_severity":"warning","correlation_id":"0897C68D-A777-483D-8B9D-4164B9EAAB46.1.1.3"}
+{"message":"No project detected for extracting metadata.","source":"MetadataCommand.ExtractMetadata","date_time":"2021-05-17T15:50:35.1233416Z","message_severity":"warning","correlation_id":"DE2E33BD-759F-414E-899C-3C88FE29909C.1.1.3"}

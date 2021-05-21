@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace GamificationApi.DTO
+namespace GamificationAPI.DTO
 {
     /// <summary>
     /// When something happening to a player or when a player do something, an event should be created. An event is link to a player and is of a type. 

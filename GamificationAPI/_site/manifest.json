@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.ApplicationsController.html",
-          "hash": "1bPEaaK4JMEOWn3GbX7EC07KMebvebEMvmNiJ8GmOuY="
+          "hash": "7MlKshgjZXu1gkzXZ/PdSsipUZJJBSaiB5Irmgr0WFg="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.BadgesController.html",
-          "hash": "Z3KMi+N/GgMuvpfeLOz8x7irBetO/9i6p5rDkV9IrQ4="
+          "hash": "u8xIS8vmdm8XjfpEsFFgJ5bLnLDwYMfMvF5mem65CLA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.EmployeesController.html",
-          "hash": "A++MkitbNVQlgu4pIzzrBhrT6WJOMfuCedlcqDUgkUY="
+          "hash": "/ykIUvy619EWIpi4n7oAo8IlczTvW0phNomDwbyENfk="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.EventsController.html",
-          "hash": "h7STcQuFyUvX0qhl4euGWBbNL1cO9ksdzNcLtKQOEvc="
+          "hash": "u8NzkSjJXRQdWOl5byOa/LlbzpGIg2Qo5nJ89SyWF6c="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.PlayersController.html",
-          "hash": "c0j+aiDyN6iQw47TME3xiQP7fywh1A++k2dX+XFjR1M="
+          "hash": "53WGsxkfPigjiczktV+3dffLg0asiirLicI/6SQah7Q="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.RulesController.html",
-          "hash": "EtfrI6qK6Q7WAfBbGVEXtLPsK+KjLRLYVPOiz42YkQo="
+          "hash": "8EnVufTIFpfvaVdSmvN2H8i8X+AqTlewXAgdmvJP8yE="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.WeatherForecastController.html",
-          "hash": "CrdwreICKXnZgIi7xIY6z3bynmuQYE+Tcf2GxPMx2uc="
+          "hash": "pMGaZYHXVvVKO8woUQGWhfa/NgStzsNO1btKIpBZdY4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +93,82 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.html",
-          "hash": "WMKNIR9L2VId0+b7qlICGFDDAEPek2jxN+FcZnNE0e0="
+          "hash": "Vvw7LQ2pb3E2wq7yRDLj3y1jciR4lm8hD+88bhzxv9E="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.DTO.ApplicationDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.DTO.ApplicationDTO.html",
+          "hash": "DbD6aLDtvr+/LirrptMNeCSnSncUPWW44ns7cxwDNEY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.DTO.BadgeDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.DTO.BadgeDTO.html",
+          "hash": "Zev4DECgA2hxmPL26yUi2L1o/aR70//5mNCvYAwRYXo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.DTO.EventDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.DTO.EventDTO.html",
+          "hash": "8VDfxZqiRkqfQyFeNmPQoBs3rW9JABOFrHCLuvTX60Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.DTO.PlayerDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.DTO.PlayerDTO.html",
+          "hash": "O2AdDttWLqo4lMzP+pv+Hzgxl5VDwpDwneYC3WhILkE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.DTO.RuleDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.DTO.RuleDTO.html",
+          "hash": "z85wdEl5yTgxDG5BCesvRV+rGz84iZRKtHlNneHpxQ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.DTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.DTO.html",
+          "hash": "C3iP+Ow3hhL3ZgePhMwpIRyZHgNfmJC7tqL54TeRFQM="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Data.GamificationAPIContext.html",
-          "hash": "+1Nxj+4dmf25mnFZ3XQPg9x1QbUmFiqVRHkEZeJm4pM="
+          "hash": "h33Zctu7I2MsHZ37Sc3qKdIaFwUTKLv9M+HWcZTV5GI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Data.html",
-          "hash": "CJUcGco1pkhRsG4mr4O2mRgZE2RWtTRQ28QYa4uflrE="
+          "hash": "4BRrdUSDqDjUTJiBV/9iLOtmN2iUYgrTZktLwccHkB0="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Migrations.Initial.html",
-          "hash": "Z7Ptn4F25qmF7o/tOg/Um5C9lruH6rtUPlI1meQdp2Y="
+          "hash": "FEkNg/1d53hpi2OPdRPzoTJGVfujg8QW8HGyY5J8rHI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +213,34 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Migrations.html",
-          "hash": "I/Swa1glcaPJ4YkNQ125X1MFBM11ePSTRzscXN0P2J8="
+          "hash": "R0O6GRuFtr4+0zbrjBXsZODci8rzKPBNRFYw5yXTm90="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.Models.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.Models.Application.html",
+          "hash": "mJBoF+AF/pIBteDXo7KtH/D0FKW2RVvJKPo3WokaFvc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.Models.Badge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.Models.Badge.html",
+          "hash": "yR7ZM88cnWcNq2tzBrlbiUJPxBGbNkpAR3jVi5wKPmU="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +249,58 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.Employee.html",
-          "hash": "uVyjwFMX5mduaM75VRMQ8O0V///zFY7qT2iyXxyGFRA="
+          "hash": "xi7m4LR8GHDjB3YY6XXH3v5oyoR9wUrggA1VBAIJBuY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.Models.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.Models.Event.html",
+          "hash": "dvwrSU0vfqyI2O9G2OrXqyl8MU475F7dXuD7VWfh+TI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.Models.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.Models.Player.html",
+          "hash": "cqQeQ97Cj8G7YPQ6DCX3XJw2FV3x5cHLGpjTfT7PtIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.Models.Rule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.Models.Rule.html",
+          "hash": "uucwfaeC8G/B3u0TfEWunOnwRdGPBcl88LzMnYGBK8w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.Models.WeatherForecast.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.Models.WeatherForecast.html",
+          "hash": "mkNxA0/AyY/iSV2ccVMrshLlfq85Mog3WTeDIVtsHDk="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +309,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.html",
-          "hash": "GlBvlGWMQl8RYfvZe8N8F1vFuIlnGxnb7PgcthJ+huQ="
+          "hash": "Rx7annOcVvD6sn0j01apa6xd0kJrpfkIUOc3FSZqRFA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +321,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Pages.ErrorModel.html",
-          "hash": "rUAdkpRtv7CjgxRBd4doybEeSyxw++59vyvra9WrwyQ="
+          "hash": "U3/nJX6mGB75925pMKiSwds9bo6+qFn4NCX2g1BegyE="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +333,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Pages.html",
-          "hash": "/AmUV/8vOa5coWycn5KAFOpgxsON5OfnkTC4XyfTkk0="
+          "hash": "hbQskJUuZcERd2yn7pSY3UpTk4v/TDdHDrBihy+Cm/4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +345,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Program.html",
-          "hash": "jCqs1Q0CkMzm/ubLKf1e02zmYHZ7dFPihsV7IlYjBU0="
+          "hash": "8H/79/AAygYIR0Kj4RKMOXfu4ZyAT6JDepBVT5nR2z8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +357,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Startup.html",
-          "hash": "DmYMeD9cGemdq4iiSZ5uRxekEthIS4miuW628F2MSRI="
+          "hash": "W8H+r/WQnqiUPLhAuC6VS096lveK1ZUGe5VfJP3vmEc="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,166 +369,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.html",
-          "hash": "HcmvY/wgS4ZJhV0erQkC2EaM6KiPIEYCv/FfwTjV4os="
+          "hash": "fWhw1Yb7syGa6ShZvlltRhon4TyhrBzMqt5gT2A3si0="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.DTO.ApplicationDTO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.DTO.ApplicationDTO.html",
-          "hash": "7R/FJFR7wHddMZqhEsEqt5D56uNOeeMrSiAWSidunAc="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.DTO.BadgeDTO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.DTO.BadgeDTO.html",
-          "hash": "///QmSsZAi2GmUwvmN0KQ94gGWUSG5yi6QuNnm/qcgY="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.DTO.EventDTO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.DTO.EventDTO.html",
-          "hash": "lLFyut9ZMawTxHEBcFJcKt7dPcygJxMytqENLRJW0dk="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.DTO.PlayerDTO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.DTO.PlayerDTO.html",
-          "hash": "wVuriIdRx8+wlTGTiUKd52JwnfSmwzD1yePgIufOJgA="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.DTO.RuleDTO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.DTO.RuleDTO.html",
-          "hash": "OU6Jb2Rx57JKn8Bxu+E+8SAjyws8nnhOuskQXoEMYKk="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.DTO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.DTO.html",
-          "hash": "dKk0SBe5mpKQw+l+YsAGMwpfXze21Uk03bDv9uiGpJ0="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.Models.Application.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.Models.Application.html",
-          "hash": "XvYJ/pUCZRdmKNKJ+jV60tbnr17Pci7wjOKeqEJcYIA="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.Models.Badge.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.Models.Badge.html",
-          "hash": "xJj0C6HDIKsrvyrzSSBVJxXmQpQMiIwUpQGwF/Qc+zM="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.Models.Event.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.Models.Event.html",
-          "hash": "cbMKAphrYsyIIhnhy5aNk1mVdmnb0Zjx9RDiX42IkGk="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.Models.Player.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.Models.Player.html",
-          "hash": "0nU+kCL3NvninteZiNhu4u1kHKoTKpr4sL3cUf2kFBk="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.Models.Rule.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.Models.Rule.html",
-          "hash": "ZnROQNjienE285VLnt5DH/dQSHzmmHzgjxTmcMOLbmk="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.Models.WeatherForecast.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.Models.WeatherForecast.html",
-          "hash": "skhhBSyc2+IsKYfxc3HsiowMB0fVskSUfNbKtGaVgMU="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/GamificationApi.Models_1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/GamificationApi.Models_1.html",
-          "hash": "zQa+p/1AJwvG7My/43Gcnv6OHx4ldPLq/P3TaIwr0b4="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -393,10 +381,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "jDs9yPn5A0FzXRg2/Sb/Q3b26jFjjjWTXKRpzcnjOkM="
+          "hash": "tVc7y9erh5PH97MGVBHnp1lqnow9s9mhjNw+D8NI8FI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -442,8 +430,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 32,
-          "skipped_file_count": 32
+          "total_file_count": 31,
+          "skipped_file_count": 10
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

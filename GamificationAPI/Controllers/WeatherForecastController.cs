@@ -1,4 +1,4 @@
-﻿using GamificationApi.Models;
+﻿using GamificationAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

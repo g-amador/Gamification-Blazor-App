@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using GamificationAPI.Models;
-using GamificationApi.Models;
 
 namespace GamificationAPI.Data
 {
@@ -18,15 +17,15 @@ namespace GamificationAPI.Data
         public DbSet<GamificationAPI.Models.Employee> Employee { get; set; }
 
         #region GamificationAPI DbSets
-        public DbSet<GamificationApi.Models.Application> Application { get; set; }
+        public DbSet<GamificationAPI.Models.Application> Application { get; set; }
 
-        public DbSet<GamificationApi.Models.Badge> Badge { get; set; }
+        public DbSet<GamificationAPI.Models.Badge> Badge { get; set; }
 
-        public DbSet<GamificationApi.Models.Event> Event { get; set; }
+        public DbSet<GamificationAPI.Models.Event> Event { get; set; }
 
-        public DbSet<GamificationApi.Models.Player> Player { get; set; }
+        public DbSet<GamificationAPI.Models.Player> Player { get; set; }
 
-        public DbSet<GamificationApi.Models.Rule> Rule { get; set; }
+        public DbSet<GamificationAPI.Models.Rule> Rule { get; set; }
         #endregion
 
     }

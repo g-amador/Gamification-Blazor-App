@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace GamificationApi.Models
+namespace GamificationAPI.Models
 {
     /// <summary>
     /// A badge is a distinction, win by a player when he does something significant (on event).

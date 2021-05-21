@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GamificationAPI.Data;
-using GamificationApi.Models;
+using GamificationAPI.Models;
 
 namespace GamificationAPI.Controllers
 {

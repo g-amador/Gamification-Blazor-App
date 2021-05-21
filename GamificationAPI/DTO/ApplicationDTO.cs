@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GamificationApi.DTO
+namespace GamificationAPI.DTO
 {
     /// <summary>
     /// The application is the entry point of the API. All others resources are link to an application. Each application has a unique apiKey and an apiPassword. 

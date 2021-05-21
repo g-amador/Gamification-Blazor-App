@@ -1,9 +1,9 @@
-﻿using GamificationApi.Models;
+﻿using GamificationAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace GamificationApi.DTO
+namespace GamificationAPI.DTO
 {
     /// <summary>
     /// The player is an user of the application. He can win points and badges when events happening.

@@ -1,6 +1,6 @@
 using System;
 
-namespace GamificationApi.Models
+namespace GamificationAPI.Models
 {
     public class WeatherForecast
     {

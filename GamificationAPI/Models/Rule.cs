@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GamificationApi.Models
+namespace GamificationAPI.Models
 {
     /// <summary>
     /// A rule determine how many points or/and which badge can be win by a player on an event type. Many rules can be create for the same event type.

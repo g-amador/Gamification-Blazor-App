@@ -64,11 +64,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.ApplicationsController.GetApplication
   nameWithType: ApplicationsController.GetApplication
-- uid: GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationApi.Models.Application)
+- uid: GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationAPI.Models.Application)
   name: PostApplication(Application)
-  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_PostApplication_GamificationApi_Models_Application_
-  commentId: M:GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationApi.Models.Application)
-  fullName: GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationApi.Models.Application)
+  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_PostApplication_GamificationAPI_Models_Application_
+  commentId: M:GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationAPI.Models.Application)
+  fullName: GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationAPI.Models.Application)
   nameWithType: ApplicationsController.PostApplication(Application)
 - uid: GamificationAPI.Controllers.ApplicationsController.PostApplication*
   name: PostApplication
@@ -77,11 +77,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.ApplicationsController.PostApplication
   nameWithType: ApplicationsController.PostApplication
-- uid: GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationApi.Models.Application)
+- uid: GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationAPI.Models.Application)
   name: PutApplication(Int64, Application)
-  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_PutApplication_System_Int64_GamificationApi_Models_Application_
-  commentId: M:GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationApi.Models.Application)
-  fullName: GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64, GamificationApi.Models.Application)
+  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_PutApplication_System_Int64_GamificationAPI_Models_Application_
+  commentId: M:GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationAPI.Models.Application)
+  fullName: GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64, GamificationAPI.Models.Application)
   nameWithType: ApplicationsController.PutApplication(Int64, Application)
 - uid: GamificationAPI.Controllers.ApplicationsController.PutApplication*
   name: PutApplication
@@ -141,11 +141,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.BadgesController.GetBadge
   nameWithType: BadgesController.GetBadge
-- uid: GamificationAPI.Controllers.BadgesController.PostBadge(GamificationApi.Models.Badge)
+- uid: GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge)
   name: PostBadge(Badge)
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PostBadge_GamificationApi_Models_Badge_
-  commentId: M:GamificationAPI.Controllers.BadgesController.PostBadge(GamificationApi.Models.Badge)
-  fullName: GamificationAPI.Controllers.BadgesController.PostBadge(GamificationApi.Models.Badge)
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PostBadge_GamificationAPI_Models_Badge_
+  commentId: M:GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge)
+  fullName: GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge)
   nameWithType: BadgesController.PostBadge(Badge)
 - uid: GamificationAPI.Controllers.BadgesController.PostBadge*
   name: PostBadge
@@ -154,11 +154,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.BadgesController.PostBadge
   nameWithType: BadgesController.PostBadge
-- uid: GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64,GamificationApi.Models.Badge)
+- uid: GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64,GamificationAPI.Models.Badge)
   name: PutBadge(Int64, Badge)
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PutBadge_System_Int64_GamificationApi_Models_Badge_
-  commentId: M:GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64,GamificationApi.Models.Badge)
-  fullName: GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64, GamificationApi.Models.Badge)
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PutBadge_System_Int64_GamificationAPI_Models_Badge_
+  commentId: M:GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64,GamificationAPI.Models.Badge)
+  fullName: GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64, GamificationAPI.Models.Badge)
   nameWithType: BadgesController.PutBadge(Int64, Badge)
 - uid: GamificationAPI.Controllers.BadgesController.PutBadge*
   name: PutBadge
@@ -295,11 +295,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.EventsController.GetEvent
   nameWithType: EventsController.GetEvent
-- uid: GamificationAPI.Controllers.EventsController.PostEvent(GamificationApi.Models.Event)
+- uid: GamificationAPI.Controllers.EventsController.PostEvent(GamificationAPI.Models.Event)
   name: PostEvent(Event)
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_PostEvent_GamificationApi_Models_Event_
-  commentId: M:GamificationAPI.Controllers.EventsController.PostEvent(GamificationApi.Models.Event)
-  fullName: GamificationAPI.Controllers.EventsController.PostEvent(GamificationApi.Models.Event)
+  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_PostEvent_GamificationAPI_Models_Event_
+  commentId: M:GamificationAPI.Controllers.EventsController.PostEvent(GamificationAPI.Models.Event)
+  fullName: GamificationAPI.Controllers.EventsController.PostEvent(GamificationAPI.Models.Event)
   nameWithType: EventsController.PostEvent(Event)
 - uid: GamificationAPI.Controllers.EventsController.PostEvent*
   name: PostEvent
@@ -308,11 +308,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.EventsController.PostEvent
   nameWithType: EventsController.PostEvent
-- uid: GamificationAPI.Controllers.EventsController.PutEvent(System.Int64,GamificationApi.Models.Event)
+- uid: GamificationAPI.Controllers.EventsController.PutEvent(System.Int64,GamificationAPI.Models.Event)
   name: PutEvent(Int64, Event)
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_PutEvent_System_Int64_GamificationApi_Models_Event_
-  commentId: M:GamificationAPI.Controllers.EventsController.PutEvent(System.Int64,GamificationApi.Models.Event)
-  fullName: GamificationAPI.Controllers.EventsController.PutEvent(System.Int64, GamificationApi.Models.Event)
+  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_PutEvent_System_Int64_GamificationAPI_Models_Event_
+  commentId: M:GamificationAPI.Controllers.EventsController.PutEvent(System.Int64,GamificationAPI.Models.Event)
+  fullName: GamificationAPI.Controllers.EventsController.PutEvent(System.Int64, GamificationAPI.Models.Event)
   nameWithType: EventsController.PutEvent(Int64, Event)
 - uid: GamificationAPI.Controllers.EventsController.PutEvent*
   name: PutEvent
@@ -372,11 +372,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.PlayersController.GetPlayer
   nameWithType: PlayersController.GetPlayer
-- uid: GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationApi.Models.Player)
+- uid: GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player)
   name: PostPlayer(Player)
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PostPlayer_GamificationApi_Models_Player_
-  commentId: M:GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationApi.Models.Player)
-  fullName: GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationApi.Models.Player)
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PostPlayer_GamificationAPI_Models_Player_
+  commentId: M:GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player)
+  fullName: GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player)
   nameWithType: PlayersController.PostPlayer(Player)
 - uid: GamificationAPI.Controllers.PlayersController.PostPlayer*
   name: PostPlayer
@@ -385,11 +385,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.PlayersController.PostPlayer
   nameWithType: PlayersController.PostPlayer
-- uid: GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64,GamificationApi.Models.Player)
+- uid: GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64,GamificationAPI.Models.Player)
   name: PutPlayer(Int64, Player)
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PutPlayer_System_Int64_GamificationApi_Models_Player_
-  commentId: M:GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64,GamificationApi.Models.Player)
-  fullName: GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64, GamificationApi.Models.Player)
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PutPlayer_System_Int64_GamificationAPI_Models_Player_
+  commentId: M:GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64,GamificationAPI.Models.Player)
+  fullName: GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64, GamificationAPI.Models.Player)
   nameWithType: PlayersController.PutPlayer(Int64, Player)
 - uid: GamificationAPI.Controllers.PlayersController.PutPlayer*
   name: PutPlayer
@@ -449,11 +449,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.RulesController.GetRule
   nameWithType: RulesController.GetRule
-- uid: GamificationAPI.Controllers.RulesController.PostRule(GamificationApi.Models.Rule)
+- uid: GamificationAPI.Controllers.RulesController.PostRule(GamificationAPI.Models.Rule)
   name: PostRule(Rule)
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_PostRule_GamificationApi_Models_Rule_
-  commentId: M:GamificationAPI.Controllers.RulesController.PostRule(GamificationApi.Models.Rule)
-  fullName: GamificationAPI.Controllers.RulesController.PostRule(GamificationApi.Models.Rule)
+  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_PostRule_GamificationAPI_Models_Rule_
+  commentId: M:GamificationAPI.Controllers.RulesController.PostRule(GamificationAPI.Models.Rule)
+  fullName: GamificationAPI.Controllers.RulesController.PostRule(GamificationAPI.Models.Rule)
   nameWithType: RulesController.PostRule(Rule)
 - uid: GamificationAPI.Controllers.RulesController.PostRule*
   name: PostRule
@@ -462,11 +462,11 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.RulesController.PostRule
   nameWithType: RulesController.PostRule
-- uid: GamificationAPI.Controllers.RulesController.PutRule(System.Int64,GamificationApi.Models.Rule)
+- uid: GamificationAPI.Controllers.RulesController.PutRule(System.Int64,GamificationAPI.Models.Rule)
   name: PutRule(Int64, Rule)
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_PutRule_System_Int64_GamificationApi_Models_Rule_
-  commentId: M:GamificationAPI.Controllers.RulesController.PutRule(System.Int64,GamificationApi.Models.Rule)
-  fullName: GamificationAPI.Controllers.RulesController.PutRule(System.Int64, GamificationApi.Models.Rule)
+  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_PutRule_System_Int64_GamificationAPI_Models_Rule_
+  commentId: M:GamificationAPI.Controllers.RulesController.PutRule(System.Int64,GamificationAPI.Models.Rule)
+  fullName: GamificationAPI.Controllers.RulesController.PutRule(System.Int64, GamificationAPI.Models.Rule)
   nameWithType: RulesController.PutRule(Int64, Rule)
 - uid: GamificationAPI.Controllers.RulesController.PutRule*
   name: PutRule
@@ -616,353 +616,353 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Data.GamificationAPIContext.Rule
   nameWithType: GamificationAPIContext.Rule
-- uid: GamificationApi.DTO
-  name: GamificationApi.DTO
-  href: api/GamificationApi.DTO.html
-  commentId: N:GamificationApi.DTO
-  fullName: GamificationApi.DTO
-  nameWithType: GamificationApi.DTO
-- uid: GamificationApi.DTO.ApplicationDTO
+- uid: GamificationAPI.DTO
+  name: GamificationAPI.DTO
+  href: api/GamificationAPI.DTO.html
+  commentId: N:GamificationAPI.DTO
+  fullName: GamificationAPI.DTO
+  nameWithType: GamificationAPI.DTO
+- uid: GamificationAPI.DTO.ApplicationDTO
   name: ApplicationDTO
-  href: api/GamificationApi.DTO.ApplicationDTO.html
-  commentId: T:GamificationApi.DTO.ApplicationDTO
-  fullName: GamificationApi.DTO.ApplicationDTO
+  href: api/GamificationAPI.DTO.ApplicationDTO.html
+  commentId: T:GamificationAPI.DTO.ApplicationDTO
+  fullName: GamificationAPI.DTO.ApplicationDTO
   nameWithType: ApplicationDTO
-- uid: GamificationApi.DTO.ApplicationDTO.ApiKey
+- uid: GamificationAPI.DTO.ApplicationDTO.ApiKey
   name: ApiKey
-  href: api/GamificationApi.DTO.ApplicationDTO.html#GamificationApi_DTO_ApplicationDTO_ApiKey
-  commentId: P:GamificationApi.DTO.ApplicationDTO.ApiKey
-  fullName: GamificationApi.DTO.ApplicationDTO.ApiKey
+  href: api/GamificationAPI.DTO.ApplicationDTO.html#GamificationAPI_DTO_ApplicationDTO_ApiKey
+  commentId: P:GamificationAPI.DTO.ApplicationDTO.ApiKey
+  fullName: GamificationAPI.DTO.ApplicationDTO.ApiKey
   nameWithType: ApplicationDTO.ApiKey
-- uid: GamificationApi.DTO.ApplicationDTO.ApiKey*
+- uid: GamificationAPI.DTO.ApplicationDTO.ApiKey*
   name: ApiKey
-  href: api/GamificationApi.DTO.ApplicationDTO.html#GamificationApi_DTO_ApplicationDTO_ApiKey_
-  commentId: Overload:GamificationApi.DTO.ApplicationDTO.ApiKey
+  href: api/GamificationAPI.DTO.ApplicationDTO.html#GamificationAPI_DTO_ApplicationDTO_ApiKey_
+  commentId: Overload:GamificationAPI.DTO.ApplicationDTO.ApiKey
   isSpec: "True"
-  fullName: GamificationApi.DTO.ApplicationDTO.ApiKey
+  fullName: GamificationAPI.DTO.ApplicationDTO.ApiKey
   nameWithType: ApplicationDTO.ApiKey
-- uid: GamificationApi.DTO.ApplicationDTO.Description
+- uid: GamificationAPI.DTO.ApplicationDTO.Description
   name: Description
-  href: api/GamificationApi.DTO.ApplicationDTO.html#GamificationApi_DTO_ApplicationDTO_Description
-  commentId: P:GamificationApi.DTO.ApplicationDTO.Description
-  fullName: GamificationApi.DTO.ApplicationDTO.Description
+  href: api/GamificationAPI.DTO.ApplicationDTO.html#GamificationAPI_DTO_ApplicationDTO_Description
+  commentId: P:GamificationAPI.DTO.ApplicationDTO.Description
+  fullName: GamificationAPI.DTO.ApplicationDTO.Description
   nameWithType: ApplicationDTO.Description
-- uid: GamificationApi.DTO.ApplicationDTO.Description*
+- uid: GamificationAPI.DTO.ApplicationDTO.Description*
   name: Description
-  href: api/GamificationApi.DTO.ApplicationDTO.html#GamificationApi_DTO_ApplicationDTO_Description_
-  commentId: Overload:GamificationApi.DTO.ApplicationDTO.Description
+  href: api/GamificationAPI.DTO.ApplicationDTO.html#GamificationAPI_DTO_ApplicationDTO_Description_
+  commentId: Overload:GamificationAPI.DTO.ApplicationDTO.Description
   isSpec: "True"
-  fullName: GamificationApi.DTO.ApplicationDTO.Description
+  fullName: GamificationAPI.DTO.ApplicationDTO.Description
   nameWithType: ApplicationDTO.Description
-- uid: GamificationApi.DTO.ApplicationDTO.Name
+- uid: GamificationAPI.DTO.ApplicationDTO.Name
   name: Name
-  href: api/GamificationApi.DTO.ApplicationDTO.html#GamificationApi_DTO_ApplicationDTO_Name
-  commentId: P:GamificationApi.DTO.ApplicationDTO.Name
-  fullName: GamificationApi.DTO.ApplicationDTO.Name
+  href: api/GamificationAPI.DTO.ApplicationDTO.html#GamificationAPI_DTO_ApplicationDTO_Name
+  commentId: P:GamificationAPI.DTO.ApplicationDTO.Name
+  fullName: GamificationAPI.DTO.ApplicationDTO.Name
   nameWithType: ApplicationDTO.Name
-- uid: GamificationApi.DTO.ApplicationDTO.Name*
+- uid: GamificationAPI.DTO.ApplicationDTO.Name*
   name: Name
-  href: api/GamificationApi.DTO.ApplicationDTO.html#GamificationApi_DTO_ApplicationDTO_Name_
-  commentId: Overload:GamificationApi.DTO.ApplicationDTO.Name
+  href: api/GamificationAPI.DTO.ApplicationDTO.html#GamificationAPI_DTO_ApplicationDTO_Name_
+  commentId: Overload:GamificationAPI.DTO.ApplicationDTO.Name
   isSpec: "True"
-  fullName: GamificationApi.DTO.ApplicationDTO.Name
+  fullName: GamificationAPI.DTO.ApplicationDTO.Name
   nameWithType: ApplicationDTO.Name
-- uid: GamificationApi.DTO.BadgeDTO
+- uid: GamificationAPI.DTO.BadgeDTO
   name: BadgeDTO
-  href: api/GamificationApi.DTO.BadgeDTO.html
-  commentId: T:GamificationApi.DTO.BadgeDTO
-  fullName: GamificationApi.DTO.BadgeDTO
+  href: api/GamificationAPI.DTO.BadgeDTO.html
+  commentId: T:GamificationAPI.DTO.BadgeDTO
+  fullName: GamificationAPI.DTO.BadgeDTO
   nameWithType: BadgeDTO
-- uid: GamificationApi.DTO.BadgeDTO.Description
+- uid: GamificationAPI.DTO.BadgeDTO.Description
   name: Description
-  href: api/GamificationApi.DTO.BadgeDTO.html#GamificationApi_DTO_BadgeDTO_Description
-  commentId: P:GamificationApi.DTO.BadgeDTO.Description
-  fullName: GamificationApi.DTO.BadgeDTO.Description
+  href: api/GamificationAPI.DTO.BadgeDTO.html#GamificationAPI_DTO_BadgeDTO_Description
+  commentId: P:GamificationAPI.DTO.BadgeDTO.Description
+  fullName: GamificationAPI.DTO.BadgeDTO.Description
   nameWithType: BadgeDTO.Description
-- uid: GamificationApi.DTO.BadgeDTO.Description*
+- uid: GamificationAPI.DTO.BadgeDTO.Description*
   name: Description
-  href: api/GamificationApi.DTO.BadgeDTO.html#GamificationApi_DTO_BadgeDTO_Description_
-  commentId: Overload:GamificationApi.DTO.BadgeDTO.Description
+  href: api/GamificationAPI.DTO.BadgeDTO.html#GamificationAPI_DTO_BadgeDTO_Description_
+  commentId: Overload:GamificationAPI.DTO.BadgeDTO.Description
   isSpec: "True"
-  fullName: GamificationApi.DTO.BadgeDTO.Description
+  fullName: GamificationAPI.DTO.BadgeDTO.Description
   nameWithType: BadgeDTO.Description
-- uid: GamificationApi.DTO.BadgeDTO.Icon
+- uid: GamificationAPI.DTO.BadgeDTO.Icon
   name: Icon
-  href: api/GamificationApi.DTO.BadgeDTO.html#GamificationApi_DTO_BadgeDTO_Icon
-  commentId: P:GamificationApi.DTO.BadgeDTO.Icon
-  fullName: GamificationApi.DTO.BadgeDTO.Icon
+  href: api/GamificationAPI.DTO.BadgeDTO.html#GamificationAPI_DTO_BadgeDTO_Icon
+  commentId: P:GamificationAPI.DTO.BadgeDTO.Icon
+  fullName: GamificationAPI.DTO.BadgeDTO.Icon
   nameWithType: BadgeDTO.Icon
-- uid: GamificationApi.DTO.BadgeDTO.Icon*
+- uid: GamificationAPI.DTO.BadgeDTO.Icon*
   name: Icon
-  href: api/GamificationApi.DTO.BadgeDTO.html#GamificationApi_DTO_BadgeDTO_Icon_
-  commentId: Overload:GamificationApi.DTO.BadgeDTO.Icon
+  href: api/GamificationAPI.DTO.BadgeDTO.html#GamificationAPI_DTO_BadgeDTO_Icon_
+  commentId: Overload:GamificationAPI.DTO.BadgeDTO.Icon
   isSpec: "True"
-  fullName: GamificationApi.DTO.BadgeDTO.Icon
+  fullName: GamificationAPI.DTO.BadgeDTO.Icon
   nameWithType: BadgeDTO.Icon
-- uid: GamificationApi.DTO.BadgeDTO.Id
+- uid: GamificationAPI.DTO.BadgeDTO.Id
   name: Id
-  href: api/GamificationApi.DTO.BadgeDTO.html#GamificationApi_DTO_BadgeDTO_Id
-  commentId: P:GamificationApi.DTO.BadgeDTO.Id
-  fullName: GamificationApi.DTO.BadgeDTO.Id
+  href: api/GamificationAPI.DTO.BadgeDTO.html#GamificationAPI_DTO_BadgeDTO_Id
+  commentId: P:GamificationAPI.DTO.BadgeDTO.Id
+  fullName: GamificationAPI.DTO.BadgeDTO.Id
   nameWithType: BadgeDTO.Id
-- uid: GamificationApi.DTO.BadgeDTO.Id*
+- uid: GamificationAPI.DTO.BadgeDTO.Id*
   name: Id
-  href: api/GamificationApi.DTO.BadgeDTO.html#GamificationApi_DTO_BadgeDTO_Id_
-  commentId: Overload:GamificationApi.DTO.BadgeDTO.Id
+  href: api/GamificationAPI.DTO.BadgeDTO.html#GamificationAPI_DTO_BadgeDTO_Id_
+  commentId: Overload:GamificationAPI.DTO.BadgeDTO.Id
   isSpec: "True"
-  fullName: GamificationApi.DTO.BadgeDTO.Id
+  fullName: GamificationAPI.DTO.BadgeDTO.Id
   nameWithType: BadgeDTO.Id
-- uid: GamificationApi.DTO.BadgeDTO.Name
+- uid: GamificationAPI.DTO.BadgeDTO.Name
   name: Name
-  href: api/GamificationApi.DTO.BadgeDTO.html#GamificationApi_DTO_BadgeDTO_Name
-  commentId: P:GamificationApi.DTO.BadgeDTO.Name
-  fullName: GamificationApi.DTO.BadgeDTO.Name
+  href: api/GamificationAPI.DTO.BadgeDTO.html#GamificationAPI_DTO_BadgeDTO_Name
+  commentId: P:GamificationAPI.DTO.BadgeDTO.Name
+  fullName: GamificationAPI.DTO.BadgeDTO.Name
   nameWithType: BadgeDTO.Name
-- uid: GamificationApi.DTO.BadgeDTO.Name*
+- uid: GamificationAPI.DTO.BadgeDTO.Name*
   name: Name
-  href: api/GamificationApi.DTO.BadgeDTO.html#GamificationApi_DTO_BadgeDTO_Name_
-  commentId: Overload:GamificationApi.DTO.BadgeDTO.Name
+  href: api/GamificationAPI.DTO.BadgeDTO.html#GamificationAPI_DTO_BadgeDTO_Name_
+  commentId: Overload:GamificationAPI.DTO.BadgeDTO.Name
   isSpec: "True"
-  fullName: GamificationApi.DTO.BadgeDTO.Name
+  fullName: GamificationAPI.DTO.BadgeDTO.Name
   nameWithType: BadgeDTO.Name
-- uid: GamificationApi.DTO.EventDTO
+- uid: GamificationAPI.DTO.EventDTO
   name: EventDTO
-  href: api/GamificationApi.DTO.EventDTO.html
-  commentId: T:GamificationApi.DTO.EventDTO
-  fullName: GamificationApi.DTO.EventDTO
+  href: api/GamificationAPI.DTO.EventDTO.html
+  commentId: T:GamificationAPI.DTO.EventDTO
+  fullName: GamificationAPI.DTO.EventDTO
   nameWithType: EventDTO
-- uid: GamificationApi.DTO.EventDTO.Id
+- uid: GamificationAPI.DTO.EventDTO.Id
   name: Id
-  href: api/GamificationApi.DTO.EventDTO.html#GamificationApi_DTO_EventDTO_Id
-  commentId: P:GamificationApi.DTO.EventDTO.Id
-  fullName: GamificationApi.DTO.EventDTO.Id
+  href: api/GamificationAPI.DTO.EventDTO.html#GamificationAPI_DTO_EventDTO_Id
+  commentId: P:GamificationAPI.DTO.EventDTO.Id
+  fullName: GamificationAPI.DTO.EventDTO.Id
   nameWithType: EventDTO.Id
-- uid: GamificationApi.DTO.EventDTO.Id*
+- uid: GamificationAPI.DTO.EventDTO.Id*
   name: Id
-  href: api/GamificationApi.DTO.EventDTO.html#GamificationApi_DTO_EventDTO_Id_
-  commentId: Overload:GamificationApi.DTO.EventDTO.Id
+  href: api/GamificationAPI.DTO.EventDTO.html#GamificationAPI_DTO_EventDTO_Id_
+  commentId: Overload:GamificationAPI.DTO.EventDTO.Id
   isSpec: "True"
-  fullName: GamificationApi.DTO.EventDTO.Id
+  fullName: GamificationAPI.DTO.EventDTO.Id
   nameWithType: EventDTO.Id
-- uid: GamificationApi.DTO.EventDTO.PlayerId
+- uid: GamificationAPI.DTO.EventDTO.PlayerId
   name: PlayerId
-  href: api/GamificationApi.DTO.EventDTO.html#GamificationApi_DTO_EventDTO_PlayerId
-  commentId: P:GamificationApi.DTO.EventDTO.PlayerId
-  fullName: GamificationApi.DTO.EventDTO.PlayerId
+  href: api/GamificationAPI.DTO.EventDTO.html#GamificationAPI_DTO_EventDTO_PlayerId
+  commentId: P:GamificationAPI.DTO.EventDTO.PlayerId
+  fullName: GamificationAPI.DTO.EventDTO.PlayerId
   nameWithType: EventDTO.PlayerId
-- uid: GamificationApi.DTO.EventDTO.PlayerId*
+- uid: GamificationAPI.DTO.EventDTO.PlayerId*
   name: PlayerId
-  href: api/GamificationApi.DTO.EventDTO.html#GamificationApi_DTO_EventDTO_PlayerId_
-  commentId: Overload:GamificationApi.DTO.EventDTO.PlayerId
+  href: api/GamificationAPI.DTO.EventDTO.html#GamificationAPI_DTO_EventDTO_PlayerId_
+  commentId: Overload:GamificationAPI.DTO.EventDTO.PlayerId
   isSpec: "True"
-  fullName: GamificationApi.DTO.EventDTO.PlayerId
+  fullName: GamificationAPI.DTO.EventDTO.PlayerId
   nameWithType: EventDTO.PlayerId
-- uid: GamificationApi.DTO.EventDTO.Timestamp
+- uid: GamificationAPI.DTO.EventDTO.Timestamp
   name: Timestamp
-  href: api/GamificationApi.DTO.EventDTO.html#GamificationApi_DTO_EventDTO_Timestamp
-  commentId: P:GamificationApi.DTO.EventDTO.Timestamp
-  fullName: GamificationApi.DTO.EventDTO.Timestamp
+  href: api/GamificationAPI.DTO.EventDTO.html#GamificationAPI_DTO_EventDTO_Timestamp
+  commentId: P:GamificationAPI.DTO.EventDTO.Timestamp
+  fullName: GamificationAPI.DTO.EventDTO.Timestamp
   nameWithType: EventDTO.Timestamp
-- uid: GamificationApi.DTO.EventDTO.Timestamp*
+- uid: GamificationAPI.DTO.EventDTO.Timestamp*
   name: Timestamp
-  href: api/GamificationApi.DTO.EventDTO.html#GamificationApi_DTO_EventDTO_Timestamp_
-  commentId: Overload:GamificationApi.DTO.EventDTO.Timestamp
+  href: api/GamificationAPI.DTO.EventDTO.html#GamificationAPI_DTO_EventDTO_Timestamp_
+  commentId: Overload:GamificationAPI.DTO.EventDTO.Timestamp
   isSpec: "True"
-  fullName: GamificationApi.DTO.EventDTO.Timestamp
+  fullName: GamificationAPI.DTO.EventDTO.Timestamp
   nameWithType: EventDTO.Timestamp
-- uid: GamificationApi.DTO.EventDTO.Type
+- uid: GamificationAPI.DTO.EventDTO.Type
   name: Type
-  href: api/GamificationApi.DTO.EventDTO.html#GamificationApi_DTO_EventDTO_Type
-  commentId: P:GamificationApi.DTO.EventDTO.Type
-  fullName: GamificationApi.DTO.EventDTO.Type
+  href: api/GamificationAPI.DTO.EventDTO.html#GamificationAPI_DTO_EventDTO_Type
+  commentId: P:GamificationAPI.DTO.EventDTO.Type
+  fullName: GamificationAPI.DTO.EventDTO.Type
   nameWithType: EventDTO.Type
-- uid: GamificationApi.DTO.EventDTO.Type*
+- uid: GamificationAPI.DTO.EventDTO.Type*
   name: Type
-  href: api/GamificationApi.DTO.EventDTO.html#GamificationApi_DTO_EventDTO_Type_
-  commentId: Overload:GamificationApi.DTO.EventDTO.Type
+  href: api/GamificationAPI.DTO.EventDTO.html#GamificationAPI_DTO_EventDTO_Type_
+  commentId: Overload:GamificationAPI.DTO.EventDTO.Type
   isSpec: "True"
-  fullName: GamificationApi.DTO.EventDTO.Type
+  fullName: GamificationAPI.DTO.EventDTO.Type
   nameWithType: EventDTO.Type
-- uid: GamificationApi.DTO.PlayerDTO
+- uid: GamificationAPI.DTO.PlayerDTO
   name: PlayerDTO
-  href: api/GamificationApi.DTO.PlayerDTO.html
-  commentId: T:GamificationApi.DTO.PlayerDTO
-  fullName: GamificationApi.DTO.PlayerDTO
+  href: api/GamificationAPI.DTO.PlayerDTO.html
+  commentId: T:GamificationAPI.DTO.PlayerDTO
+  fullName: GamificationAPI.DTO.PlayerDTO
   nameWithType: PlayerDTO
-- uid: GamificationApi.DTO.PlayerDTO.Badges
+- uid: GamificationAPI.DTO.PlayerDTO.Badges
   name: Badges
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_Badges
-  commentId: P:GamificationApi.DTO.PlayerDTO.Badges
-  fullName: GamificationApi.DTO.PlayerDTO.Badges
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_Badges
+  commentId: P:GamificationAPI.DTO.PlayerDTO.Badges
+  fullName: GamificationAPI.DTO.PlayerDTO.Badges
   nameWithType: PlayerDTO.Badges
-- uid: GamificationApi.DTO.PlayerDTO.Badges*
+- uid: GamificationAPI.DTO.PlayerDTO.Badges*
   name: Badges
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_Badges_
-  commentId: Overload:GamificationApi.DTO.PlayerDTO.Badges
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_Badges_
+  commentId: Overload:GamificationAPI.DTO.PlayerDTO.Badges
   isSpec: "True"
-  fullName: GamificationApi.DTO.PlayerDTO.Badges
+  fullName: GamificationAPI.DTO.PlayerDTO.Badges
   nameWithType: PlayerDTO.Badges
-- uid: GamificationApi.DTO.PlayerDTO.Email
+- uid: GamificationAPI.DTO.PlayerDTO.Email
   name: Email
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_Email
-  commentId: P:GamificationApi.DTO.PlayerDTO.Email
-  fullName: GamificationApi.DTO.PlayerDTO.Email
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_Email
+  commentId: P:GamificationAPI.DTO.PlayerDTO.Email
+  fullName: GamificationAPI.DTO.PlayerDTO.Email
   nameWithType: PlayerDTO.Email
-- uid: GamificationApi.DTO.PlayerDTO.Email*
+- uid: GamificationAPI.DTO.PlayerDTO.Email*
   name: Email
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_Email_
-  commentId: Overload:GamificationApi.DTO.PlayerDTO.Email
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_Email_
+  commentId: Overload:GamificationAPI.DTO.PlayerDTO.Email
   isSpec: "True"
-  fullName: GamificationApi.DTO.PlayerDTO.Email
+  fullName: GamificationAPI.DTO.PlayerDTO.Email
   nameWithType: PlayerDTO.Email
-- uid: GamificationApi.DTO.PlayerDTO.FirstName
+- uid: GamificationAPI.DTO.PlayerDTO.FirstName
   name: FirstName
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_FirstName
-  commentId: P:GamificationApi.DTO.PlayerDTO.FirstName
-  fullName: GamificationApi.DTO.PlayerDTO.FirstName
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_FirstName
+  commentId: P:GamificationAPI.DTO.PlayerDTO.FirstName
+  fullName: GamificationAPI.DTO.PlayerDTO.FirstName
   nameWithType: PlayerDTO.FirstName
-- uid: GamificationApi.DTO.PlayerDTO.FirstName*
+- uid: GamificationAPI.DTO.PlayerDTO.FirstName*
   name: FirstName
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_FirstName_
-  commentId: Overload:GamificationApi.DTO.PlayerDTO.FirstName
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_FirstName_
+  commentId: Overload:GamificationAPI.DTO.PlayerDTO.FirstName
   isSpec: "True"
-  fullName: GamificationApi.DTO.PlayerDTO.FirstName
+  fullName: GamificationAPI.DTO.PlayerDTO.FirstName
   nameWithType: PlayerDTO.FirstName
-- uid: GamificationApi.DTO.PlayerDTO.Id
+- uid: GamificationAPI.DTO.PlayerDTO.Id
   name: Id
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_Id
-  commentId: P:GamificationApi.DTO.PlayerDTO.Id
-  fullName: GamificationApi.DTO.PlayerDTO.Id
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_Id
+  commentId: P:GamificationAPI.DTO.PlayerDTO.Id
+  fullName: GamificationAPI.DTO.PlayerDTO.Id
   nameWithType: PlayerDTO.Id
-- uid: GamificationApi.DTO.PlayerDTO.Id*
+- uid: GamificationAPI.DTO.PlayerDTO.Id*
   name: Id
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_Id_
-  commentId: Overload:GamificationApi.DTO.PlayerDTO.Id
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_Id_
+  commentId: Overload:GamificationAPI.DTO.PlayerDTO.Id
   isSpec: "True"
-  fullName: GamificationApi.DTO.PlayerDTO.Id
+  fullName: GamificationAPI.DTO.PlayerDTO.Id
   nameWithType: PlayerDTO.Id
-- uid: GamificationApi.DTO.PlayerDTO.LastName
+- uid: GamificationAPI.DTO.PlayerDTO.LastName
   name: LastName
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_LastName
-  commentId: P:GamificationApi.DTO.PlayerDTO.LastName
-  fullName: GamificationApi.DTO.PlayerDTO.LastName
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_LastName
+  commentId: P:GamificationAPI.DTO.PlayerDTO.LastName
+  fullName: GamificationAPI.DTO.PlayerDTO.LastName
   nameWithType: PlayerDTO.LastName
-- uid: GamificationApi.DTO.PlayerDTO.LastName*
+- uid: GamificationAPI.DTO.PlayerDTO.LastName*
   name: LastName
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_LastName_
-  commentId: Overload:GamificationApi.DTO.PlayerDTO.LastName
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_LastName_
+  commentId: Overload:GamificationAPI.DTO.PlayerDTO.LastName
   isSpec: "True"
-  fullName: GamificationApi.DTO.PlayerDTO.LastName
+  fullName: GamificationAPI.DTO.PlayerDTO.LastName
   nameWithType: PlayerDTO.LastName
-- uid: GamificationApi.DTO.PlayerDTO.NickName
+- uid: GamificationAPI.DTO.PlayerDTO.NickName
   name: NickName
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_NickName
-  commentId: P:GamificationApi.DTO.PlayerDTO.NickName
-  fullName: GamificationApi.DTO.PlayerDTO.NickName
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_NickName
+  commentId: P:GamificationAPI.DTO.PlayerDTO.NickName
+  fullName: GamificationAPI.DTO.PlayerDTO.NickName
   nameWithType: PlayerDTO.NickName
-- uid: GamificationApi.DTO.PlayerDTO.NickName*
+- uid: GamificationAPI.DTO.PlayerDTO.NickName*
   name: NickName
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_NickName_
-  commentId: Overload:GamificationApi.DTO.PlayerDTO.NickName
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_NickName_
+  commentId: Overload:GamificationAPI.DTO.PlayerDTO.NickName
   isSpec: "True"
-  fullName: GamificationApi.DTO.PlayerDTO.NickName
+  fullName: GamificationAPI.DTO.PlayerDTO.NickName
   nameWithType: PlayerDTO.NickName
-- uid: GamificationApi.DTO.PlayerDTO.NumberOfCredits
+- uid: GamificationAPI.DTO.PlayerDTO.NumberOfCredits
   name: NumberOfCredits
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_NumberOfCredits
-  commentId: P:GamificationApi.DTO.PlayerDTO.NumberOfCredits
-  fullName: GamificationApi.DTO.PlayerDTO.NumberOfCredits
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_NumberOfCredits
+  commentId: P:GamificationAPI.DTO.PlayerDTO.NumberOfCredits
+  fullName: GamificationAPI.DTO.PlayerDTO.NumberOfCredits
   nameWithType: PlayerDTO.NumberOfCredits
-- uid: GamificationApi.DTO.PlayerDTO.NumberOfCredits*
+- uid: GamificationAPI.DTO.PlayerDTO.NumberOfCredits*
   name: NumberOfCredits
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_NumberOfCredits_
-  commentId: Overload:GamificationApi.DTO.PlayerDTO.NumberOfCredits
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_NumberOfCredits_
+  commentId: Overload:GamificationAPI.DTO.PlayerDTO.NumberOfCredits
   isSpec: "True"
-  fullName: GamificationApi.DTO.PlayerDTO.NumberOfCredits
+  fullName: GamificationAPI.DTO.PlayerDTO.NumberOfCredits
   nameWithType: PlayerDTO.NumberOfCredits
-- uid: GamificationApi.DTO.PlayerDTO.NumberOfPoints
+- uid: GamificationAPI.DTO.PlayerDTO.NumberOfPoints
   name: NumberOfPoints
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_NumberOfPoints
-  commentId: P:GamificationApi.DTO.PlayerDTO.NumberOfPoints
-  fullName: GamificationApi.DTO.PlayerDTO.NumberOfPoints
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_NumberOfPoints
+  commentId: P:GamificationAPI.DTO.PlayerDTO.NumberOfPoints
+  fullName: GamificationAPI.DTO.PlayerDTO.NumberOfPoints
   nameWithType: PlayerDTO.NumberOfPoints
-- uid: GamificationApi.DTO.PlayerDTO.NumberOfPoints*
+- uid: GamificationAPI.DTO.PlayerDTO.NumberOfPoints*
   name: NumberOfPoints
-  href: api/GamificationApi.DTO.PlayerDTO.html#GamificationApi_DTO_PlayerDTO_NumberOfPoints_
-  commentId: Overload:GamificationApi.DTO.PlayerDTO.NumberOfPoints
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_NumberOfPoints_
+  commentId: Overload:GamificationAPI.DTO.PlayerDTO.NumberOfPoints
   isSpec: "True"
-  fullName: GamificationApi.DTO.PlayerDTO.NumberOfPoints
+  fullName: GamificationAPI.DTO.PlayerDTO.NumberOfPoints
   nameWithType: PlayerDTO.NumberOfPoints
-- uid: GamificationApi.DTO.RuleDTO
+- uid: GamificationAPI.DTO.RuleDTO
   name: RuleDTO
-  href: api/GamificationApi.DTO.RuleDTO.html
-  commentId: T:GamificationApi.DTO.RuleDTO
-  fullName: GamificationApi.DTO.RuleDTO
+  href: api/GamificationAPI.DTO.RuleDTO.html
+  commentId: T:GamificationAPI.DTO.RuleDTO
+  fullName: GamificationAPI.DTO.RuleDTO
   nameWithType: RuleDTO
-- uid: GamificationApi.DTO.RuleDTO.BadgeId
+- uid: GamificationAPI.DTO.RuleDTO.BadgeId
   name: BadgeId
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_BadgeId
-  commentId: P:GamificationApi.DTO.RuleDTO.BadgeId
-  fullName: GamificationApi.DTO.RuleDTO.BadgeId
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_BadgeId
+  commentId: P:GamificationAPI.DTO.RuleDTO.BadgeId
+  fullName: GamificationAPI.DTO.RuleDTO.BadgeId
   nameWithType: RuleDTO.BadgeId
-- uid: GamificationApi.DTO.RuleDTO.BadgeId*
+- uid: GamificationAPI.DTO.RuleDTO.BadgeId*
   name: BadgeId
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_BadgeId_
-  commentId: Overload:GamificationApi.DTO.RuleDTO.BadgeId
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_BadgeId_
+  commentId: Overload:GamificationAPI.DTO.RuleDTO.BadgeId
   isSpec: "True"
-  fullName: GamificationApi.DTO.RuleDTO.BadgeId
+  fullName: GamificationAPI.DTO.RuleDTO.BadgeId
   nameWithType: RuleDTO.BadgeId
-- uid: GamificationApi.DTO.RuleDTO.Id
+- uid: GamificationAPI.DTO.RuleDTO.Id
   name: Id
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_Id
-  commentId: P:GamificationApi.DTO.RuleDTO.Id
-  fullName: GamificationApi.DTO.RuleDTO.Id
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_Id
+  commentId: P:GamificationAPI.DTO.RuleDTO.Id
+  fullName: GamificationAPI.DTO.RuleDTO.Id
   nameWithType: RuleDTO.Id
-- uid: GamificationApi.DTO.RuleDTO.Id*
+- uid: GamificationAPI.DTO.RuleDTO.Id*
   name: Id
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_Id_
-  commentId: Overload:GamificationApi.DTO.RuleDTO.Id
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_Id_
+  commentId: Overload:GamificationAPI.DTO.RuleDTO.Id
   isSpec: "True"
-  fullName: GamificationApi.DTO.RuleDTO.Id
+  fullName: GamificationAPI.DTO.RuleDTO.Id
   nameWithType: RuleDTO.Id
-- uid: GamificationApi.DTO.RuleDTO.NumberOfCredits
+- uid: GamificationAPI.DTO.RuleDTO.NumberOfCredits
   name: NumberOfCredits
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_NumberOfCredits
-  commentId: P:GamificationApi.DTO.RuleDTO.NumberOfCredits
-  fullName: GamificationApi.DTO.RuleDTO.NumberOfCredits
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_NumberOfCredits
+  commentId: P:GamificationAPI.DTO.RuleDTO.NumberOfCredits
+  fullName: GamificationAPI.DTO.RuleDTO.NumberOfCredits
   nameWithType: RuleDTO.NumberOfCredits
-- uid: GamificationApi.DTO.RuleDTO.NumberOfCredits*
+- uid: GamificationAPI.DTO.RuleDTO.NumberOfCredits*
   name: NumberOfCredits
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_NumberOfCredits_
-  commentId: Overload:GamificationApi.DTO.RuleDTO.NumberOfCredits
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_NumberOfCredits_
+  commentId: Overload:GamificationAPI.DTO.RuleDTO.NumberOfCredits
   isSpec: "True"
-  fullName: GamificationApi.DTO.RuleDTO.NumberOfCredits
+  fullName: GamificationAPI.DTO.RuleDTO.NumberOfCredits
   nameWithType: RuleDTO.NumberOfCredits
-- uid: GamificationApi.DTO.RuleDTO.NumberOfPoints
+- uid: GamificationAPI.DTO.RuleDTO.NumberOfPoints
   name: NumberOfPoints
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_NumberOfPoints
-  commentId: P:GamificationApi.DTO.RuleDTO.NumberOfPoints
-  fullName: GamificationApi.DTO.RuleDTO.NumberOfPoints
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_NumberOfPoints
+  commentId: P:GamificationAPI.DTO.RuleDTO.NumberOfPoints
+  fullName: GamificationAPI.DTO.RuleDTO.NumberOfPoints
   nameWithType: RuleDTO.NumberOfPoints
-- uid: GamificationApi.DTO.RuleDTO.NumberOfPoints*
+- uid: GamificationAPI.DTO.RuleDTO.NumberOfPoints*
   name: NumberOfPoints
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_NumberOfPoints_
-  commentId: Overload:GamificationApi.DTO.RuleDTO.NumberOfPoints
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_NumberOfPoints_
+  commentId: Overload:GamificationAPI.DTO.RuleDTO.NumberOfPoints
   isSpec: "True"
-  fullName: GamificationApi.DTO.RuleDTO.NumberOfPoints
+  fullName: GamificationAPI.DTO.RuleDTO.NumberOfPoints
   nameWithType: RuleDTO.NumberOfPoints
-- uid: GamificationApi.DTO.RuleDTO.OnEventType
+- uid: GamificationAPI.DTO.RuleDTO.OnEventType
   name: OnEventType
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_OnEventType
-  commentId: P:GamificationApi.DTO.RuleDTO.OnEventType
-  fullName: GamificationApi.DTO.RuleDTO.OnEventType
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_OnEventType
+  commentId: P:GamificationAPI.DTO.RuleDTO.OnEventType
+  fullName: GamificationAPI.DTO.RuleDTO.OnEventType
   nameWithType: RuleDTO.OnEventType
-- uid: GamificationApi.DTO.RuleDTO.OnEventType*
+- uid: GamificationAPI.DTO.RuleDTO.OnEventType*
   name: OnEventType
-  href: api/GamificationApi.DTO.RuleDTO.html#GamificationApi_DTO_RuleDTO_OnEventType_
-  commentId: Overload:GamificationApi.DTO.RuleDTO.OnEventType
+  href: api/GamificationAPI.DTO.RuleDTO.html#GamificationAPI_DTO_RuleDTO_OnEventType_
+  commentId: Overload:GamificationAPI.DTO.RuleDTO.OnEventType
   isSpec: "True"
-  fullName: GamificationApi.DTO.RuleDTO.OnEventType
+  fullName: GamificationAPI.DTO.RuleDTO.OnEventType
   nameWithType: RuleDTO.OnEventType
 - uid: GamificationAPI.Migrations
   name: GamificationAPI.Migrations
@@ -1015,211 +1015,205 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Migrations.Initial.Up
   nameWithType: Initial.Up
-- uid: GamificationApi.Models
-  name: GamificationApi.Models
-  href: api/GamificationApi.Models_1.html
-  commentId: N:GamificationApi.Models
-  fullName: GamificationApi.Models
-  nameWithType: GamificationApi.Models
 - uid: GamificationAPI.Models
   name: GamificationAPI.Models
   href: api/GamificationAPI.Models.html
   commentId: N:GamificationAPI.Models
   fullName: GamificationAPI.Models
   nameWithType: GamificationAPI.Models
-- uid: GamificationApi.Models.Application
+- uid: GamificationAPI.Models.Application
   name: Application
-  href: api/GamificationApi.Models.Application.html
-  commentId: T:GamificationApi.Models.Application
-  fullName: GamificationApi.Models.Application
+  href: api/GamificationAPI.Models.Application.html
+  commentId: T:GamificationAPI.Models.Application
+  fullName: GamificationAPI.Models.Application
   nameWithType: Application
-- uid: GamificationApi.Models.Application.ApiKey
+- uid: GamificationAPI.Models.Application.ApiKey
   name: ApiKey
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_ApiKey
-  commentId: P:GamificationApi.Models.Application.ApiKey
-  fullName: GamificationApi.Models.Application.ApiKey
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_ApiKey
+  commentId: P:GamificationAPI.Models.Application.ApiKey
+  fullName: GamificationAPI.Models.Application.ApiKey
   nameWithType: Application.ApiKey
-- uid: GamificationApi.Models.Application.ApiKey*
+- uid: GamificationAPI.Models.Application.ApiKey*
   name: ApiKey
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_ApiKey_
-  commentId: Overload:GamificationApi.Models.Application.ApiKey
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_ApiKey_
+  commentId: Overload:GamificationAPI.Models.Application.ApiKey
   isSpec: "True"
-  fullName: GamificationApi.Models.Application.ApiKey
+  fullName: GamificationAPI.Models.Application.ApiKey
   nameWithType: Application.ApiKey
-- uid: GamificationApi.Models.Application.ApiSecret
+- uid: GamificationAPI.Models.Application.ApiSecret
   name: ApiSecret
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_ApiSecret
-  commentId: P:GamificationApi.Models.Application.ApiSecret
-  fullName: GamificationApi.Models.Application.ApiSecret
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_ApiSecret
+  commentId: P:GamificationAPI.Models.Application.ApiSecret
+  fullName: GamificationAPI.Models.Application.ApiSecret
   nameWithType: Application.ApiSecret
-- uid: GamificationApi.Models.Application.ApiSecret*
+- uid: GamificationAPI.Models.Application.ApiSecret*
   name: ApiSecret
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_ApiSecret_
-  commentId: Overload:GamificationApi.Models.Application.ApiSecret
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_ApiSecret_
+  commentId: Overload:GamificationAPI.Models.Application.ApiSecret
   isSpec: "True"
-  fullName: GamificationApi.Models.Application.ApiSecret
+  fullName: GamificationAPI.Models.Application.ApiSecret
   nameWithType: Application.ApiSecret
-- uid: GamificationApi.Models.Application.Badges
+- uid: GamificationAPI.Models.Application.Badges
   name: Badges
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Badges
-  commentId: P:GamificationApi.Models.Application.Badges
-  fullName: GamificationApi.Models.Application.Badges
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Badges
+  commentId: P:GamificationAPI.Models.Application.Badges
+  fullName: GamificationAPI.Models.Application.Badges
   nameWithType: Application.Badges
-- uid: GamificationApi.Models.Application.Badges*
+- uid: GamificationAPI.Models.Application.Badges*
   name: Badges
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Badges_
-  commentId: Overload:GamificationApi.Models.Application.Badges
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Badges_
+  commentId: Overload:GamificationAPI.Models.Application.Badges
   isSpec: "True"
-  fullName: GamificationApi.Models.Application.Badges
+  fullName: GamificationAPI.Models.Application.Badges
   nameWithType: Application.Badges
-- uid: GamificationApi.Models.Application.Description
+- uid: GamificationAPI.Models.Application.Description
   name: Description
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Description
-  commentId: P:GamificationApi.Models.Application.Description
-  fullName: GamificationApi.Models.Application.Description
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Description
+  commentId: P:GamificationAPI.Models.Application.Description
+  fullName: GamificationAPI.Models.Application.Description
   nameWithType: Application.Description
-- uid: GamificationApi.Models.Application.Description*
+- uid: GamificationAPI.Models.Application.Description*
   name: Description
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Description_
-  commentId: Overload:GamificationApi.Models.Application.Description
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Description_
+  commentId: Overload:GamificationAPI.Models.Application.Description
   isSpec: "True"
-  fullName: GamificationApi.Models.Application.Description
+  fullName: GamificationAPI.Models.Application.Description
   nameWithType: Application.Description
-- uid: GamificationApi.Models.Application.Events
+- uid: GamificationAPI.Models.Application.Events
   name: Events
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Events
-  commentId: P:GamificationApi.Models.Application.Events
-  fullName: GamificationApi.Models.Application.Events
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Events
+  commentId: P:GamificationAPI.Models.Application.Events
+  fullName: GamificationAPI.Models.Application.Events
   nameWithType: Application.Events
-- uid: GamificationApi.Models.Application.Events*
+- uid: GamificationAPI.Models.Application.Events*
   name: Events
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Events_
-  commentId: Overload:GamificationApi.Models.Application.Events
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Events_
+  commentId: Overload:GamificationAPI.Models.Application.Events
   isSpec: "True"
-  fullName: GamificationApi.Models.Application.Events
+  fullName: GamificationAPI.Models.Application.Events
   nameWithType: Application.Events
-- uid: GamificationApi.Models.Application.Id
+- uid: GamificationAPI.Models.Application.Id
   name: Id
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Id
-  commentId: P:GamificationApi.Models.Application.Id
-  fullName: GamificationApi.Models.Application.Id
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Id
+  commentId: P:GamificationAPI.Models.Application.Id
+  fullName: GamificationAPI.Models.Application.Id
   nameWithType: Application.Id
-- uid: GamificationApi.Models.Application.Id*
+- uid: GamificationAPI.Models.Application.Id*
   name: Id
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Id_
-  commentId: Overload:GamificationApi.Models.Application.Id
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Id_
+  commentId: Overload:GamificationAPI.Models.Application.Id
   isSpec: "True"
-  fullName: GamificationApi.Models.Application.Id
+  fullName: GamificationAPI.Models.Application.Id
   nameWithType: Application.Id
-- uid: GamificationApi.Models.Application.Name
+- uid: GamificationAPI.Models.Application.Name
   name: Name
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Name
-  commentId: P:GamificationApi.Models.Application.Name
-  fullName: GamificationApi.Models.Application.Name
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Name
+  commentId: P:GamificationAPI.Models.Application.Name
+  fullName: GamificationAPI.Models.Application.Name
   nameWithType: Application.Name
-- uid: GamificationApi.Models.Application.Name*
+- uid: GamificationAPI.Models.Application.Name*
   name: Name
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Name_
-  commentId: Overload:GamificationApi.Models.Application.Name
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Name_
+  commentId: Overload:GamificationAPI.Models.Application.Name
   isSpec: "True"
-  fullName: GamificationApi.Models.Application.Name
+  fullName: GamificationAPI.Models.Application.Name
   nameWithType: Application.Name
-- uid: GamificationApi.Models.Application.Players
+- uid: GamificationAPI.Models.Application.Players
   name: Players
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Players
-  commentId: P:GamificationApi.Models.Application.Players
-  fullName: GamificationApi.Models.Application.Players
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Players
+  commentId: P:GamificationAPI.Models.Application.Players
+  fullName: GamificationAPI.Models.Application.Players
   nameWithType: Application.Players
-- uid: GamificationApi.Models.Application.Players*
+- uid: GamificationAPI.Models.Application.Players*
   name: Players
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Players_
-  commentId: Overload:GamificationApi.Models.Application.Players
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Players_
+  commentId: Overload:GamificationAPI.Models.Application.Players
   isSpec: "True"
-  fullName: GamificationApi.Models.Application.Players
+  fullName: GamificationAPI.Models.Application.Players
   nameWithType: Application.Players
-- uid: GamificationApi.Models.Application.Rules
+- uid: GamificationAPI.Models.Application.Rules
   name: Rules
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Rules
-  commentId: P:GamificationApi.Models.Application.Rules
-  fullName: GamificationApi.Models.Application.Rules
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Rules
+  commentId: P:GamificationAPI.Models.Application.Rules
+  fullName: GamificationAPI.Models.Application.Rules
   nameWithType: Application.Rules
-- uid: GamificationApi.Models.Application.Rules*
+- uid: GamificationAPI.Models.Application.Rules*
   name: Rules
-  href: api/GamificationApi.Models.Application.html#GamificationApi_Models_Application_Rules_
-  commentId: Overload:GamificationApi.Models.Application.Rules
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Rules_
+  commentId: Overload:GamificationAPI.Models.Application.Rules
   isSpec: "True"
-  fullName: GamificationApi.Models.Application.Rules
+  fullName: GamificationAPI.Models.Application.Rules
   nameWithType: Application.Rules
-- uid: GamificationApi.Models.Badge
+- uid: GamificationAPI.Models.Badge
   name: Badge
-  href: api/GamificationApi.Models.Badge.html
-  commentId: T:GamificationApi.Models.Badge
-  fullName: GamificationApi.Models.Badge
+  href: api/GamificationAPI.Models.Badge.html
+  commentId: T:GamificationAPI.Models.Badge
+  fullName: GamificationAPI.Models.Badge
   nameWithType: Badge
-- uid: GamificationApi.Models.Badge.Application
+- uid: GamificationAPI.Models.Badge.Application
   name: Application
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Application
-  commentId: P:GamificationApi.Models.Badge.Application
-  fullName: GamificationApi.Models.Badge.Application
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Application
+  commentId: P:GamificationAPI.Models.Badge.Application
+  fullName: GamificationAPI.Models.Badge.Application
   nameWithType: Badge.Application
-- uid: GamificationApi.Models.Badge.Application*
+- uid: GamificationAPI.Models.Badge.Application*
   name: Application
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Application_
-  commentId: Overload:GamificationApi.Models.Badge.Application
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Application_
+  commentId: Overload:GamificationAPI.Models.Badge.Application
   isSpec: "True"
-  fullName: GamificationApi.Models.Badge.Application
+  fullName: GamificationAPI.Models.Badge.Application
   nameWithType: Badge.Application
-- uid: GamificationApi.Models.Badge.Description
+- uid: GamificationAPI.Models.Badge.Description
   name: Description
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Description
-  commentId: P:GamificationApi.Models.Badge.Description
-  fullName: GamificationApi.Models.Badge.Description
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Description
+  commentId: P:GamificationAPI.Models.Badge.Description
+  fullName: GamificationAPI.Models.Badge.Description
   nameWithType: Badge.Description
-- uid: GamificationApi.Models.Badge.Description*
+- uid: GamificationAPI.Models.Badge.Description*
   name: Description
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Description_
-  commentId: Overload:GamificationApi.Models.Badge.Description
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Description_
+  commentId: Overload:GamificationAPI.Models.Badge.Description
   isSpec: "True"
-  fullName: GamificationApi.Models.Badge.Description
+  fullName: GamificationAPI.Models.Badge.Description
   nameWithType: Badge.Description
-- uid: GamificationApi.Models.Badge.Icon
+- uid: GamificationAPI.Models.Badge.Icon
   name: Icon
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Icon
-  commentId: P:GamificationApi.Models.Badge.Icon
-  fullName: GamificationApi.Models.Badge.Icon
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Icon
+  commentId: P:GamificationAPI.Models.Badge.Icon
+  fullName: GamificationAPI.Models.Badge.Icon
   nameWithType: Badge.Icon
-- uid: GamificationApi.Models.Badge.Icon*
+- uid: GamificationAPI.Models.Badge.Icon*
   name: Icon
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Icon_
-  commentId: Overload:GamificationApi.Models.Badge.Icon
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Icon_
+  commentId: Overload:GamificationAPI.Models.Badge.Icon
   isSpec: "True"
-  fullName: GamificationApi.Models.Badge.Icon
+  fullName: GamificationAPI.Models.Badge.Icon
   nameWithType: Badge.Icon
-- uid: GamificationApi.Models.Badge.Id
+- uid: GamificationAPI.Models.Badge.Id
   name: Id
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Id
-  commentId: P:GamificationApi.Models.Badge.Id
-  fullName: GamificationApi.Models.Badge.Id
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Id
+  commentId: P:GamificationAPI.Models.Badge.Id
+  fullName: GamificationAPI.Models.Badge.Id
   nameWithType: Badge.Id
-- uid: GamificationApi.Models.Badge.Id*
+- uid: GamificationAPI.Models.Badge.Id*
   name: Id
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Id_
-  commentId: Overload:GamificationApi.Models.Badge.Id
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Id_
+  commentId: Overload:GamificationAPI.Models.Badge.Id
   isSpec: "True"
-  fullName: GamificationApi.Models.Badge.Id
+  fullName: GamificationAPI.Models.Badge.Id
   nameWithType: Badge.Id
-- uid: GamificationApi.Models.Badge.Name
+- uid: GamificationAPI.Models.Badge.Name
   name: Name
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Name
-  commentId: P:GamificationApi.Models.Badge.Name
-  fullName: GamificationApi.Models.Badge.Name
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Name
+  commentId: P:GamificationAPI.Models.Badge.Name
+  fullName: GamificationAPI.Models.Badge.Name
   nameWithType: Badge.Name
-- uid: GamificationApi.Models.Badge.Name*
+- uid: GamificationAPI.Models.Badge.Name*
   name: Name
-  href: api/GamificationApi.Models.Badge.html#GamificationApi_Models_Badge_Name_
-  commentId: Overload:GamificationApi.Models.Badge.Name
+  href: api/GamificationAPI.Models.Badge.html#GamificationAPI_Models_Badge_Name_
+  commentId: Overload:GamificationAPI.Models.Badge.Name
   isSpec: "True"
-  fullName: GamificationApi.Models.Badge.Name
+  fullName: GamificationAPI.Models.Badge.Name
   nameWithType: Badge.Name
 - uid: GamificationAPI.Models.Employee
   name: Employee
@@ -1292,341 +1286,341 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Models.Employee.Name
   nameWithType: Employee.Name
-- uid: GamificationApi.Models.Event
+- uid: GamificationAPI.Models.Event
   name: Event
-  href: api/GamificationApi.Models.Event.html
-  commentId: T:GamificationApi.Models.Event
-  fullName: GamificationApi.Models.Event
+  href: api/GamificationAPI.Models.Event.html
+  commentId: T:GamificationAPI.Models.Event
+  fullName: GamificationAPI.Models.Event
   nameWithType: Event
-- uid: GamificationApi.Models.Event.Application
+- uid: GamificationAPI.Models.Event.Application
   name: Application
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Application
-  commentId: P:GamificationApi.Models.Event.Application
-  fullName: GamificationApi.Models.Event.Application
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Application
+  commentId: P:GamificationAPI.Models.Event.Application
+  fullName: GamificationAPI.Models.Event.Application
   nameWithType: Event.Application
-- uid: GamificationApi.Models.Event.Application*
+- uid: GamificationAPI.Models.Event.Application*
   name: Application
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Application_
-  commentId: Overload:GamificationApi.Models.Event.Application
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Application_
+  commentId: Overload:GamificationAPI.Models.Event.Application
   isSpec: "True"
-  fullName: GamificationApi.Models.Event.Application
+  fullName: GamificationAPI.Models.Event.Application
   nameWithType: Event.Application
-- uid: GamificationApi.Models.Event.Id
+- uid: GamificationAPI.Models.Event.Id
   name: Id
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Id
-  commentId: P:GamificationApi.Models.Event.Id
-  fullName: GamificationApi.Models.Event.Id
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Id
+  commentId: P:GamificationAPI.Models.Event.Id
+  fullName: GamificationAPI.Models.Event.Id
   nameWithType: Event.Id
-- uid: GamificationApi.Models.Event.Id*
+- uid: GamificationAPI.Models.Event.Id*
   name: Id
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Id_
-  commentId: Overload:GamificationApi.Models.Event.Id
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Id_
+  commentId: Overload:GamificationAPI.Models.Event.Id
   isSpec: "True"
-  fullName: GamificationApi.Models.Event.Id
+  fullName: GamificationAPI.Models.Event.Id
   nameWithType: Event.Id
-- uid: GamificationApi.Models.Event.Player
+- uid: GamificationAPI.Models.Event.Player
   name: Player
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Player
-  commentId: P:GamificationApi.Models.Event.Player
-  fullName: GamificationApi.Models.Event.Player
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Player
+  commentId: P:GamificationAPI.Models.Event.Player
+  fullName: GamificationAPI.Models.Event.Player
   nameWithType: Event.Player
-- uid: GamificationApi.Models.Event.Player*
+- uid: GamificationAPI.Models.Event.Player*
   name: Player
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Player_
-  commentId: Overload:GamificationApi.Models.Event.Player
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Player_
+  commentId: Overload:GamificationAPI.Models.Event.Player
   isSpec: "True"
-  fullName: GamificationApi.Models.Event.Player
+  fullName: GamificationAPI.Models.Event.Player
   nameWithType: Event.Player
-- uid: GamificationApi.Models.Event.Timestamp
+- uid: GamificationAPI.Models.Event.Timestamp
   name: Timestamp
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Timestamp
-  commentId: P:GamificationApi.Models.Event.Timestamp
-  fullName: GamificationApi.Models.Event.Timestamp
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Timestamp
+  commentId: P:GamificationAPI.Models.Event.Timestamp
+  fullName: GamificationAPI.Models.Event.Timestamp
   nameWithType: Event.Timestamp
-- uid: GamificationApi.Models.Event.Timestamp*
+- uid: GamificationAPI.Models.Event.Timestamp*
   name: Timestamp
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Timestamp_
-  commentId: Overload:GamificationApi.Models.Event.Timestamp
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Timestamp_
+  commentId: Overload:GamificationAPI.Models.Event.Timestamp
   isSpec: "True"
-  fullName: GamificationApi.Models.Event.Timestamp
+  fullName: GamificationAPI.Models.Event.Timestamp
   nameWithType: Event.Timestamp
-- uid: GamificationApi.Models.Event.Type
+- uid: GamificationAPI.Models.Event.Type
   name: Type
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Type
-  commentId: P:GamificationApi.Models.Event.Type
-  fullName: GamificationApi.Models.Event.Type
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Type
+  commentId: P:GamificationAPI.Models.Event.Type
+  fullName: GamificationAPI.Models.Event.Type
   nameWithType: Event.Type
-- uid: GamificationApi.Models.Event.Type*
+- uid: GamificationAPI.Models.Event.Type*
   name: Type
-  href: api/GamificationApi.Models.Event.html#GamificationApi_Models_Event_Type_
-  commentId: Overload:GamificationApi.Models.Event.Type
+  href: api/GamificationAPI.Models.Event.html#GamificationAPI_Models_Event_Type_
+  commentId: Overload:GamificationAPI.Models.Event.Type
   isSpec: "True"
-  fullName: GamificationApi.Models.Event.Type
+  fullName: GamificationAPI.Models.Event.Type
   nameWithType: Event.Type
-- uid: GamificationApi.Models.Player
+- uid: GamificationAPI.Models.Player
   name: Player
-  href: api/GamificationApi.Models.Player.html
-  commentId: T:GamificationApi.Models.Player
-  fullName: GamificationApi.Models.Player
+  href: api/GamificationAPI.Models.Player.html
+  commentId: T:GamificationAPI.Models.Player
+  fullName: GamificationAPI.Models.Player
   nameWithType: Player
-- uid: GamificationApi.Models.Player.Application
+- uid: GamificationAPI.Models.Player.Application
   name: Application
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_Application
-  commentId: P:GamificationApi.Models.Player.Application
-  fullName: GamificationApi.Models.Player.Application
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_Application
+  commentId: P:GamificationAPI.Models.Player.Application
+  fullName: GamificationAPI.Models.Player.Application
   nameWithType: Player.Application
-- uid: GamificationApi.Models.Player.Application*
+- uid: GamificationAPI.Models.Player.Application*
   name: Application
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_Application_
-  commentId: Overload:GamificationApi.Models.Player.Application
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_Application_
+  commentId: Overload:GamificationAPI.Models.Player.Application
   isSpec: "True"
-  fullName: GamificationApi.Models.Player.Application
+  fullName: GamificationAPI.Models.Player.Application
   nameWithType: Player.Application
-- uid: GamificationApi.Models.Player.Badges
+- uid: GamificationAPI.Models.Player.Badges
   name: Badges
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_Badges
-  commentId: P:GamificationApi.Models.Player.Badges
-  fullName: GamificationApi.Models.Player.Badges
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_Badges
+  commentId: P:GamificationAPI.Models.Player.Badges
+  fullName: GamificationAPI.Models.Player.Badges
   nameWithType: Player.Badges
-- uid: GamificationApi.Models.Player.Badges*
+- uid: GamificationAPI.Models.Player.Badges*
   name: Badges
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_Badges_
-  commentId: Overload:GamificationApi.Models.Player.Badges
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_Badges_
+  commentId: Overload:GamificationAPI.Models.Player.Badges
   isSpec: "True"
-  fullName: GamificationApi.Models.Player.Badges
+  fullName: GamificationAPI.Models.Player.Badges
   nameWithType: Player.Badges
-- uid: GamificationApi.Models.Player.Email
+- uid: GamificationAPI.Models.Player.Email
   name: Email
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_Email
-  commentId: P:GamificationApi.Models.Player.Email
-  fullName: GamificationApi.Models.Player.Email
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_Email
+  commentId: P:GamificationAPI.Models.Player.Email
+  fullName: GamificationAPI.Models.Player.Email
   nameWithType: Player.Email
-- uid: GamificationApi.Models.Player.Email*
+- uid: GamificationAPI.Models.Player.Email*
   name: Email
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_Email_
-  commentId: Overload:GamificationApi.Models.Player.Email
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_Email_
+  commentId: Overload:GamificationAPI.Models.Player.Email
   isSpec: "True"
-  fullName: GamificationApi.Models.Player.Email
+  fullName: GamificationAPI.Models.Player.Email
   nameWithType: Player.Email
-- uid: GamificationApi.Models.Player.FirstName
+- uid: GamificationAPI.Models.Player.FirstName
   name: FirstName
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_FirstName
-  commentId: P:GamificationApi.Models.Player.FirstName
-  fullName: GamificationApi.Models.Player.FirstName
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_FirstName
+  commentId: P:GamificationAPI.Models.Player.FirstName
+  fullName: GamificationAPI.Models.Player.FirstName
   nameWithType: Player.FirstName
-- uid: GamificationApi.Models.Player.FirstName*
+- uid: GamificationAPI.Models.Player.FirstName*
   name: FirstName
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_FirstName_
-  commentId: Overload:GamificationApi.Models.Player.FirstName
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_FirstName_
+  commentId: Overload:GamificationAPI.Models.Player.FirstName
   isSpec: "True"
-  fullName: GamificationApi.Models.Player.FirstName
+  fullName: GamificationAPI.Models.Player.FirstName
   nameWithType: Player.FirstName
-- uid: GamificationApi.Models.Player.Id
+- uid: GamificationAPI.Models.Player.Id
   name: Id
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_Id
-  commentId: P:GamificationApi.Models.Player.Id
-  fullName: GamificationApi.Models.Player.Id
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_Id
+  commentId: P:GamificationAPI.Models.Player.Id
+  fullName: GamificationAPI.Models.Player.Id
   nameWithType: Player.Id
-- uid: GamificationApi.Models.Player.Id*
+- uid: GamificationAPI.Models.Player.Id*
   name: Id
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_Id_
-  commentId: Overload:GamificationApi.Models.Player.Id
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_Id_
+  commentId: Overload:GamificationAPI.Models.Player.Id
   isSpec: "True"
-  fullName: GamificationApi.Models.Player.Id
+  fullName: GamificationAPI.Models.Player.Id
   nameWithType: Player.Id
-- uid: GamificationApi.Models.Player.LastName
+- uid: GamificationAPI.Models.Player.LastName
   name: LastName
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_LastName
-  commentId: P:GamificationApi.Models.Player.LastName
-  fullName: GamificationApi.Models.Player.LastName
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_LastName
+  commentId: P:GamificationAPI.Models.Player.LastName
+  fullName: GamificationAPI.Models.Player.LastName
   nameWithType: Player.LastName
-- uid: GamificationApi.Models.Player.LastName*
+- uid: GamificationAPI.Models.Player.LastName*
   name: LastName
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_LastName_
-  commentId: Overload:GamificationApi.Models.Player.LastName
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_LastName_
+  commentId: Overload:GamificationAPI.Models.Player.LastName
   isSpec: "True"
-  fullName: GamificationApi.Models.Player.LastName
+  fullName: GamificationAPI.Models.Player.LastName
   nameWithType: Player.LastName
-- uid: GamificationApi.Models.Player.NickName
+- uid: GamificationAPI.Models.Player.NickName
   name: NickName
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_NickName
-  commentId: P:GamificationApi.Models.Player.NickName
-  fullName: GamificationApi.Models.Player.NickName
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_NickName
+  commentId: P:GamificationAPI.Models.Player.NickName
+  fullName: GamificationAPI.Models.Player.NickName
   nameWithType: Player.NickName
-- uid: GamificationApi.Models.Player.NickName*
+- uid: GamificationAPI.Models.Player.NickName*
   name: NickName
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_NickName_
-  commentId: Overload:GamificationApi.Models.Player.NickName
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_NickName_
+  commentId: Overload:GamificationAPI.Models.Player.NickName
   isSpec: "True"
-  fullName: GamificationApi.Models.Player.NickName
+  fullName: GamificationAPI.Models.Player.NickName
   nameWithType: Player.NickName
-- uid: GamificationApi.Models.Player.NumberOfCredits
+- uid: GamificationAPI.Models.Player.NumberOfCredits
   name: NumberOfCredits
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_NumberOfCredits
-  commentId: P:GamificationApi.Models.Player.NumberOfCredits
-  fullName: GamificationApi.Models.Player.NumberOfCredits
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_NumberOfCredits
+  commentId: P:GamificationAPI.Models.Player.NumberOfCredits
+  fullName: GamificationAPI.Models.Player.NumberOfCredits
   nameWithType: Player.NumberOfCredits
-- uid: GamificationApi.Models.Player.NumberOfCredits*
+- uid: GamificationAPI.Models.Player.NumberOfCredits*
   name: NumberOfCredits
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_NumberOfCredits_
-  commentId: Overload:GamificationApi.Models.Player.NumberOfCredits
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_NumberOfCredits_
+  commentId: Overload:GamificationAPI.Models.Player.NumberOfCredits
   isSpec: "True"
-  fullName: GamificationApi.Models.Player.NumberOfCredits
+  fullName: GamificationAPI.Models.Player.NumberOfCredits
   nameWithType: Player.NumberOfCredits
-- uid: GamificationApi.Models.Player.NumberOfPoints
+- uid: GamificationAPI.Models.Player.NumberOfPoints
   name: NumberOfPoints
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_NumberOfPoints
-  commentId: P:GamificationApi.Models.Player.NumberOfPoints
-  fullName: GamificationApi.Models.Player.NumberOfPoints
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_NumberOfPoints
+  commentId: P:GamificationAPI.Models.Player.NumberOfPoints
+  fullName: GamificationAPI.Models.Player.NumberOfPoints
   nameWithType: Player.NumberOfPoints
-- uid: GamificationApi.Models.Player.NumberOfPoints*
+- uid: GamificationAPI.Models.Player.NumberOfPoints*
   name: NumberOfPoints
-  href: api/GamificationApi.Models.Player.html#GamificationApi_Models_Player_NumberOfPoints_
-  commentId: Overload:GamificationApi.Models.Player.NumberOfPoints
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_NumberOfPoints_
+  commentId: Overload:GamificationAPI.Models.Player.NumberOfPoints
   isSpec: "True"
-  fullName: GamificationApi.Models.Player.NumberOfPoints
+  fullName: GamificationAPI.Models.Player.NumberOfPoints
   nameWithType: Player.NumberOfPoints
-- uid: GamificationApi.Models.Rule
+- uid: GamificationAPI.Models.Rule
   name: Rule
-  href: api/GamificationApi.Models.Rule.html
-  commentId: T:GamificationApi.Models.Rule
-  fullName: GamificationApi.Models.Rule
+  href: api/GamificationAPI.Models.Rule.html
+  commentId: T:GamificationAPI.Models.Rule
+  fullName: GamificationAPI.Models.Rule
   nameWithType: Rule
-- uid: GamificationApi.Models.Rule.Application
+- uid: GamificationAPI.Models.Rule.Application
   name: Application
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_Application
-  commentId: P:GamificationApi.Models.Rule.Application
-  fullName: GamificationApi.Models.Rule.Application
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_Application
+  commentId: P:GamificationAPI.Models.Rule.Application
+  fullName: GamificationAPI.Models.Rule.Application
   nameWithType: Rule.Application
-- uid: GamificationApi.Models.Rule.Application*
+- uid: GamificationAPI.Models.Rule.Application*
   name: Application
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_Application_
-  commentId: Overload:GamificationApi.Models.Rule.Application
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_Application_
+  commentId: Overload:GamificationAPI.Models.Rule.Application
   isSpec: "True"
-  fullName: GamificationApi.Models.Rule.Application
+  fullName: GamificationAPI.Models.Rule.Application
   nameWithType: Rule.Application
-- uid: GamificationApi.Models.Rule.Badge
+- uid: GamificationAPI.Models.Rule.Badge
   name: Badge
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_Badge
-  commentId: P:GamificationApi.Models.Rule.Badge
-  fullName: GamificationApi.Models.Rule.Badge
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_Badge
+  commentId: P:GamificationAPI.Models.Rule.Badge
+  fullName: GamificationAPI.Models.Rule.Badge
   nameWithType: Rule.Badge
-- uid: GamificationApi.Models.Rule.Badge*
+- uid: GamificationAPI.Models.Rule.Badge*
   name: Badge
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_Badge_
-  commentId: Overload:GamificationApi.Models.Rule.Badge
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_Badge_
+  commentId: Overload:GamificationAPI.Models.Rule.Badge
   isSpec: "True"
-  fullName: GamificationApi.Models.Rule.Badge
+  fullName: GamificationAPI.Models.Rule.Badge
   nameWithType: Rule.Badge
-- uid: GamificationApi.Models.Rule.Id
+- uid: GamificationAPI.Models.Rule.Id
   name: Id
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_Id
-  commentId: P:GamificationApi.Models.Rule.Id
-  fullName: GamificationApi.Models.Rule.Id
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_Id
+  commentId: P:GamificationAPI.Models.Rule.Id
+  fullName: GamificationAPI.Models.Rule.Id
   nameWithType: Rule.Id
-- uid: GamificationApi.Models.Rule.Id*
+- uid: GamificationAPI.Models.Rule.Id*
   name: Id
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_Id_
-  commentId: Overload:GamificationApi.Models.Rule.Id
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_Id_
+  commentId: Overload:GamificationAPI.Models.Rule.Id
   isSpec: "True"
-  fullName: GamificationApi.Models.Rule.Id
+  fullName: GamificationAPI.Models.Rule.Id
   nameWithType: Rule.Id
-- uid: GamificationApi.Models.Rule.NumberOfCredits
+- uid: GamificationAPI.Models.Rule.NumberOfCredits
   name: NumberOfCredits
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_NumberOfCredits
-  commentId: P:GamificationApi.Models.Rule.NumberOfCredits
-  fullName: GamificationApi.Models.Rule.NumberOfCredits
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_NumberOfCredits
+  commentId: P:GamificationAPI.Models.Rule.NumberOfCredits
+  fullName: GamificationAPI.Models.Rule.NumberOfCredits
   nameWithType: Rule.NumberOfCredits
-- uid: GamificationApi.Models.Rule.NumberOfCredits*
+- uid: GamificationAPI.Models.Rule.NumberOfCredits*
   name: NumberOfCredits
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_NumberOfCredits_
-  commentId: Overload:GamificationApi.Models.Rule.NumberOfCredits
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_NumberOfCredits_
+  commentId: Overload:GamificationAPI.Models.Rule.NumberOfCredits
   isSpec: "True"
-  fullName: GamificationApi.Models.Rule.NumberOfCredits
+  fullName: GamificationAPI.Models.Rule.NumberOfCredits
   nameWithType: Rule.NumberOfCredits
-- uid: GamificationApi.Models.Rule.NumberOfPoints
+- uid: GamificationAPI.Models.Rule.NumberOfPoints
   name: NumberOfPoints
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_NumberOfPoints
-  commentId: P:GamificationApi.Models.Rule.NumberOfPoints
-  fullName: GamificationApi.Models.Rule.NumberOfPoints
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_NumberOfPoints
+  commentId: P:GamificationAPI.Models.Rule.NumberOfPoints
+  fullName: GamificationAPI.Models.Rule.NumberOfPoints
   nameWithType: Rule.NumberOfPoints
-- uid: GamificationApi.Models.Rule.NumberOfPoints*
+- uid: GamificationAPI.Models.Rule.NumberOfPoints*
   name: NumberOfPoints
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_NumberOfPoints_
-  commentId: Overload:GamificationApi.Models.Rule.NumberOfPoints
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_NumberOfPoints_
+  commentId: Overload:GamificationAPI.Models.Rule.NumberOfPoints
   isSpec: "True"
-  fullName: GamificationApi.Models.Rule.NumberOfPoints
+  fullName: GamificationAPI.Models.Rule.NumberOfPoints
   nameWithType: Rule.NumberOfPoints
-- uid: GamificationApi.Models.Rule.OnEventType
+- uid: GamificationAPI.Models.Rule.OnEventType
   name: OnEventType
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_OnEventType
-  commentId: P:GamificationApi.Models.Rule.OnEventType
-  fullName: GamificationApi.Models.Rule.OnEventType
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_OnEventType
+  commentId: P:GamificationAPI.Models.Rule.OnEventType
+  fullName: GamificationAPI.Models.Rule.OnEventType
   nameWithType: Rule.OnEventType
-- uid: GamificationApi.Models.Rule.OnEventType*
+- uid: GamificationAPI.Models.Rule.OnEventType*
   name: OnEventType
-  href: api/GamificationApi.Models.Rule.html#GamificationApi_Models_Rule_OnEventType_
-  commentId: Overload:GamificationApi.Models.Rule.OnEventType
+  href: api/GamificationAPI.Models.Rule.html#GamificationAPI_Models_Rule_OnEventType_
+  commentId: Overload:GamificationAPI.Models.Rule.OnEventType
   isSpec: "True"
-  fullName: GamificationApi.Models.Rule.OnEventType
+  fullName: GamificationAPI.Models.Rule.OnEventType
   nameWithType: Rule.OnEventType
-- uid: GamificationApi.Models.WeatherForecast
+- uid: GamificationAPI.Models.WeatherForecast
   name: WeatherForecast
-  href: api/GamificationApi.Models.WeatherForecast.html
-  commentId: T:GamificationApi.Models.WeatherForecast
-  fullName: GamificationApi.Models.WeatherForecast
+  href: api/GamificationAPI.Models.WeatherForecast.html
+  commentId: T:GamificationAPI.Models.WeatherForecast
+  fullName: GamificationAPI.Models.WeatherForecast
   nameWithType: WeatherForecast
-- uid: GamificationApi.Models.WeatherForecast.Date
+- uid: GamificationAPI.Models.WeatherForecast.Date
   name: Date
-  href: api/GamificationApi.Models.WeatherForecast.html#GamificationApi_Models_WeatherForecast_Date
-  commentId: P:GamificationApi.Models.WeatherForecast.Date
-  fullName: GamificationApi.Models.WeatherForecast.Date
+  href: api/GamificationAPI.Models.WeatherForecast.html#GamificationAPI_Models_WeatherForecast_Date
+  commentId: P:GamificationAPI.Models.WeatherForecast.Date
+  fullName: GamificationAPI.Models.WeatherForecast.Date
   nameWithType: WeatherForecast.Date
-- uid: GamificationApi.Models.WeatherForecast.Date*
+- uid: GamificationAPI.Models.WeatherForecast.Date*
   name: Date
-  href: api/GamificationApi.Models.WeatherForecast.html#GamificationApi_Models_WeatherForecast_Date_
-  commentId: Overload:GamificationApi.Models.WeatherForecast.Date
+  href: api/GamificationAPI.Models.WeatherForecast.html#GamificationAPI_Models_WeatherForecast_Date_
+  commentId: Overload:GamificationAPI.Models.WeatherForecast.Date
   isSpec: "True"
-  fullName: GamificationApi.Models.WeatherForecast.Date
+  fullName: GamificationAPI.Models.WeatherForecast.Date
   nameWithType: WeatherForecast.Date
-- uid: GamificationApi.Models.WeatherForecast.Summary
+- uid: GamificationAPI.Models.WeatherForecast.Summary
   name: Summary
-  href: api/GamificationApi.Models.WeatherForecast.html#GamificationApi_Models_WeatherForecast_Summary
-  commentId: P:GamificationApi.Models.WeatherForecast.Summary
-  fullName: GamificationApi.Models.WeatherForecast.Summary
+  href: api/GamificationAPI.Models.WeatherForecast.html#GamificationAPI_Models_WeatherForecast_Summary
+  commentId: P:GamificationAPI.Models.WeatherForecast.Summary
+  fullName: GamificationAPI.Models.WeatherForecast.Summary
   nameWithType: WeatherForecast.Summary
-- uid: GamificationApi.Models.WeatherForecast.Summary*
+- uid: GamificationAPI.Models.WeatherForecast.Summary*
   name: Summary
-  href: api/GamificationApi.Models.WeatherForecast.html#GamificationApi_Models_WeatherForecast_Summary_
-  commentId: Overload:GamificationApi.Models.WeatherForecast.Summary
+  href: api/GamificationAPI.Models.WeatherForecast.html#GamificationAPI_Models_WeatherForecast_Summary_
+  commentId: Overload:GamificationAPI.Models.WeatherForecast.Summary
   isSpec: "True"
-  fullName: GamificationApi.Models.WeatherForecast.Summary
+  fullName: GamificationAPI.Models.WeatherForecast.Summary
   nameWithType: WeatherForecast.Summary
-- uid: GamificationApi.Models.WeatherForecast.TemperatureC
+- uid: GamificationAPI.Models.WeatherForecast.TemperatureC
   name: TemperatureC
-  href: api/GamificationApi.Models.WeatherForecast.html#GamificationApi_Models_WeatherForecast_TemperatureC
-  commentId: P:GamificationApi.Models.WeatherForecast.TemperatureC
-  fullName: GamificationApi.Models.WeatherForecast.TemperatureC
+  href: api/GamificationAPI.Models.WeatherForecast.html#GamificationAPI_Models_WeatherForecast_TemperatureC
+  commentId: P:GamificationAPI.Models.WeatherForecast.TemperatureC
+  fullName: GamificationAPI.Models.WeatherForecast.TemperatureC
   nameWithType: WeatherForecast.TemperatureC
-- uid: GamificationApi.Models.WeatherForecast.TemperatureC*
+- uid: GamificationAPI.Models.WeatherForecast.TemperatureC*
   name: TemperatureC
-  href: api/GamificationApi.Models.WeatherForecast.html#GamificationApi_Models_WeatherForecast_TemperatureC_
-  commentId: Overload:GamificationApi.Models.WeatherForecast.TemperatureC
+  href: api/GamificationAPI.Models.WeatherForecast.html#GamificationAPI_Models_WeatherForecast_TemperatureC_
+  commentId: Overload:GamificationAPI.Models.WeatherForecast.TemperatureC
   isSpec: "True"
-  fullName: GamificationApi.Models.WeatherForecast.TemperatureC
+  fullName: GamificationAPI.Models.WeatherForecast.TemperatureC
   nameWithType: WeatherForecast.TemperatureC
-- uid: GamificationApi.Models.WeatherForecast.TemperatureF
+- uid: GamificationAPI.Models.WeatherForecast.TemperatureF
   name: TemperatureF
-  href: api/GamificationApi.Models.WeatherForecast.html#GamificationApi_Models_WeatherForecast_TemperatureF
-  commentId: P:GamificationApi.Models.WeatherForecast.TemperatureF
-  fullName: GamificationApi.Models.WeatherForecast.TemperatureF
+  href: api/GamificationAPI.Models.WeatherForecast.html#GamificationAPI_Models_WeatherForecast_TemperatureF
+  commentId: P:GamificationAPI.Models.WeatherForecast.TemperatureF
+  fullName: GamificationAPI.Models.WeatherForecast.TemperatureF
   nameWithType: WeatherForecast.TemperatureF
-- uid: GamificationApi.Models.WeatherForecast.TemperatureF*
+- uid: GamificationAPI.Models.WeatherForecast.TemperatureF*
   name: TemperatureF
-  href: api/GamificationApi.Models.WeatherForecast.html#GamificationApi_Models_WeatherForecast_TemperatureF_
-  commentId: Overload:GamificationApi.Models.WeatherForecast.TemperatureF
+  href: api/GamificationAPI.Models.WeatherForecast.html#GamificationAPI_Models_WeatherForecast_TemperatureF_
+  commentId: Overload:GamificationAPI.Models.WeatherForecast.TemperatureF
   isSpec: "True"
-  fullName: GamificationApi.Models.WeatherForecast.TemperatureF
+  fullName: GamificationAPI.Models.WeatherForecast.TemperatureF
   nameWithType: WeatherForecast.TemperatureF
 - uid: GamificationAPI.Pages
   name: GamificationAPI.Pages

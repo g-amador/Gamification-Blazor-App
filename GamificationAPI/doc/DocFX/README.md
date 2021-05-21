@@ -17,16 +17,17 @@ Restart is required!
 
 ## Build solution it will create the following folders and files in each project in the solution (and all files in them):
 
-.
-├── _site -> where the final website resides
-├── api
-├── apidoc
-├── articles
-├── images
-├── docfx.json
-├── index.md
-├── log.txt
-├── toc.yml
+
+    .
+    ├── _site                                           # Where the final website resides.
+    ├── api
+    ├── apidoc
+    ├── articles
+    ├── images
+    ├── docfx.json
+    ├── index.md
+    ├── log.txt
+    ├── toc.yml
 
 
 ## Test the generated documentation 

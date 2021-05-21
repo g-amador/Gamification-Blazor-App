@@ -15,23 +15,25 @@ To enable migrations, Click Tools -> NuGet Package Manager -> Package Manager Co
 
 Run this command, 
 
-<Add-Migration Initial>
+``Add-Migration Initial``
 
 
 ## Create a Database
 
 You have to execute below command in Package Manager Console to create a database,
 
-<Update-Database>
+``Update-Database``
 
 To Open SQL Server Object Explorer, Click View -> SQL Server Object Explorer, You can now see the GamificationAPI-79145ad7-6d46-4195-b012-1f5e06acb6c2 
 database and Model corresponding tables.
 
 Any changes to the data model, you should use the 
 
-<Add-Migration MigrationName> 
+``Add-Migration MigrationName``
 
-and <Update-Database> 
+and 
+
+``Update-Database``
 
 commands to push changes to the database.
 

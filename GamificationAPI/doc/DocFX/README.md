@@ -1,11 +1,11 @@
 # HOW TO GENERATE DOCUMENTATION USING DocFX:
 
-##Use DocFX integrated with Visual Studio
+## Use DocFX integrated with Visual Studio
 
 Step 3 (ignore the rest) https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html
 
 
-##Add DocFX.exe to system values
+## Add DocFX.exe to system values
 
 After the VS standard plugin is installed the docfx.exe will be in C:\Users\USERNAME\.nuget\packages\docfx.console\2.57.2\tools
 you should add it to the path in the Env_Variables (recommended System Variables but optional)
@@ -15,7 +15,7 @@ https://windowsloop.com/add-environment-variable-in-windows-10/#:~:text=Steps%20
 Restart is required!
 
 
-##Build solution it will create the following folders and files in each project in the solution (and all files in them):
+## Build solution it will create the following folders and files in each project in the solution (and all files in them):
 
 |+_site -> where the final website resides
 |+api
@@ -28,7 +28,7 @@ Restart is required!
 |+toc.yml
 
 
-##Test the generated documentation 
+## Test the generated documentation 
 
 In the terminal or powersheel
 
@@ -42,7 +42,7 @@ The _site has to be placed somewhere like in the wwwrot folder of IIS to be aces
 https://tecadmin.net/create-website-in-iis/
 
 
-##Generate Static website
+## Generate Static website
 
 To generate static content in docfx.json replace before build and --serve
 

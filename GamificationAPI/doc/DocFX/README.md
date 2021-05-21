@@ -17,15 +17,16 @@ Restart is required!
 
 ## Build solution it will create the following folders and files in each project in the solution (and all files in them):
 
-|+_site -> where the final website resides
-|+api
-|+apidoc
-|+images
-|+articles
-|+docfx.json
-|+index.md
-|+log.txt
-|+toc.yml
+.
+├── _site -> where the final website resides
+├── api
+├── apidoc
+├── articles
+├── images
+├── docfx.json
+├── index.md
+├── log.txt
+├── toc.yml
 
 
 ## Test the generated documentation 
@@ -35,7 +36,7 @@ In the terminal or powersheel
 ``docfx "C:\Users\g_n_p\source\repos\GamificationAPI\GamificationAPI\docfx.json" --serve``
 
 
-##Serve the site in IIS
+## Serve the site in IIS
 
 The _site has to be placed somewhere like in the wwwrot folder of IIS to be acessed as it will not work properly opened from index.html fule due to CORS security policies.
 

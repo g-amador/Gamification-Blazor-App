@@ -15,7 +15,9 @@ https://windowsloop.com/add-environment-variable-in-windows-10/#:~:text=Steps%20
 Restart is required!
 
 
-## Build solution it will create the following folders and files in each project in the solution (and all files in them):
+## Generate documentation 
+
+Build solution, it will create the following folders and files in each project in the solution (and all files in them):
 
 
     .
@@ -37,7 +39,7 @@ In the terminal or powersheel
 ``docfx "C:\Users\g_n_p\source\repos\GamificationAPI\GamificationAPI\docfx.json" --serve``
 
 
-## Serve the site in IIS
+## Serve the _site in IIS
 
 The _site has to be placed somewhere like in the wwwrot folder of IIS to be acessed as it will not work properly opened from index.html fule due to CORS security policies.
 

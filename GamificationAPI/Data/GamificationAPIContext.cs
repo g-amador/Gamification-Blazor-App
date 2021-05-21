@@ -17,6 +17,7 @@ namespace GamificationAPI.Data
 
         public DbSet<GamificationAPI.Models.Employee> Employee { get; set; }
 
+        #region GamificationAPI DbSets
         public DbSet<GamificationApi.Models.Application> Application { get; set; }
 
         public DbSet<GamificationApi.Models.Badge> Badge { get; set; }
@@ -26,5 +27,7 @@ namespace GamificationAPI.Data
         public DbSet<GamificationApi.Models.Player> Player { get; set; }
 
         public DbSet<GamificationApi.Models.Rule> Rule { get; set; }
+        #endregion
+
     }
 }

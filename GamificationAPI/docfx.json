@@ -6,7 +6,7 @@
           "files": [
             "**.csproj"
           ],
-          "src": "C:\\Users\\g_n_p\\source\\repos\\GamificationAPI\\GamificationAPI"
+          "src": "C:\\Users\\g_n_p\\source\\repos\\GitHub\\gamification-api\\GamificationAPI"
         }
       ],
       "dest": "api",

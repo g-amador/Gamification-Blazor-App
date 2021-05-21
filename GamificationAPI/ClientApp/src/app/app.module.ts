@@ -10,23 +10,50 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { 
+  MatTableModule, 
+  MatDialogModule, 
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonModule
+} from '@angular/material';
+
+import { EmployeeManagementComponent } from './employee-management/employee-management.component';
+import { DialogBoxComponent } from './employee-management/dialog-box/dialog-box.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    EmployeeManagementComponent,
+    DialogBoxComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatInputModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'employee-management', component: EmployeeManagementComponent },
     ])
+  ],
+  entryComponents: [
+    DialogBoxComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,7 +26,7 @@ namespace GamificationApi.Models
 
 		public int NumberOfCredits { get; set; }
 
-		public ICollection<Badge> Badges { get; set; } = new List<Badge>();
+		public ICollection<Badge> Badges { get; set; }
 
 		public Application Application { get; set; }
 	}

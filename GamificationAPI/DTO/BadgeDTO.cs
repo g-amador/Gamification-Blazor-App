@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace GamificationApi.Models
+namespace GamificationApi.DTO
 {
     /// <summary>
     /// A badge is a distinction, win by a player when he does something significant (on event).
     /// </summary>
-    public class Badge
+    public class BadgeDTO
     {
         public long Id { get; set; }
 
@@ -16,7 +16,5 @@ namespace GamificationApi.Models
         public String Description { get; set; }
         
         public String Icon { get; set; }
-
-        public Application Application { get; set; }
     }
 }

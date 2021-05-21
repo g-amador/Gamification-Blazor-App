@@ -48,7 +48,7 @@ namespace GamificationAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEvent(long id, Event @event)
         {
-            if (id != @event.EventId)
+            if (id != @event.Id)
             {
                 return BadRequest();
             }
@@ -83,7 +83,7 @@ namespace GamificationAPI.Controllers
             _context.Event.Add(@event);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetEvent", new { id = @event.EventId }, @event);
+            return CreatedAtAction("GetEvent", new { id = @event.Id }, @event);
         }
 
         // DELETE: api/Events/5
@@ -104,7 +104,7 @@ namespace GamificationAPI.Controllers
 
         private bool EventExists(long id)
         {
-            return _context.Event.Any(e => e.EventId == id);
+            return _context.Event.Any(e => e.Id == id);
         }
     }
 }

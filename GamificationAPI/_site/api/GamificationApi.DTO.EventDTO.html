@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ApplicationDTO
+    <title>Class EventDTO
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ApplicationDTO
+    <meta name="title" content="Class EventDTO
    ">
     <meta name="generator" content="docfx 2.57.2.0">
     
@@ -99,7 +99,64 @@
                         
                         <ul class="nav level2">
                           <li class="">
+                            <a href="GamificationAPI.Controllers.ApplicationsController.html" title="ApplicationsController" class="">ApplicationsController</a>
+                          </li>
+                          <li class="">
+                            <a href="GamificationAPI.Controllers.BadgesController.html" title="BadgesController" class="">BadgesController</a>
+                          </li>
+                          <li class="">
+                            <a href="GamificationAPI.Controllers.EmployeesController.html" title="EmployeesController" class="">EmployeesController</a>
+                          </li>
+                          <li class="">
+                            <a href="GamificationAPI.Controllers.EventsController.html" title="EventsController" class="">EventsController</a>
+                          </li>
+                          <li class="">
+                            <a href="GamificationAPI.Controllers.PlayersController.html" title="PlayersController" class="">PlayersController</a>
+                          </li>
+                          <li class="">
+                            <a href="GamificationAPI.Controllers.RulesController.html" title="RulesController" class="">RulesController</a>
+                          </li>
+                          <li class="">
                             <a href="GamificationAPI.Controllers.WeatherForecastController.html" title="WeatherForecastController" class="">WeatherForecastController</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="GamificationAPI.Data.html" title="GamificationAPI.Data" class="">GamificationAPI.Data</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="GamificationAPI.Data.GamificationAPIContext.html" title="GamificationAPIContext" class="">GamificationAPIContext</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="GamificationApi.DTO.html" title="GamificationApi.DTO" class="">GamificationApi.DTO</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="GamificationApi.DTO.ApplicationDTO.html" title="ApplicationDTO" class="">ApplicationDTO</a>
+                          </li>
+                          <li class="">
+                            <a href="GamificationApi.DTO.BadgeDTO.html" title="BadgeDTO" class="">BadgeDTO</a>
+                          </li>
+                          <li class="active">
+                            <a href="GamificationApi.DTO.EventDTO.html" title="EventDTO" class="active">EventDTO</a>
+                          </li>
+                          <li class="">
+                            <a href="GamificationApi.DTO.PlayerDTO.html" title="PlayerDTO" class="">PlayerDTO</a>
+                          </li>
+                          <li class="">
+                            <a href="GamificationApi.DTO.RuleDTO.html" title="RuleDTO" class="">RuleDTO</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="GamificationAPI.Migrations.html" title="GamificationAPI.Migrations" class="">GamificationAPI.Migrations</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="GamificationAPI.Migrations.Initial.html" title="Initial" class="">Initial</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -137,18 +194,6 @@
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
-                      <a href="GamificationApi.Models.DTO.html" title="GamificationApi.Models.DTO" class="">GamificationApi.Models.DTO</a>
-                        
-                        <ul class="nav level2">
-                          <li class="active">
-                            <a href="GamificationApi.Models.DTO.ApplicationDTO.html" title="ApplicationDTO" class="active">ApplicationDTO</a>
-                          </li>
-                          <li class="">
-                            <a href="GamificationApi.Models.DTO.PlayerDTO.html" title="PlayerDTO" class="">PlayerDTO</a>
-                          </li>
-                        </ul>  </li>
-                    <li class="">
-                      <span class="expand-stub"></span>
                       <a href="GamificationAPI.Pages.html" title="GamificationAPI.Pages" class="">GamificationAPI.Pages</a>
                         
                         <ul class="nav level2">
@@ -163,19 +208,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="GamificationApi.Models.DTO.ApplicationDTO">
+            <article class="content wrap" id="_content" data-uid="GamificationApi.DTO.EventDTO">
   
   
-  <h1 id="GamificationApi_Models_DTO_ApplicationDTO" data-uid="GamificationApi.Models.DTO.ApplicationDTO" class="text-break">Class ApplicationDTO
+  <h1 id="GamificationApi_DTO_EventDTO" data-uid="GamificationApi.DTO.EventDTO" class="text-break">Class EventDTO
   </h1>
-  <div class="markdown level0 summary"><p>The application is the entry point of the API. All others resources are link to an application. Each application has a unique apiKey and an apiPassword.
-Those are use for authentification and must be pass on every request (in the http header).</p>
+  <div class="markdown level0 summary"><p>When something happening to a player or when a player do something, an event should be created. An event is link to a player and is of a type.
+Multiple events of the same type and player can be create. An event can't be deleted.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ApplicationDTO</span></div>
+    <div class="level1"><span class="xref">EventDTO</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -201,23 +246,28 @@ Those are use for authentification and must be pass on every request (in the htt
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="GamificationApi.Models.DTO.html">GamificationApi.Models.DTO</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="GamificationApi.DTO.html">GamificationApi.DTO</a></h6>
   <h6><strong>Assembly</strong>: GamificationAPI.dll</h6>
-  <h5 id="GamificationApi_Models_DTO_ApplicationDTO_syntax">Syntax</h5>
+  <h5 id="GamificationApi_DTO_EventDTO_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ApplicationDTO</code></pre>
+    <pre><code class="lang-csharp hljs">public class EventDTO</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="GamificationApi_Models_DTO_ApplicationDTO_ApiKey_" data-uid="GamificationApi.Models.DTO.ApplicationDTO.ApiKey*"></a>
-  <h4 id="GamificationApi_Models_DTO_ApplicationDTO_ApiKey" data-uid="GamificationApi.Models.DTO.ApplicationDTO.ApiKey">ApiKey</h4>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationApi_DTO_EventDTO_Id.md&amp;value=---%0Auid%3A%20GamificationApi.DTO.EventDTO.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/DTO/EventDTO.cs/#L12">View Source</a>
+  </span>
+  <a id="GamificationApi_DTO_EventDTO_Id_" data-uid="GamificationApi.DTO.EventDTO.Id*"></a>
+  <h4 id="GamificationApi_DTO_EventDTO_Id" data-uid="GamificationApi.DTO.EventDTO.Id">Id</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ApiKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,20 +279,25 @@ Those are use for authentification and must be pass on every request (in the htt
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="GamificationApi_Models_DTO_ApplicationDTO_Description_" data-uid="GamificationApi.Models.DTO.ApplicationDTO.Description*"></a>
-  <h4 id="GamificationApi_Models_DTO_ApplicationDTO_Description" data-uid="GamificationApi.Models.DTO.ApplicationDTO.Description">Description</h4>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationApi_DTO_EventDTO_PlayerId.md&amp;value=---%0Auid%3A%20GamificationApi.DTO.EventDTO.PlayerId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/DTO/EventDTO.cs/#L19">View Source</a>
+  </span>
+  <a id="GamificationApi_DTO_EventDTO_PlayerId_" data-uid="GamificationApi.DTO.EventDTO.PlayerId*"></a>
+  <h4 id="GamificationApi_DTO_EventDTO_PlayerId" data-uid="GamificationApi.DTO.EventDTO.PlayerId">PlayerId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long PlayerId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,20 +309,56 @@ Those are use for authentification and must be pass on every request (in the htt
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="GamificationApi_Models_DTO_ApplicationDTO_Name_" data-uid="GamificationApi.Models.DTO.ApplicationDTO.Name*"></a>
-  <h4 id="GamificationApi_Models_DTO_ApplicationDTO_Name" data-uid="GamificationApi.Models.DTO.ApplicationDTO.Name">Name</h4>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationApi_DTO_EventDTO_Timestamp.md&amp;value=---%0Auid%3A%20GamificationApi.DTO.EventDTO.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/DTO/EventDTO.cs/#L16">View Source</a>
+  </span>
+  <a id="GamificationApi_DTO_EventDTO_Timestamp_" data-uid="GamificationApi.DTO.EventDTO.Timestamp*"></a>
+  <h4 id="GamificationApi_DTO_EventDTO_Timestamp" data-uid="GamificationApi.DTO.EventDTO.Timestamp">Timestamp</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Timestamp]
+public DateTime Timestamp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationApi_DTO_EventDTO_Type.md&amp;value=---%0Auid%3A%20GamificationApi.DTO.EventDTO.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/DTO/EventDTO.cs/#L14">View Source</a>
+  </span>
+  <a id="GamificationApi_DTO_EventDTO_Type_" data-uid="GamificationApi.DTO.EventDTO.Type*"></a>
+  <h4 id="GamificationApi_DTO_EventDTO_Type" data-uid="GamificationApi.DTO.EventDTO.Type">Type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Type { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,6 +382,12 @@ Those are use for authentification and must be pass on every request (in the htt
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationApi_DTO_EventDTO.md&amp;value=---%0Auid%3A%20GamificationApi.DTO.EventDTO%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/DTO/EventDTO.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

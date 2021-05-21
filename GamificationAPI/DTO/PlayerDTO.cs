@@ -27,6 +27,6 @@ namespace GamificationApi.DTO
 
 		public int NumberOfCredits { get; set; }
 
-		public ICollection<Badge> Badges { get; set; } = new List<Badge>();
+		public ICollection<Badge> Badges { get; set; }
 	}
 }

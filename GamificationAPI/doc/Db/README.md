@@ -43,7 +43,6 @@ commands to push changes to the database.
 ``USE [GamificationAPIContext-5251a309-b240-48e2-917b-99c922ac67d1]
 GO
 
-/****** Object: Table [dbo].[Application] Script Date: 25/05/2021 15:21:52 ******/
 SET ANSI_NULLS ON
 GO
 

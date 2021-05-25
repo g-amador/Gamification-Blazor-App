@@ -40,17 +40,16 @@ commands to push changes to the database.
 
 # RESET IDENTITY SEED AFTER DELETING RECORDS IN SQL SERVER
 
-``USE [GamificationAPIContext-5251a309-b240-48e2-917b-99c922ac67d1]``
-``GO``
+```
+USE [GamificationAPIContext-5251a309-b240-48e2-917b-99c922ac67d1]
+GO
 
-``SET ANSI_NULLS ON``
+SET ANSI_NULLS ON
+GO
 
-``GO``
+SET QUOTED_IDENTIFIER ON
+GO
 
-``SET QUOTED_IDENTIFIER ON``
-
-``GO``
-
-``DBCC CHECKIDENT ('[dbo].[Application]', RESEED, 0);``
-
-``GO``
+DBCC CHECKIDENT ('[dbo].[Application]', RESEED, 0);
+GO
+```

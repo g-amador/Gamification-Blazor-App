@@ -4,10 +4,11 @@
 
 Before migration you have to verify the database connection, this will be found in appsettings.json file as shown below,
 
-```xml
+```
 "ConnectionStrings": {
 	"GamificationAPI": "Server=(localdb)\\mssqllocaldb;Database=GamificationAPI-79145ad7-6d46-4195-b012-1f5e06acb6c2;Trusted_Connection=True;MultipleActiveResultSets=true"
-}```
+}
+```
 
 The above connection string was created when we create the Entity Framework Database Context. You can also use your own SQL database instead of LocalDb. 
 

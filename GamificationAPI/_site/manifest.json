@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.ApplicationsController.html",
-          "hash": "7MlKshgjZXu1gkzXZ/PdSsipUZJJBSaiB5Irmgr0WFg="
+          "hash": "fVtVMNI1dBZgaHm8hhW3WEl4567yZJtaZZWqt3tEKpY="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.BadgesController.html",
-          "hash": "u8xIS8vmdm8XjfpEsFFgJ5bLnLDwYMfMvF5mem65CLA="
+          "hash": "33LQ+kxV8rWdDwmlc7mlWEyMlutK0BeuU0VUChC5V64="
         }
       },
       "is_incremental": true,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.EventsController.html",
-          "hash": "u8NzkSjJXRQdWOl5byOa/LlbzpGIg2Qo5nJ89SyWF6c="
+          "hash": "iPQOAKTleGxpF/UE/ddXpFHQsGFvBqJAG8W7hkX+3+M="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.PlayersController.html",
-          "hash": "53WGsxkfPigjiczktV+3dffLg0asiirLicI/6SQah7Q="
+          "hash": "Rwm2EOQ2Q/KoYhMyu9I+Ket3bCPLJfFsAoGv5kBfA6Q="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.RulesController.html",
-          "hash": "8EnVufTIFpfvaVdSmvN2H8i8X+AqTlewXAgdmvJP8yE="
+          "hash": "iZUmYRTFBpy0eWGK9wxjjbzoLgBRKxJPh0dO7RL/qFI="
         }
       },
       "is_incremental": true,

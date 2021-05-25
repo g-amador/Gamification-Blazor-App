@@ -32,12 +32,12 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.ApplicationsController.ApplicationsController
   nameWithType: ApplicationsController.ApplicationsController
-- uid: GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64)
-  name: DeleteApplication(Int64)
-  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_DeleteApplication_System_Int64_
-  commentId: M:GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64)
-  fullName: GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64)
-  nameWithType: ApplicationsController.DeleteApplication(Int64)
+- uid: GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64,System.String,System.String)
+  name: DeleteApplication(Int64, String, String)
+  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_DeleteApplication_System_Int64_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64,System.String,System.String)
+  fullName: GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64, System.String, System.String)
+  nameWithType: ApplicationsController.DeleteApplication(Int64, String, String)
 - uid: GamificationAPI.Controllers.ApplicationsController.DeleteApplication*
   name: DeleteApplication
   href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_DeleteApplication_
@@ -51,12 +51,12 @@ references:
   commentId: M:GamificationAPI.Controllers.ApplicationsController.GetApplication
   fullName: GamificationAPI.Controllers.ApplicationsController.GetApplication()
   nameWithType: ApplicationsController.GetApplication()
-- uid: GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64)
-  name: GetApplication(Int64)
-  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_GetApplication_System_Int64_
-  commentId: M:GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64)
-  fullName: GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64)
-  nameWithType: ApplicationsController.GetApplication(Int64)
+- uid: GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64,System.String,System.String)
+  name: GetApplication(Int64, String, String)
+  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_GetApplication_System_Int64_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64,System.String,System.String)
+  fullName: GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64, System.String, System.String)
+  nameWithType: ApplicationsController.GetApplication(Int64, String, String)
 - uid: GamificationAPI.Controllers.ApplicationsController.GetApplication*
   name: GetApplication
   href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_GetApplication_
@@ -77,12 +77,12 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.ApplicationsController.PostApplication
   nameWithType: ApplicationsController.PostApplication
-- uid: GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationAPI.Models.Application)
-  name: PutApplication(Int64, Application)
-  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_PutApplication_System_Int64_GamificationAPI_Models_Application_
-  commentId: M:GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationAPI.Models.Application)
-  fullName: GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64, GamificationAPI.Models.Application)
-  nameWithType: ApplicationsController.PutApplication(Int64, Application)
+- uid: GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationAPI.Models.Application,System.String,System.String)
+  name: PutApplication(Int64, Application, String, String)
+  href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_PutApplication_System_Int64_GamificationAPI_Models_Application_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationAPI.Models.Application,System.String,System.String)
+  fullName: GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64, GamificationAPI.Models.Application, System.String, System.String)
+  nameWithType: ApplicationsController.PutApplication(Int64, Application, String, String)
 - uid: GamificationAPI.Controllers.ApplicationsController.PutApplication*
   name: PutApplication
   href: api/GamificationAPI.Controllers.ApplicationsController.html#GamificationAPI_Controllers_ApplicationsController_PutApplication_
@@ -109,64 +109,6 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.BadgesController.BadgesController
   nameWithType: BadgesController.BadgesController
-- uid: GamificationAPI.Controllers.BadgesController.DeleteBadge(System.Int64)
-  name: DeleteBadge(Int64)
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_DeleteBadge_System_Int64_
-  commentId: M:GamificationAPI.Controllers.BadgesController.DeleteBadge(System.Int64)
-  fullName: GamificationAPI.Controllers.BadgesController.DeleteBadge(System.Int64)
-  nameWithType: BadgesController.DeleteBadge(Int64)
-- uid: GamificationAPI.Controllers.BadgesController.DeleteBadge*
-  name: DeleteBadge
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_DeleteBadge_
-  commentId: Overload:GamificationAPI.Controllers.BadgesController.DeleteBadge
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.BadgesController.DeleteBadge
-  nameWithType: BadgesController.DeleteBadge
-- uid: GamificationAPI.Controllers.BadgesController.GetBadge
-  name: GetBadge()
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_GetBadge
-  commentId: M:GamificationAPI.Controllers.BadgesController.GetBadge
-  fullName: GamificationAPI.Controllers.BadgesController.GetBadge()
-  nameWithType: BadgesController.GetBadge()
-- uid: GamificationAPI.Controllers.BadgesController.GetBadge(System.Int64)
-  name: GetBadge(Int64)
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_GetBadge_System_Int64_
-  commentId: M:GamificationAPI.Controllers.BadgesController.GetBadge(System.Int64)
-  fullName: GamificationAPI.Controllers.BadgesController.GetBadge(System.Int64)
-  nameWithType: BadgesController.GetBadge(Int64)
-- uid: GamificationAPI.Controllers.BadgesController.GetBadge*
-  name: GetBadge
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_GetBadge_
-  commentId: Overload:GamificationAPI.Controllers.BadgesController.GetBadge
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.BadgesController.GetBadge
-  nameWithType: BadgesController.GetBadge
-- uid: GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge)
-  name: PostBadge(Badge)
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PostBadge_GamificationAPI_Models_Badge_
-  commentId: M:GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge)
-  fullName: GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge)
-  nameWithType: BadgesController.PostBadge(Badge)
-- uid: GamificationAPI.Controllers.BadgesController.PostBadge*
-  name: PostBadge
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PostBadge_
-  commentId: Overload:GamificationAPI.Controllers.BadgesController.PostBadge
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.BadgesController.PostBadge
-  nameWithType: BadgesController.PostBadge
-- uid: GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64,GamificationAPI.Models.Badge)
-  name: PutBadge(Int64, Badge)
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PutBadge_System_Int64_GamificationAPI_Models_Badge_
-  commentId: M:GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64,GamificationAPI.Models.Badge)
-  fullName: GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64, GamificationAPI.Models.Badge)
-  nameWithType: BadgesController.PutBadge(Int64, Badge)
-- uid: GamificationAPI.Controllers.BadgesController.PutBadge*
-  name: PutBadge
-  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PutBadge_
-  commentId: Overload:GamificationAPI.Controllers.BadgesController.PutBadge
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.BadgesController.PutBadge
-  nameWithType: BadgesController.PutBadge
 - uid: GamificationAPI.Controllers.EmployeesController
   name: EmployeesController
   href: api/GamificationAPI.Controllers.EmployeesController.html
@@ -263,64 +205,6 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.EventsController.EventsController
   nameWithType: EventsController.EventsController
-- uid: GamificationAPI.Controllers.EventsController.DeleteEvent(System.Int64)
-  name: DeleteEvent(Int64)
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_DeleteEvent_System_Int64_
-  commentId: M:GamificationAPI.Controllers.EventsController.DeleteEvent(System.Int64)
-  fullName: GamificationAPI.Controllers.EventsController.DeleteEvent(System.Int64)
-  nameWithType: EventsController.DeleteEvent(Int64)
-- uid: GamificationAPI.Controllers.EventsController.DeleteEvent*
-  name: DeleteEvent
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_DeleteEvent_
-  commentId: Overload:GamificationAPI.Controllers.EventsController.DeleteEvent
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.EventsController.DeleteEvent
-  nameWithType: EventsController.DeleteEvent
-- uid: GamificationAPI.Controllers.EventsController.GetEvent
-  name: GetEvent()
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_GetEvent
-  commentId: M:GamificationAPI.Controllers.EventsController.GetEvent
-  fullName: GamificationAPI.Controllers.EventsController.GetEvent()
-  nameWithType: EventsController.GetEvent()
-- uid: GamificationAPI.Controllers.EventsController.GetEvent(System.Int64)
-  name: GetEvent(Int64)
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_GetEvent_System_Int64_
-  commentId: M:GamificationAPI.Controllers.EventsController.GetEvent(System.Int64)
-  fullName: GamificationAPI.Controllers.EventsController.GetEvent(System.Int64)
-  nameWithType: EventsController.GetEvent(Int64)
-- uid: GamificationAPI.Controllers.EventsController.GetEvent*
-  name: GetEvent
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_GetEvent_
-  commentId: Overload:GamificationAPI.Controllers.EventsController.GetEvent
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.EventsController.GetEvent
-  nameWithType: EventsController.GetEvent
-- uid: GamificationAPI.Controllers.EventsController.PostEvent(GamificationAPI.Models.Event)
-  name: PostEvent(Event)
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_PostEvent_GamificationAPI_Models_Event_
-  commentId: M:GamificationAPI.Controllers.EventsController.PostEvent(GamificationAPI.Models.Event)
-  fullName: GamificationAPI.Controllers.EventsController.PostEvent(GamificationAPI.Models.Event)
-  nameWithType: EventsController.PostEvent(Event)
-- uid: GamificationAPI.Controllers.EventsController.PostEvent*
-  name: PostEvent
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_PostEvent_
-  commentId: Overload:GamificationAPI.Controllers.EventsController.PostEvent
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.EventsController.PostEvent
-  nameWithType: EventsController.PostEvent
-- uid: GamificationAPI.Controllers.EventsController.PutEvent(System.Int64,GamificationAPI.Models.Event)
-  name: PutEvent(Int64, Event)
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_PutEvent_System_Int64_GamificationAPI_Models_Event_
-  commentId: M:GamificationAPI.Controllers.EventsController.PutEvent(System.Int64,GamificationAPI.Models.Event)
-  fullName: GamificationAPI.Controllers.EventsController.PutEvent(System.Int64, GamificationAPI.Models.Event)
-  nameWithType: EventsController.PutEvent(Int64, Event)
-- uid: GamificationAPI.Controllers.EventsController.PutEvent*
-  name: PutEvent
-  href: api/GamificationAPI.Controllers.EventsController.html#GamificationAPI_Controllers_EventsController_PutEvent_
-  commentId: Overload:GamificationAPI.Controllers.EventsController.PutEvent
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.EventsController.PutEvent
-  nameWithType: EventsController.PutEvent
 - uid: GamificationAPI.Controllers.PlayersController
   name: PlayersController
   href: api/GamificationAPI.Controllers.PlayersController.html
@@ -340,64 +224,6 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.PlayersController.PlayersController
   nameWithType: PlayersController.PlayersController
-- uid: GamificationAPI.Controllers.PlayersController.DeletePlayer(System.Int64)
-  name: DeletePlayer(Int64)
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_DeletePlayer_System_Int64_
-  commentId: M:GamificationAPI.Controllers.PlayersController.DeletePlayer(System.Int64)
-  fullName: GamificationAPI.Controllers.PlayersController.DeletePlayer(System.Int64)
-  nameWithType: PlayersController.DeletePlayer(Int64)
-- uid: GamificationAPI.Controllers.PlayersController.DeletePlayer*
-  name: DeletePlayer
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_DeletePlayer_
-  commentId: Overload:GamificationAPI.Controllers.PlayersController.DeletePlayer
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.PlayersController.DeletePlayer
-  nameWithType: PlayersController.DeletePlayer
-- uid: GamificationAPI.Controllers.PlayersController.GetPlayer
-  name: GetPlayer()
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_GetPlayer
-  commentId: M:GamificationAPI.Controllers.PlayersController.GetPlayer
-  fullName: GamificationAPI.Controllers.PlayersController.GetPlayer()
-  nameWithType: PlayersController.GetPlayer()
-- uid: GamificationAPI.Controllers.PlayersController.GetPlayer(System.Int64)
-  name: GetPlayer(Int64)
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_GetPlayer_System_Int64_
-  commentId: M:GamificationAPI.Controllers.PlayersController.GetPlayer(System.Int64)
-  fullName: GamificationAPI.Controllers.PlayersController.GetPlayer(System.Int64)
-  nameWithType: PlayersController.GetPlayer(Int64)
-- uid: GamificationAPI.Controllers.PlayersController.GetPlayer*
-  name: GetPlayer
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_GetPlayer_
-  commentId: Overload:GamificationAPI.Controllers.PlayersController.GetPlayer
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.PlayersController.GetPlayer
-  nameWithType: PlayersController.GetPlayer
-- uid: GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player)
-  name: PostPlayer(Player)
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PostPlayer_GamificationAPI_Models_Player_
-  commentId: M:GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player)
-  fullName: GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player)
-  nameWithType: PlayersController.PostPlayer(Player)
-- uid: GamificationAPI.Controllers.PlayersController.PostPlayer*
-  name: PostPlayer
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PostPlayer_
-  commentId: Overload:GamificationAPI.Controllers.PlayersController.PostPlayer
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.PlayersController.PostPlayer
-  nameWithType: PlayersController.PostPlayer
-- uid: GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64,GamificationAPI.Models.Player)
-  name: PutPlayer(Int64, Player)
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PutPlayer_System_Int64_GamificationAPI_Models_Player_
-  commentId: M:GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64,GamificationAPI.Models.Player)
-  fullName: GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64, GamificationAPI.Models.Player)
-  nameWithType: PlayersController.PutPlayer(Int64, Player)
-- uid: GamificationAPI.Controllers.PlayersController.PutPlayer*
-  name: PutPlayer
-  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PutPlayer_
-  commentId: Overload:GamificationAPI.Controllers.PlayersController.PutPlayer
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.PlayersController.PutPlayer
-  nameWithType: PlayersController.PutPlayer
 - uid: GamificationAPI.Controllers.RulesController
   name: RulesController
   href: api/GamificationAPI.Controllers.RulesController.html
@@ -417,64 +243,6 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.RulesController.RulesController
   nameWithType: RulesController.RulesController
-- uid: GamificationAPI.Controllers.RulesController.DeleteRule(System.Int64)
-  name: DeleteRule(Int64)
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_DeleteRule_System_Int64_
-  commentId: M:GamificationAPI.Controllers.RulesController.DeleteRule(System.Int64)
-  fullName: GamificationAPI.Controllers.RulesController.DeleteRule(System.Int64)
-  nameWithType: RulesController.DeleteRule(Int64)
-- uid: GamificationAPI.Controllers.RulesController.DeleteRule*
-  name: DeleteRule
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_DeleteRule_
-  commentId: Overload:GamificationAPI.Controllers.RulesController.DeleteRule
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.RulesController.DeleteRule
-  nameWithType: RulesController.DeleteRule
-- uid: GamificationAPI.Controllers.RulesController.GetRule
-  name: GetRule()
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_GetRule
-  commentId: M:GamificationAPI.Controllers.RulesController.GetRule
-  fullName: GamificationAPI.Controllers.RulesController.GetRule()
-  nameWithType: RulesController.GetRule()
-- uid: GamificationAPI.Controllers.RulesController.GetRule(System.Int64)
-  name: GetRule(Int64)
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_GetRule_System_Int64_
-  commentId: M:GamificationAPI.Controllers.RulesController.GetRule(System.Int64)
-  fullName: GamificationAPI.Controllers.RulesController.GetRule(System.Int64)
-  nameWithType: RulesController.GetRule(Int64)
-- uid: GamificationAPI.Controllers.RulesController.GetRule*
-  name: GetRule
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_GetRule_
-  commentId: Overload:GamificationAPI.Controllers.RulesController.GetRule
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.RulesController.GetRule
-  nameWithType: RulesController.GetRule
-- uid: GamificationAPI.Controllers.RulesController.PostRule(GamificationAPI.Models.Rule)
-  name: PostRule(Rule)
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_PostRule_GamificationAPI_Models_Rule_
-  commentId: M:GamificationAPI.Controllers.RulesController.PostRule(GamificationAPI.Models.Rule)
-  fullName: GamificationAPI.Controllers.RulesController.PostRule(GamificationAPI.Models.Rule)
-  nameWithType: RulesController.PostRule(Rule)
-- uid: GamificationAPI.Controllers.RulesController.PostRule*
-  name: PostRule
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_PostRule_
-  commentId: Overload:GamificationAPI.Controllers.RulesController.PostRule
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.RulesController.PostRule
-  nameWithType: RulesController.PostRule
-- uid: GamificationAPI.Controllers.RulesController.PutRule(System.Int64,GamificationAPI.Models.Rule)
-  name: PutRule(Int64, Rule)
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_PutRule_System_Int64_GamificationAPI_Models_Rule_
-  commentId: M:GamificationAPI.Controllers.RulesController.PutRule(System.Int64,GamificationAPI.Models.Rule)
-  fullName: GamificationAPI.Controllers.RulesController.PutRule(System.Int64, GamificationAPI.Models.Rule)
-  nameWithType: RulesController.PutRule(Int64, Rule)
-- uid: GamificationAPI.Controllers.RulesController.PutRule*
-  name: PutRule
-  href: api/GamificationAPI.Controllers.RulesController.html#GamificationAPI_Controllers_RulesController_PutRule_
-  commentId: Overload:GamificationAPI.Controllers.RulesController.PutRule
-  isSpec: "True"
-  fullName: GamificationAPI.Controllers.RulesController.PutRule
-  nameWithType: RulesController.PutRule
 - uid: GamificationAPI.Controllers.WeatherForecastController
   name: WeatherForecastController
   href: api/GamificationAPI.Controllers.WeatherForecastController.html

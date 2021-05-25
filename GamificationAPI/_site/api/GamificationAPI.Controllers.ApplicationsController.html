@@ -755,7 +755,7 @@ public class ApplicationsController : ControllerBase</code></pre>
     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController__ctor_GamificationAPI_Data_GamificationAPIContext_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.%23ctor(GamificationAPI.Data.GamificationAPIContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L19">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L18">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_ApplicationsController__ctor_" data-uid="GamificationAPI.Controllers.ApplicationsController.#ctor*"></a>
   <h4 id="GamificationAPI_Controllers_ApplicationsController__ctor_GamificationAPI_Data_GamificationAPIContext_" data-uid="GamificationAPI.Controllers.ApplicationsController.#ctor(GamificationAPI.Data.GamificationAPIContext)">ApplicationsController(GamificationAPIContext)</h4>
@@ -786,19 +786,21 @@ public class ApplicationsController : ControllerBase</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_DeleteApplication_System_Int64_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_DeleteApplication_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L90">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L164">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_ApplicationsController_DeleteApplication_" data-uid="GamificationAPI.Controllers.ApplicationsController.DeleteApplication*"></a>
-  <h4 id="GamificationAPI_Controllers_ApplicationsController_DeleteApplication_System_Int64_" data-uid="GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64)">DeleteApplication(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="GamificationAPI_Controllers_ApplicationsController_DeleteApplication_System_Int64_System_String_System_String_" data-uid="GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64,System.String,System.String)">DeleteApplication(Int64, String, String)</h4>
+  <div class="markdown level1 summary"><p>Delete an application.</p>
+<p>Be careful, when an application is deleted, all the attach resources are deleted in cascade!</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;{id}&quot;)]
-public Task&lt;ActionResult&lt;Application&gt;&gt; DeleteApplication(long id)</code></pre>
+public Task&lt;ActionResult&gt; DeleteApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -815,6 +817,16 @@ public Task&lt;ActionResult&lt;Application&gt;&gt; DeleteApplication(long id)</c
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiSecret</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -827,7 +839,7 @@ public Task&lt;ActionResult&lt;Application&gt;&gt; DeleteApplication(long id)</c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.Models.Application.html">Application</a>&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -837,16 +849,17 @@ public Task&lt;ActionResult&lt;Application&gt;&gt; DeleteApplication(long id)</c
     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_GetApplication.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.GetApplication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L25">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L28">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_ApplicationsController_GetApplication_" data-uid="GamificationAPI.Controllers.ApplicationsController.GetApplication*"></a>
   <h4 id="GamificationAPI_Controllers_ApplicationsController_GetApplication" data-uid="GamificationAPI.Controllers.ApplicationsController.GetApplication">GetApplication()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get list of all applications.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
-public Task&lt;ActionResult&lt;IEnumerable&lt;Application&gt;&gt;&gt; GetApplication()</code></pre>
+public Task&lt;ActionResult&lt;IEnumerable&lt;ApplicationDTO&gt;&gt;&gt; GetApplication()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -858,26 +871,28 @@ public Task&lt;ActionResult&lt;IEnumerable&lt;Application&gt;&gt;&gt; GetApplica
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="GamificationAPI.Models.Application.html">Application</a>&gt;&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="GamificationAPI.DTO.ApplicationDTO.html">ApplicationDTO</a>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_GetApplication_System_Int64_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_GetApplication_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L32">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L47">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_ApplicationsController_GetApplication_" data-uid="GamificationAPI.Controllers.ApplicationsController.GetApplication*"></a>
-  <h4 id="GamificationAPI_Controllers_ApplicationsController_GetApplication_System_Int64_" data-uid="GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64)">GetApplication(Int64)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="GamificationAPI_Controllers_ApplicationsController_GetApplication_System_Int64_System_String_System_String_" data-uid="GamificationAPI.Controllers.ApplicationsController.GetApplication(System.Int64,System.String,System.String)">GetApplication(Int64, String, String)</h4>
+  <div class="markdown level1 summary"><p>Get application.</p>
+<p>You must provide the apiKey and apiPassword in the http header.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{id}&quot;)]
-public Task&lt;ActionResult&lt;Application&gt;&gt; GetApplication(long id)</code></pre>
+public Task&lt;ActionResult&lt;ApplicationDTO&gt;&gt; GetApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -894,6 +909,16 @@ public Task&lt;ActionResult&lt;Application&gt;&gt; GetApplication(long id)</code
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiSecret</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -906,8 +931,9 @@ public Task&lt;ActionResult&lt;Application&gt;&gt; GetApplication(long id)</code
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.Models.Application.html">Application</a>&gt;&gt;</td>
-        <td></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.DTO.ApplicationDTO.html">ApplicationDTO</a>&gt;&gt;</td>
+        <td><p>The name, description and the key of an application.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -916,16 +942,18 @@ public Task&lt;ActionResult&lt;Application&gt;&gt; GetApplication(long id)</code
     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_PostApplication_GamificationAPI_Models_Application_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationAPI.Models.Application)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L80">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L137">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_ApplicationsController_PostApplication_" data-uid="GamificationAPI.Controllers.ApplicationsController.PostApplication*"></a>
   <h4 id="GamificationAPI_Controllers_ApplicationsController_PostApplication_GamificationAPI_Models_Application_" data-uid="GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationAPI.Models.Application)">PostApplication(Application)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a new application.</p>
+<p>This is the first thing you must do to use this API. Give a name, a description and a unique key and a secure password.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost]
-public Task&lt;ActionResult&lt;Application&gt;&gt; PostApplication(Application application)</code></pre>
+public Task&lt;ActionResult&lt;string&gt;&gt; PostApplication(Application application)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -954,26 +982,29 @@ public Task&lt;ActionResult&lt;Application&gt;&gt; PostApplication(Application a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.Models.Application.html">Application</a>&gt;&gt;</td>
-        <td></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>The application id.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_PutApplication_System_Int64_GamificationAPI_Models_Application_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64%2CGamificationAPI.Models.Application)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_PutApplication_System_Int64_GamificationAPI_Models_Application_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64%2CGamificationAPI.Models.Application%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L48">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L78">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_ApplicationsController_PutApplication_" data-uid="GamificationAPI.Controllers.ApplicationsController.PutApplication*"></a>
-  <h4 id="GamificationAPI_Controllers_ApplicationsController_PutApplication_System_Int64_GamificationAPI_Models_Application_" data-uid="GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationAPI.Models.Application)">PutApplication(Int64, Application)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="GamificationAPI_Controllers_ApplicationsController_PutApplication_System_Int64_GamificationAPI_Models_Application_System_String_System_String_" data-uid="GamificationAPI.Controllers.ApplicationsController.PutApplication(System.Int64,GamificationAPI.Models.Application,System.String,System.String)">PutApplication(Int64, Application, String, String)</h4>
+  <div class="markdown level1 summary"><p>Update application information.</p>
+<p>You can update all informations of your application (including apiKey and apiPassword).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPut(&quot;{id}&quot;)]
-public Task&lt;IActionResult&gt; PutApplication(long id, Application application)</code></pre>
+public Task&lt;IActionResult&gt; PutApplication(long id, Application application, [FromHeader] string apiKey, [FromHeader] string apiSecret)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -993,6 +1024,16 @@ public Task&lt;IActionResult&gt; PutApplication(long id, Application application
       <tr>
         <td><a class="xref" href="GamificationAPI.Models.Application.html">Application</a></td>
         <td><span class="parametername">application</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiSecret</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1023,7 +1064,7 @@ public Task&lt;IActionResult&gt; PutApplication(long id, Application application
                     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

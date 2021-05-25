@@ -1,0 +1,139 @@
+﻿using GamificationAPI.Data;
+using GamificationAPI.DTO;
+using GamificationAPI.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace GamificationAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ApplicationsController : ControllerBase
+    {
+        private readonly GamificationAPIContext _context;
+
+        public ApplicationsController(GamificationAPIContext context)
+        {
+            _context = context;
+        }
+
+        /// <summary>
+        /// Get list of all applications.
+        /// </summary>
+        /// <returns></returns>
+        // GET: api/Applications
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<ApplicationDTO>>> GetApplication()
+        {
+            //return await _context.Application.ToListAsync();
+            return await _context.Application
+                .Select(a => ApplicationToDTO(a))
+                .ToListAsync();            
+        }
+
+        /// <summary>
+        /// Get application.
+        /// 
+        /// You must provide the apiKey and apiPassword in the http header.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="apiKey"></param>
+        /// <param name="apiSecret"></param>
+        /// <returns>The name, description and the key of an application.</returns>
+        // GET: api/Applications/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ApplicationDTO>> GetApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret)
+        {
+            var application = await _context.Application.FindAsync(id);
+
+            if (application == null)
+            {
+                return NotFound();
+            }
+
+            if (application.ApiKey != apiKey || application.ApiSecret != apiSecret)
+            {
+                return BadRequest();
+            }
+
+            return ApplicationToDTO(application);
+        }
+
+        // PUT: api/Applications/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutApplication(long id, Application application)
+        {
+            if (id != application.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(application).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ApplicationExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // POST: api/Applications
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPost]
+        public async Task<ActionResult<Application>> PostApplication(Application application)
+        {
+            _context.Application.Add(application);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetApplication", new { id = application.Id }, application);
+        }
+
+        // DELETE: api/Applications/5
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Application>> DeleteApplication(long id)
+        {
+            var application = await _context.Application.FindAsync(id);
+            if (application == null)
+            {
+                return NotFound();
+            }
+
+            _context.Application.Remove(application);
+            await _context.SaveChangesAsync();
+
+            return application;
+        }
+
+        private bool ApplicationExists(long id)
+        {
+            return _context.Application.Any(a => a.Id == id);
+        }
+
+        private static ApplicationDTO ApplicationToDTO(Application applicationItem) =>
+            new ApplicationDTO
+            {
+                Name = applicationItem.Name,
+                Description = applicationItem.Description,
+                ApiKey = applicationItem.ApiKey
+            };
+    }
+}
+}

@@ -18,7 +18,7 @@ namespace GamificationAPI.Controllers
         {
             _context = context;
         }
-
+        /*
         // GET: api/Rules
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Rule>>> GetRule()
@@ -103,6 +103,6 @@ namespace GamificationAPI.Controllers
         private bool RuleExists(long id)
         {
             return _context.Rule.Any(e => e.Id == id);
-        }
+        }*/
     }
 }

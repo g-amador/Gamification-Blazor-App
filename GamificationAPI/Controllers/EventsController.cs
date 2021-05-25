@@ -18,7 +18,7 @@ namespace GamificationAPI.Controllers
         {
             _context = context;
         }
-
+        /*
         // GET: api/Events
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Event>>> GetEvent()
@@ -103,6 +103,6 @@ namespace GamificationAPI.Controllers
         private bool EventExists(long id)
         {
             return _context.Event.Any(e => e.Id == id);
-        }
+        }*/
     }
 }

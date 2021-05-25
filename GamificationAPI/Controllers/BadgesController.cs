@@ -20,7 +20,7 @@ namespace GamificationAPI.Controllers
         }
 
         // GET: api/Badges
-        [HttpGet]
+        /*[HttpGet]
         public async Task<ActionResult<IEnumerable<Badge>>> GetBadge()
         {
             return await _context.Badge.ToListAsync();
@@ -103,6 +103,6 @@ namespace GamificationAPI.Controllers
         private bool BadgeExists(long id)
         {
             return _context.Badge.Any(e => e.Id == id);
-        }
+        }*/
     }
 }

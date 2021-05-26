@@ -158,6 +158,9 @@
                           <li class="">
                             <a href="GamificationAPI.Migrations.Initial.html" title="Initial" class="">Initial</a>
                           </li>
+                          <li class="">
+                            <a href="GamificationAPI.Migrations.RenameApiSecretToApiPassword.html" title="RenameApiSecretToApiPassword" class="">RenameApiSecretToApiPassword</a>
+                          </li>
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
@@ -789,7 +792,7 @@ public class ApplicationsController : ControllerBase</code></pre>
     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_DeleteApplication_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L164">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L163">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_ApplicationsController_DeleteApplication_" data-uid="GamificationAPI.Controllers.ApplicationsController.DeleteApplication*"></a>
   <h4 id="GamificationAPI_Controllers_ApplicationsController_DeleteApplication_System_Int64_System_String_System_String_" data-uid="GamificationAPI.Controllers.ApplicationsController.DeleteApplication(System.Int64,System.String,System.String)">DeleteApplication(Int64, String, String)</h4>
@@ -800,7 +803,7 @@ public class ApplicationsController : ControllerBase</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;{id}&quot;)]
-public Task&lt;ActionResult&gt; DeleteApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret)</code></pre>
+public Task&lt;ActionResult&gt; DeleteApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -824,7 +827,7 @@ public Task&lt;ActionResult&gt; DeleteApplication(long id, [FromHeader] string a
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">apiSecret</span></td>
+        <td><span class="parametername">apiPassword</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -892,7 +895,7 @@ public Task&lt;ActionResult&lt;IEnumerable&lt;ApplicationDTO&gt;&gt;&gt; GetAppl
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{id}&quot;)]
-public Task&lt;ActionResult&lt;ApplicationDTO&gt;&gt; GetApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret)</code></pre>
+public Task&lt;ActionResult&lt;ApplicationDTO&gt;&gt; GetApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -916,7 +919,7 @@ public Task&lt;ActionResult&lt;ApplicationDTO&gt;&gt; GetApplication(long id, [F
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">apiSecret</span></td>
+        <td><span class="parametername">apiPassword</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -942,7 +945,7 @@ public Task&lt;ActionResult&lt;ApplicationDTO&gt;&gt; GetApplication(long id, [F
     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_ApplicationsController_PostApplication_GamificationAPI_Models_Application_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationAPI.Models.Application)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L137">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/ApplicationsController.cs/#L136">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_ApplicationsController_PostApplication_" data-uid="GamificationAPI.Controllers.ApplicationsController.PostApplication*"></a>
   <h4 id="GamificationAPI_Controllers_ApplicationsController_PostApplication_GamificationAPI_Models_Application_" data-uid="GamificationAPI.Controllers.ApplicationsController.PostApplication(GamificationAPI.Models.Application)">PostApplication(Application)</h4>
@@ -1004,7 +1007,7 @@ public Task&lt;ActionResult&lt;string&gt;&gt; PostApplication(Application applic
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPut(&quot;{id}&quot;)]
-public Task&lt;IActionResult&gt; PutApplication(long id, Application application, [FromHeader] string apiKey, [FromHeader] string apiSecret)</code></pre>
+public Task&lt;IActionResult&gt; PutApplication(long id, Application application, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1033,7 +1036,7 @@ public Task&lt;IActionResult&gt; PutApplication(long id, Application application
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">apiSecret</span></td>
+        <td><span class="parametername">apiPassword</span></td>
         <td></td>
       </tr>
     </tbody>

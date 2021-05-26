@@ -158,6 +158,9 @@
                           <li class="">
                             <a href="GamificationAPI.Migrations.Initial.html" title="Initial" class="">Initial</a>
                           </li>
+                          <li class="">
+                            <a href="GamificationAPI.Migrations.RenameApiSecretToApiPassword.html" title="RenameApiSecretToApiPassword" class="">RenameApiSecretToApiPassword</a>
+                          </li>
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
@@ -755,7 +758,7 @@ public class BadgesController : ControllerBase</code></pre>
     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_BadgesController__ctor_GamificationAPI_Data_GamificationAPIContext_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.BadgesController.%23ctor(GamificationAPI.Data.GamificationAPIContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/BadgesController.cs/#L17">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/BadgesController.cs/#L18">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_BadgesController__ctor_" data-uid="GamificationAPI.Controllers.BadgesController.#ctor*"></a>
   <h4 id="GamificationAPI_Controllers_BadgesController__ctor_GamificationAPI_Data_GamificationAPIContext_" data-uid="GamificationAPI.Controllers.BadgesController.#ctor(GamificationAPI.Data.GamificationAPIContext)">BadgesController(GamificationAPIContext)</h4>
@@ -782,6 +785,304 @@ public class BadgesController : ControllerBase</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_BadgesController_DeleteBadge_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.BadgesController.DeleteBadge(System.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/BadgesController.cs/#L133">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_BadgesController_DeleteBadge_" data-uid="GamificationAPI.Controllers.BadgesController.DeleteBadge*"></a>
+  <h4 id="GamificationAPI_Controllers_BadgesController_DeleteBadge_System_Int64_System_String_System_String_" data-uid="GamificationAPI.Controllers.BadgesController.DeleteBadge(System.Int64,System.String,System.String)">DeleteBadge(Int64, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpDelete(&quot;{id}&quot;)]
+public Task&lt;ActionResult&lt;Badge&gt;&gt; DeleteBadge(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.Models.Badge.html">Badge</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_BadgesController_GetBadge_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.BadgesController.GetBadge(System.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/BadgesController.cs/#L49">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_BadgesController_GetBadge_" data-uid="GamificationAPI.Controllers.BadgesController.GetBadge*"></a>
+  <h4 id="GamificationAPI_Controllers_BadgesController_GetBadge_System_Int64_System_String_System_String_" data-uid="GamificationAPI.Controllers.BadgesController.GetBadge(System.Int64,System.String,System.String)">GetBadge(Int64, String, String)</h4>
+  <div class="markdown level1 summary"><p>Get badge details</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{id}&quot;)]
+public Task&lt;ActionResult&lt;BadgeDTO&gt;&gt; GetBadge(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.DTO.BadgeDTO.html">BadgeDTO</a>&gt;&gt;</td>
+        <td><p>All details of a badge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_BadgesController_GetBadge_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.BadgesController.GetBadge(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/BadgesController.cs/#L30">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_BadgesController_GetBadge_" data-uid="GamificationAPI.Controllers.BadgesController.GetBadge*"></a>
+  <h4 id="GamificationAPI_Controllers_BadgesController_GetBadge_System_String_System_String_" data-uid="GamificationAPI.Controllers.BadgesController.GetBadge(System.String,System.String)">GetBadge(String, String)</h4>
+  <div class="markdown level1 summary"><p>Get list of badges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet]
+public Task&lt;ActionResult&lt;IEnumerable&lt;BadgeDTO&gt;&gt;&gt; GetBadge([FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="GamificationAPI.DTO.BadgeDTO.html">BadgeDTO</a>&gt;&gt;&gt;</td>
+        <td><p>The list of all badges of the application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_BadgesController_PostBadge_GamificationAPI_Models_Badge_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/BadgesController.cs/#L113">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_BadgesController_PostBadge_" data-uid="GamificationAPI.Controllers.BadgesController.PostBadge*"></a>
+  <h4 id="GamificationAPI_Controllers_BadgesController_PostBadge_GamificationAPI_Models_Badge_System_String_System_String_" data-uid="GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge,System.String,System.String)">PostBadge(Badge, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost]
+public Task&lt;ActionResult&lt;Badge&gt;&gt; PostBadge(Badge badge, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GamificationAPI.Models.Badge.html">Badge</a></td>
+        <td><span class="parametername">badge</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.Models.Badge.html">Badge</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_BadgesController_PutBadge_System_Int64_GamificationAPI_Models_Badge_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64%2CGamificationAPI.Models.Badge%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/BadgesController.cs/#L80">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_BadgesController_PutBadge_" data-uid="GamificationAPI.Controllers.BadgesController.PutBadge*"></a>
+  <h4 id="GamificationAPI_Controllers_BadgesController_PutBadge_System_Int64_GamificationAPI_Models_Badge_System_String_System_String_" data-uid="GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64,GamificationAPI.Models.Badge,System.String,System.String)">PutBadge(Int64, Badge, String, String)</h4>
+  <div class="markdown level1 summary"><p>Update badge informations.</p>
+<p>Update badge informations and icon path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPut(&quot;{id}&quot;)]
+public Task&lt;IActionResult&gt; PutBadge(long id, Badge badge, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="GamificationAPI.Models.Badge.html">Badge</a></td>
+        <td><span class="parametername">badge</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -793,7 +1094,7 @@ public class BadgesController : ControllerBase</code></pre>
                     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_BadgesController.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.BadgesController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/BadgesController.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/BadgesController.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

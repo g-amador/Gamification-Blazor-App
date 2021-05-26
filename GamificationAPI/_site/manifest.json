@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.ApplicationsController.html",
-          "hash": "fVtVMNI1dBZgaHm8hhW3WEl4567yZJtaZZWqt3tEKpY="
+          "hash": "JGQbvAJJuWBmvQ3OrP4ZKOxICoQ8C0TmZW2PlFvfTl4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.BadgesController.html",
-          "hash": "33LQ+kxV8rWdDwmlc7mlWEyMlutK0BeuU0VUChC5V64="
+          "hash": "3kNqwqswa/EzacPXmcK3Df/i214QubmtYBuygziZMJ0="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.EmployeesController.html",
-          "hash": "/ykIUvy619EWIpi4n7oAo8IlczTvW0phNomDwbyENfk="
+          "hash": "6ThLieSfIkaYets1lRBrG4VXQ41KBRpPYV4FPXMBvo4="
         }
       },
       "is_incremental": true,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.EventsController.html",
-          "hash": "iPQOAKTleGxpF/UE/ddXpFHQsGFvBqJAG8W7hkX+3+M="
+          "hash": "AElekuEWmecQzE9FNVHRiCqwVHlaPtmsjeoaqXFL0NM="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.PlayersController.html",
-          "hash": "Rwm2EOQ2Q/KoYhMyu9I+Ket3bCPLJfFsAoGv5kBfA6Q="
+          "hash": "kUCD5ubbCh5zWkLEl78S2bmbRTNHMDpdzPI5f7auON0="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.RulesController.html",
-          "hash": "iZUmYRTFBpy0eWGK9wxjjbzoLgBRKxJPh0dO7RL/qFI="
+          "hash": "Kmv+sRWju3Yzn0GCnMHrHXGYvxO1uV/eAlXbE5tvRgU="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.WeatherForecastController.html",
-          "hash": "pMGaZYHXVvVKO8woUQGWhfa/NgStzsNO1btKIpBZdY4="
+          "hash": "mJe0BwUw6D2zKKy3IlgSQqUXEcXrWyIv5DntZFIZrCU="
         }
       },
       "is_incremental": true,
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.html",
-          "hash": "Vvw7LQ2pb3E2wq7yRDLj3y1jciR4lm8hD+88bhzxv9E="
+          "hash": "j1VibSuPbn5eUYzP/Cauq80NOYeer4mfhMK/f20mhYc="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.DTO.ApplicationDTO.html",
-          "hash": "DbD6aLDtvr+/LirrptMNeCSnSncUPWW44ns7cxwDNEY="
+          "hash": "O0kCH0ySLxBPSwwgUnEdr3ztBfVKfyX7j8Y4TLLX3F0="
         }
       },
       "is_incremental": true,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.DTO.BadgeDTO.html",
-          "hash": "Zev4DECgA2hxmPL26yUi2L1o/aR70//5mNCvYAwRYXo="
+          "hash": "D3gbUvF+b50HEtgS58sSUvBlCk6zAPUwVBVGNXTwrz4="
         }
       },
       "is_incremental": true,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.DTO.EventDTO.html",
-          "hash": "8VDfxZqiRkqfQyFeNmPQoBs3rW9JABOFrHCLuvTX60Y="
+          "hash": "lzl65z5dcrAKcsVqGIZP+9xP5TD2fsb7W0ylCK94f9Y="
         }
       },
       "is_incremental": true,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.DTO.PlayerDTO.html",
-          "hash": "O2AdDttWLqo4lMzP+pv+Hzgxl5VDwpDwneYC3WhILkE="
+          "hash": "OYRZk/ekvqLalV93nv4j1lLR2YKJQL1tJgAV4fWdWPM="
         }
       },
       "is_incremental": true,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.DTO.RuleDTO.html",
-          "hash": "z85wdEl5yTgxDG5BCesvRV+rGz84iZRKtHlNneHpxQ8="
+          "hash": "hPnstrwKEjUEBY2QGLnckPVgIMCxNt3L0DLy1cI2GW0="
         }
       },
       "is_incremental": true,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.DTO.html",
-          "hash": "C3iP+Ow3hhL3ZgePhMwpIRyZHgNfmJC7tqL54TeRFQM="
+          "hash": "kM2CJJDVsMMb8H0s8MhtFkO//KfCT8gAaAmAiM6S75w="
         }
       },
       "is_incremental": true,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Data.GamificationAPIContext.html",
-          "hash": "h33Zctu7I2MsHZ37Sc3qKdIaFwUTKLv9M+HWcZTV5GI="
+          "hash": "Mci+QVZcOG9iaT/rsOj5dVzV9rWRk9K49vfibsOtJbk="
         }
       },
       "is_incremental": true,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Data.html",
-          "hash": "4BRrdUSDqDjUTJiBV/9iLOtmN2iUYgrTZktLwccHkB0="
+          "hash": "LwSzqGkXN8LiN/A2HlGQfrMPjElze5h/ag2/HEbGltk="
         }
       },
       "is_incremental": true,
@@ -201,7 +201,19 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Migrations.Initial.html",
-          "hash": "FEkNg/1d53hpi2OPdRPzoTJGVfujg8QW8HGyY5J8rHI="
+          "hash": "inRveZAWTEJoDhGVe93vO7e9+Z3x8i7QrQvBqrkLhBs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GamificationAPI.Migrations.RenameApiSecretToApiPassword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GamificationAPI.Migrations.RenameApiSecretToApiPassword.html",
+          "hash": "0D34gM5IdIZyJVkAgzEwJ99ta903Xcs6HoKtlWGC13A="
         }
       },
       "is_incremental": true,
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Migrations.html",
-          "hash": "R0O6GRuFtr4+0zbrjBXsZODci8rzKPBNRFYw5yXTm90="
+          "hash": "ddeWzl71boLcqEmy8OmSpPmaezQ1V67R+kSP5rSf3eI="
         }
       },
       "is_incremental": true,
@@ -225,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.Application.html",
-          "hash": "mJBoF+AF/pIBteDXo7KtH/D0FKW2RVvJKPo3WokaFvc="
+          "hash": "D44G4U4AvVU+xPNl1Zn4wkMUW4GlfIt2w5D4SEls/4U="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.Badge.html",
-          "hash": "yR7ZM88cnWcNq2tzBrlbiUJPxBGbNkpAR3jVi5wKPmU="
+          "hash": "Qc0jIA0yufdhZ8TCbOmsnUeBE8MFs3IovqIfFVq8+XY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.Employee.html",
-          "hash": "xi7m4LR8GHDjB3YY6XXH3v5oyoR9wUrggA1VBAIJBuY="
+          "hash": "GnBCCGWT185J8TdVXAYEsi9/kvHy86U2H2X5Bx3bU+8="
         }
       },
       "is_incremental": true,
@@ -261,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.Event.html",
-          "hash": "dvwrSU0vfqyI2O9G2OrXqyl8MU475F7dXuD7VWfh+TI="
+          "hash": "nMiPhOlOQVdkqnl+S4u0NxNNFThcTsAp0FDJ8l+2Y2Y="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +285,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.Player.html",
-          "hash": "cqQeQ97Cj8G7YPQ6DCX3XJw2FV3x5cHLGpjTfT7PtIY="
+          "hash": "qCSkcJ8MD/IhtZyG6X0Vqaxi0z3bmcFcJwzWmmHtJt4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.Rule.html",
-          "hash": "uucwfaeC8G/B3u0TfEWunOnwRdGPBcl88LzMnYGBK8w="
+          "hash": "hOhdtiwDJEKFwc+yq02tnGaU1VPFg1mJYt664lZoA/E="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.WeatherForecast.html",
-          "hash": "mkNxA0/AyY/iSV2ccVMrshLlfq85Mog3WTeDIVtsHDk="
+          "hash": "d5Fo65R4FyXjEUqohs+Ad3pt18i5ukxkuYhRpCDQ3po="
         }
       },
       "is_incremental": true,
@@ -309,10 +321,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.html",
-          "hash": "Rx7annOcVvD6sn0j01apa6xd0kJrpfkIUOc3FSZqRFA="
+          "hash": "rIBCTG9hVuUjywcx9r5d8gE3d/CQz5TOAAfMxaUsDw4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -321,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Pages.ErrorModel.html",
-          "hash": "U3/nJX6mGB75925pMKiSwds9bo6+qFn4NCX2g1BegyE="
+          "hash": "HedcUU07/GOcOkJ683wiPfTzuqhR8llufYO2tO2jTUk="
         }
       },
       "is_incremental": true,
@@ -333,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Pages.html",
-          "hash": "hbQskJUuZcERd2yn7pSY3UpTk4v/TDdHDrBihy+Cm/4="
+          "hash": "FwBN4BGiQ4DQRDYaF96VahAFMHXpKItlA6dJ4mqHjjQ="
         }
       },
       "is_incremental": true,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Program.html",
-          "hash": "8H/79/AAygYIR0Kj4RKMOXfu4ZyAT6JDepBVT5nR2z8="
+          "hash": "T/VHS6sDcJKwvr6huC2jJKS2MZaRAZR7qG6v2oCCKI4="
         }
       },
       "is_incremental": true,
@@ -357,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Startup.html",
-          "hash": "W8H+r/WQnqiUPLhAuC6VS096lveK1ZUGe5VfJP3vmEc="
+          "hash": "DIPu/z22uNJe/txw59hbgbjZvk/Rz0atwCYy77LMXWc="
         }
       },
       "is_incremental": true,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.html",
-          "hash": "fWhw1Yb7syGa6ShZvlltRhon4TyhrBzMqt5gT2A3si0="
+          "hash": "3Oqat7WUe22sVgu7yjoL7O7wkiNtX42/3mKErzgxyhg="
         }
       },
       "is_incremental": true,
@@ -381,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "tVc7y9erh5PH97MGVBHnp1lqnow9s9mhjNw+D8NI8FI="
+          "hash": "puuxu00eUrOyQJ6xo0MFHKj/hdv+rRCNPzkxIFhZ6NM="
         }
       },
       "is_incremental": true,
@@ -430,8 +442,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 31,
-          "skipped_file_count": 31
+          "total_file_count": 32,
+          "skipped_file_count": 29
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

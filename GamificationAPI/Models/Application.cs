@@ -19,14 +19,19 @@ namespace GamificationAPI.Models
         public String ApiKey { get; set; }
 
         [DataType(DataType.Password)]
-        public String ApiSecret { get; set; }
+        public String ApiPassword { get; set; }
 
-        public ICollection<Player> Players { get; set; }
+        public ICollection<Player> Players { get; set; } = new List<Player>();
 
-        public ICollection<Badge> Badges { get; set; }
+        public ICollection<Badge> Badges { get; set; } = new List<Badge>();
 
-        public ICollection<Event> Events { get; set; }
+        public ICollection<Event> Events { get; set; } = new List<Event>();
 
-        public ICollection<Rule> Rules { get; set; }
+        public ICollection<Rule> Rules { get; set; } = new List<Rule>();
+
+        public bool IsNotAuthToModify(Application application, string apiKey, string apiPassword)
+        {
+            return (application.ApiKey != apiKey || application.ApiPassword != apiPassword);
+        }
     }
 }

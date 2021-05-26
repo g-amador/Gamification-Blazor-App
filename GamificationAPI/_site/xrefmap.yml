@@ -109,6 +109,64 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.BadgesController.BadgesController
   nameWithType: BadgesController.BadgesController
+- uid: GamificationAPI.Controllers.BadgesController.DeleteBadge(System.Int64,System.String,System.String)
+  name: DeleteBadge(Int64, String, String)
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_DeleteBadge_System_Int64_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.BadgesController.DeleteBadge(System.Int64,System.String,System.String)
+  fullName: GamificationAPI.Controllers.BadgesController.DeleteBadge(System.Int64, System.String, System.String)
+  nameWithType: BadgesController.DeleteBadge(Int64, String, String)
+- uid: GamificationAPI.Controllers.BadgesController.DeleteBadge*
+  name: DeleteBadge
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_DeleteBadge_
+  commentId: Overload:GamificationAPI.Controllers.BadgesController.DeleteBadge
+  isSpec: "True"
+  fullName: GamificationAPI.Controllers.BadgesController.DeleteBadge
+  nameWithType: BadgesController.DeleteBadge
+- uid: GamificationAPI.Controllers.BadgesController.GetBadge(System.Int64,System.String,System.String)
+  name: GetBadge(Int64, String, String)
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_GetBadge_System_Int64_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.BadgesController.GetBadge(System.Int64,System.String,System.String)
+  fullName: GamificationAPI.Controllers.BadgesController.GetBadge(System.Int64, System.String, System.String)
+  nameWithType: BadgesController.GetBadge(Int64, String, String)
+- uid: GamificationAPI.Controllers.BadgesController.GetBadge(System.String,System.String)
+  name: GetBadge(String, String)
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_GetBadge_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.BadgesController.GetBadge(System.String,System.String)
+  fullName: GamificationAPI.Controllers.BadgesController.GetBadge(System.String, System.String)
+  nameWithType: BadgesController.GetBadge(String, String)
+- uid: GamificationAPI.Controllers.BadgesController.GetBadge*
+  name: GetBadge
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_GetBadge_
+  commentId: Overload:GamificationAPI.Controllers.BadgesController.GetBadge
+  isSpec: "True"
+  fullName: GamificationAPI.Controllers.BadgesController.GetBadge
+  nameWithType: BadgesController.GetBadge
+- uid: GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge,System.String,System.String)
+  name: PostBadge(Badge, String, String)
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PostBadge_GamificationAPI_Models_Badge_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge,System.String,System.String)
+  fullName: GamificationAPI.Controllers.BadgesController.PostBadge(GamificationAPI.Models.Badge, System.String, System.String)
+  nameWithType: BadgesController.PostBadge(Badge, String, String)
+- uid: GamificationAPI.Controllers.BadgesController.PostBadge*
+  name: PostBadge
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PostBadge_
+  commentId: Overload:GamificationAPI.Controllers.BadgesController.PostBadge
+  isSpec: "True"
+  fullName: GamificationAPI.Controllers.BadgesController.PostBadge
+  nameWithType: BadgesController.PostBadge
+- uid: GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64,GamificationAPI.Models.Badge,System.String,System.String)
+  name: PutBadge(Int64, Badge, String, String)
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PutBadge_System_Int64_GamificationAPI_Models_Badge_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64,GamificationAPI.Models.Badge,System.String,System.String)
+  fullName: GamificationAPI.Controllers.BadgesController.PutBadge(System.Int64, GamificationAPI.Models.Badge, System.String, System.String)
+  nameWithType: BadgesController.PutBadge(Int64, Badge, String, String)
+- uid: GamificationAPI.Controllers.BadgesController.PutBadge*
+  name: PutBadge
+  href: api/GamificationAPI.Controllers.BadgesController.html#GamificationAPI_Controllers_BadgesController_PutBadge_
+  commentId: Overload:GamificationAPI.Controllers.BadgesController.PutBadge
+  isSpec: "True"
+  fullName: GamificationAPI.Controllers.BadgesController.PutBadge
+  nameWithType: BadgesController.PutBadge
 - uid: GamificationAPI.Controllers.EmployeesController
   name: EmployeesController
   href: api/GamificationAPI.Controllers.EmployeesController.html
@@ -783,6 +841,51 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Migrations.Initial.Up
   nameWithType: Initial.Up
+- uid: GamificationAPI.Migrations.RenameApiSecretToApiPassword
+  name: RenameApiSecretToApiPassword
+  href: api/GamificationAPI.Migrations.RenameApiSecretToApiPassword.html
+  commentId: T:GamificationAPI.Migrations.RenameApiSecretToApiPassword
+  fullName: GamificationAPI.Migrations.RenameApiSecretToApiPassword
+  nameWithType: RenameApiSecretToApiPassword
+- uid: GamificationAPI.Migrations.RenameApiSecretToApiPassword.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  name: BuildTargetModel(ModelBuilder)
+  href: api/GamificationAPI.Migrations.RenameApiSecretToApiPassword.html#GamificationAPI_Migrations_RenameApiSecretToApiPassword_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  commentId: M:GamificationAPI.Migrations.RenameApiSecretToApiPassword.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  fullName: GamificationAPI.Migrations.RenameApiSecretToApiPassword.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  nameWithType: RenameApiSecretToApiPassword.BuildTargetModel(ModelBuilder)
+- uid: GamificationAPI.Migrations.RenameApiSecretToApiPassword.BuildTargetModel*
+  name: BuildTargetModel
+  href: api/GamificationAPI.Migrations.RenameApiSecretToApiPassword.html#GamificationAPI_Migrations_RenameApiSecretToApiPassword_BuildTargetModel_
+  commentId: Overload:GamificationAPI.Migrations.RenameApiSecretToApiPassword.BuildTargetModel
+  isSpec: "True"
+  fullName: GamificationAPI.Migrations.RenameApiSecretToApiPassword.BuildTargetModel
+  nameWithType: RenameApiSecretToApiPassword.BuildTargetModel
+- uid: GamificationAPI.Migrations.RenameApiSecretToApiPassword.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Down(MigrationBuilder)
+  href: api/GamificationAPI.Migrations.RenameApiSecretToApiPassword.html#GamificationAPI_Migrations_RenameApiSecretToApiPassword_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:GamificationAPI.Migrations.RenameApiSecretToApiPassword.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: GamificationAPI.Migrations.RenameApiSecretToApiPassword.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: RenameApiSecretToApiPassword.Down(MigrationBuilder)
+- uid: GamificationAPI.Migrations.RenameApiSecretToApiPassword.Down*
+  name: Down
+  href: api/GamificationAPI.Migrations.RenameApiSecretToApiPassword.html#GamificationAPI_Migrations_RenameApiSecretToApiPassword_Down_
+  commentId: Overload:GamificationAPI.Migrations.RenameApiSecretToApiPassword.Down
+  isSpec: "True"
+  fullName: GamificationAPI.Migrations.RenameApiSecretToApiPassword.Down
+  nameWithType: RenameApiSecretToApiPassword.Down
+- uid: GamificationAPI.Migrations.RenameApiSecretToApiPassword.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Up(MigrationBuilder)
+  href: api/GamificationAPI.Migrations.RenameApiSecretToApiPassword.html#GamificationAPI_Migrations_RenameApiSecretToApiPassword_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:GamificationAPI.Migrations.RenameApiSecretToApiPassword.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: GamificationAPI.Migrations.RenameApiSecretToApiPassword.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: RenameApiSecretToApiPassword.Up(MigrationBuilder)
+- uid: GamificationAPI.Migrations.RenameApiSecretToApiPassword.Up*
+  name: Up
+  href: api/GamificationAPI.Migrations.RenameApiSecretToApiPassword.html#GamificationAPI_Migrations_RenameApiSecretToApiPassword_Up_
+  commentId: Overload:GamificationAPI.Migrations.RenameApiSecretToApiPassword.Up
+  isSpec: "True"
+  fullName: GamificationAPI.Migrations.RenameApiSecretToApiPassword.Up
+  nameWithType: RenameApiSecretToApiPassword.Up
 - uid: GamificationAPI.Models
   name: GamificationAPI.Models
   href: api/GamificationAPI.Models.html
@@ -808,19 +911,19 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Models.Application.ApiKey
   nameWithType: Application.ApiKey
-- uid: GamificationAPI.Models.Application.ApiSecret
-  name: ApiSecret
-  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_ApiSecret
-  commentId: P:GamificationAPI.Models.Application.ApiSecret
-  fullName: GamificationAPI.Models.Application.ApiSecret
-  nameWithType: Application.ApiSecret
-- uid: GamificationAPI.Models.Application.ApiSecret*
-  name: ApiSecret
-  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_ApiSecret_
-  commentId: Overload:GamificationAPI.Models.Application.ApiSecret
+- uid: GamificationAPI.Models.Application.ApiPassword
+  name: ApiPassword
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_ApiPassword
+  commentId: P:GamificationAPI.Models.Application.ApiPassword
+  fullName: GamificationAPI.Models.Application.ApiPassword
+  nameWithType: Application.ApiPassword
+- uid: GamificationAPI.Models.Application.ApiPassword*
+  name: ApiPassword
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_ApiPassword_
+  commentId: Overload:GamificationAPI.Models.Application.ApiPassword
   isSpec: "True"
-  fullName: GamificationAPI.Models.Application.ApiSecret
-  nameWithType: Application.ApiSecret
+  fullName: GamificationAPI.Models.Application.ApiPassword
+  nameWithType: Application.ApiPassword
 - uid: GamificationAPI.Models.Application.Badges
   name: Badges
   href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Badges
@@ -873,6 +976,19 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Models.Application.Id
   nameWithType: Application.Id
+- uid: GamificationAPI.Models.Application.IsNotAuthToModify(GamificationAPI.Models.Application,System.String,System.String)
+  name: IsNotAuthToModify(Application, String, String)
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_IsNotAuthToModify_GamificationAPI_Models_Application_System_String_System_String_
+  commentId: M:GamificationAPI.Models.Application.IsNotAuthToModify(GamificationAPI.Models.Application,System.String,System.String)
+  fullName: GamificationAPI.Models.Application.IsNotAuthToModify(GamificationAPI.Models.Application, System.String, System.String)
+  nameWithType: Application.IsNotAuthToModify(Application, String, String)
+- uid: GamificationAPI.Models.Application.IsNotAuthToModify*
+  name: IsNotAuthToModify
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_IsNotAuthToModify_
+  commentId: Overload:GamificationAPI.Models.Application.IsNotAuthToModify
+  isSpec: "True"
+  fullName: GamificationAPI.Models.Application.IsNotAuthToModify
+  nameWithType: Application.IsNotAuthToModify
 - uid: GamificationAPI.Models.Application.Name
   name: Name
   href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Name

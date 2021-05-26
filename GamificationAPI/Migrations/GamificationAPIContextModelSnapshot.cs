@@ -19,33 +19,7 @@ namespace GamificationAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("GamificationAPI.Models.Employee", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Designation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("MobileNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Employee");
-                });
-
-            modelBuilder.Entity("GamificationApi.Models.Application", b =>
+            modelBuilder.Entity("GamificationAPI.Models.Application", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -55,7 +29,7 @@ namespace GamificationAPI.Migrations
                     b.Property<string>("ApiKey")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ApiSecret")
+                    b.Property<string>("ApiPassword")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
@@ -69,7 +43,7 @@ namespace GamificationAPI.Migrations
                     b.ToTable("Application");
                 });
 
-            modelBuilder.Entity("GamificationApi.Models.Badge", b =>
+            modelBuilder.Entity("GamificationAPI.Models.Badge", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -101,7 +75,33 @@ namespace GamificationAPI.Migrations
                     b.ToTable("Badge");
                 });
 
-            modelBuilder.Entity("GamificationApi.Models.Event", b =>
+            modelBuilder.Entity("GamificationAPI.Models.Employee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Designation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MobileNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Employee");
+                });
+
+            modelBuilder.Entity("GamificationAPI.Models.Event", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -131,7 +131,7 @@ namespace GamificationAPI.Migrations
                     b.ToTable("Event");
                 });
 
-            modelBuilder.Entity("GamificationApi.Models.Player", b =>
+            modelBuilder.Entity("GamificationAPI.Models.Player", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -168,7 +168,7 @@ namespace GamificationAPI.Migrations
                     b.ToTable("Player");
                 });
 
-            modelBuilder.Entity("GamificationApi.Models.Rule", b =>
+            modelBuilder.Entity("GamificationAPI.Models.Rule", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -199,42 +199,42 @@ namespace GamificationAPI.Migrations
                     b.ToTable("Rule");
                 });
 
-            modelBuilder.Entity("GamificationApi.Models.Badge", b =>
+            modelBuilder.Entity("GamificationAPI.Models.Badge", b =>
                 {
-                    b.HasOne("GamificationApi.Models.Application", "Application")
+                    b.HasOne("GamificationAPI.Models.Application", "Application")
                         .WithMany("Badges")
                         .HasForeignKey("ApplicationId");
 
-                    b.HasOne("GamificationApi.Models.Player", null)
+                    b.HasOne("GamificationAPI.Models.Player", null)
                         .WithMany("Badges")
                         .HasForeignKey("PlayerId");
                 });
 
-            modelBuilder.Entity("GamificationApi.Models.Event", b =>
+            modelBuilder.Entity("GamificationAPI.Models.Event", b =>
                 {
-                    b.HasOne("GamificationApi.Models.Application", "Application")
+                    b.HasOne("GamificationAPI.Models.Application", "Application")
                         .WithMany("Events")
                         .HasForeignKey("ApplicationId");
 
-                    b.HasOne("GamificationApi.Models.Player", "Player")
+                    b.HasOne("GamificationAPI.Models.Player", "Player")
                         .WithMany()
                         .HasForeignKey("PlayerId");
                 });
 
-            modelBuilder.Entity("GamificationApi.Models.Player", b =>
+            modelBuilder.Entity("GamificationAPI.Models.Player", b =>
                 {
-                    b.HasOne("GamificationApi.Models.Application", "Application")
+                    b.HasOne("GamificationAPI.Models.Application", "Application")
                         .WithMany("Players")
                         .HasForeignKey("ApplicationId");
                 });
 
-            modelBuilder.Entity("GamificationApi.Models.Rule", b =>
+            modelBuilder.Entity("GamificationAPI.Models.Rule", b =>
                 {
-                    b.HasOne("GamificationApi.Models.Application", "Application")
+                    b.HasOne("GamificationAPI.Models.Application", "Application")
                         .WithMany("Rules")
                         .HasForeignKey("ApplicationId");
 
-                    b.HasOne("GamificationApi.Models.Badge", "Badge")
+                    b.HasOne("GamificationAPI.Models.Badge", "Badge")
                         .WithMany()
                         .HasForeignKey("BadgeId");
                 });

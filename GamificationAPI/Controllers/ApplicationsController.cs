@@ -41,11 +41,11 @@ namespace GamificationAPI.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <param name="apiKey"></param>
-        /// <param name="apiSecret"></param>
+        /// <param name="apiPassword"></param>
         /// <returns>The name, description and the key of an application.</returns>
         // GET: api/Applications/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ApplicationDTO>> GetApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret)
+        public async Task<ActionResult<ApplicationDTO>> GetApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)
         {
             var application = await _context.Application.FindAsync(id);
 
@@ -54,7 +54,7 @@ namespace GamificationAPI.Controllers
                 return NotFound();
             }
 
-            if (IsNotAuthToModify(application, apiKey, apiSecret))
+            if (application.IsNotAuthToModify(application, apiKey, apiPassword))
             {
                 return BadRequest();
             }
@@ -70,13 +70,13 @@ namespace GamificationAPI.Controllers
         /// <param name="id"></param>
         /// <param name="application"></param>
         /// <param name="apiKey"></param>
-        /// <param name="apiSecret"></param>
+        /// <param name="apiPassword"></param>
         /// <returns></returns>
         // PUT: api/Applications/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutApplication(long id, Application application, [FromHeader] string apiKey, [FromHeader] string apiSecret)
+        public async Task<IActionResult> PutApplication(long id, Application application, [FromHeader] string apiKey, [FromHeader] string apiPassword)
         {
             if (id != application.Id)
             {
@@ -84,19 +84,18 @@ namespace GamificationAPI.Controllers
             }
 
             bool isNotUniqueApiKey = await _context.Application.AnyAsync(a => a.Id != id && a.ApiKey == apiKey);
-            bool isNotAuthToModify = await _context.Application.AnyAsync(a => a.Id == id && (a.ApiKey != apiKey || a.ApiSecret != apiSecret));
+            bool isNotAuthToModify = await _context.Application.AnyAsync(a => a.Id == id && (a.ApiKey != apiKey || a.ApiPassword != apiPassword));
             if (isNotUniqueApiKey || isNotAuthToModify)
             {
                 return BadRequest();
             }
 
-            //TODO: update locally and on database associations
-            /*
+            #region TODO: update locally and on database associations (pass to context)
             foreach (Badge b in application.Badges)
             {
-                b.Application = application;                
+                b.Application = application;
             }
-            foreach (Event e in application.Events)
+            /*foreach (Event e in application.Events)
             {
                 e.Application = application;
             }
@@ -107,8 +106,8 @@ namespace GamificationAPI.Controllers
             foreach (Rule r in application.Rules)
             {
                 r.Application = application;
-            }
-            */
+            }*/
+            #endregion
 
             _context.Entry(application).State = EntityState.Modified;
 
@@ -158,12 +157,12 @@ namespace GamificationAPI.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <param name="apiKey"></param>
-        /// <param name="apiSecret"></param>
+        /// <param name="apiPassword"></param>
         /// <returns></returns>
         // DELETE: api/Applications/5
         [HttpDelete("{id}")]
         //public async Task<ActionResult<Application>> DeleteApplication(long id)
-        public async Task<ActionResult> DeleteApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiSecret)
+        public async Task<ActionResult> DeleteApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)
         {
             var application = await _context.Application.FindAsync(id);
             if (application == null)
@@ -171,18 +170,34 @@ namespace GamificationAPI.Controllers
                 return NotFound();
             }
 
-            if (IsNotAuthToModify(application, apiKey, apiSecret)) 
+            if (application.IsNotAuthToModify(application, apiKey, apiPassword)) 
             {
                 return BadRequest();
             }
 
-            //TODO: update locally and on database associations
-            /*
+            #region TODO: update locally and on database associations (pass to context)
+            foreach (Badge b in application.Badges)
+            {
+                _context.Badge.Remove(b);
+            }
+            /*foreach (Event e in application.Events)
+            {
+                _context.Event.Remove(e);
+            }
+            foreach (Player p in application.Players)
+            {
+                _context.Player.Remove(p);
+            }
+            foreach (Rule r in application.Rules)
+            {
+                _context.Rule.Remove(r);
+            }
+
             application.Badges.Clear();
             application.Events.Clear();
             application.Players.Clear();
-            application.Rules.Clear();
-            */
+            application.Rules.Clear();*/
+            #endregion
 
             _context.Application.Remove(application);
             await _context.SaveChangesAsync();
@@ -194,17 +209,12 @@ namespace GamificationAPI.Controllers
         private bool ApplicationExists(long id) =>
             _context.Application.Any(a => a.Id == id);
 
-        private static ApplicationDTO ApplicationToDTO(Application applicationItem) =>
+        private static ApplicationDTO ApplicationToDTO(Application application) =>
             new ApplicationDTO
             {
-                Name = applicationItem.Name,
-                Description = applicationItem.Description,
-                ApiKey = applicationItem.ApiKey
+                Name = application.Name,
+                Description = application.Description,
+                ApiKey = application.ApiKey
             };
-
-        private bool IsNotAuthToModify(Application application, string apiKey, string apiSecret)
-        {
-            return (application.ApiKey != apiKey || application.ApiSecret != apiSecret);
-        }
     }
 }

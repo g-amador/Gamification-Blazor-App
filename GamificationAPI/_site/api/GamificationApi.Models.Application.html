@@ -158,6 +158,9 @@
                           <li class="">
                             <a href="GamificationAPI.Migrations.Initial.html" title="Initial" class="">Initial</a>
                           </li>
+                          <li class="">
+                            <a href="GamificationAPI.Migrations.RenameApiSecretToApiPassword.html" title="RenameApiSecretToApiPassword" class="">RenameApiSecretToApiPassword</a>
+                          </li>
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
@@ -280,19 +283,19 @@ Those are use for authentification and must be pass on every request (in the htt
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Models_Application_ApiSecret.md&amp;value=---%0Auid%3A%20GamificationAPI.Models.Application.ApiSecret%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Models_Application_ApiPassword.md&amp;value=---%0Auid%3A%20GamificationAPI.Models.Application.ApiPassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Models/Application.cs/#L21">View Source</a>
   </span>
-  <a id="GamificationAPI_Models_Application_ApiSecret_" data-uid="GamificationAPI.Models.Application.ApiSecret*"></a>
-  <h4 id="GamificationAPI_Models_Application_ApiSecret" data-uid="GamificationAPI.Models.Application.ApiSecret">ApiSecret</h4>
+  <a id="GamificationAPI_Models_Application_ApiPassword_" data-uid="GamificationAPI.Models.Application.ApiPassword*"></a>
+  <h4 id="GamificationAPI_Models_Application_ApiPassword" data-uid="GamificationAPI.Models.Application.ApiPassword">ApiPassword</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DataType(DataType.Password)]
-public string ApiSecret { get; set; }</code></pre>
+public string ApiPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -515,6 +518,65 @@ public string ApiSecret { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="GamificationAPI.Models.Rule.html">Rule</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Models_Application_IsNotAuthToModify_GamificationAPI_Models_Application_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Models.Application.IsNotAuthToModify(GamificationAPI.Models.Application%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Models/Application.cs/#L32">View Source</a>
+  </span>
+  <a id="GamificationAPI_Models_Application_IsNotAuthToModify_" data-uid="GamificationAPI.Models.Application.IsNotAuthToModify*"></a>
+  <h4 id="GamificationAPI_Models_Application_IsNotAuthToModify_GamificationAPI_Models_Application_System_String_System_String_" data-uid="GamificationAPI.Models.Application.IsNotAuthToModify(GamificationAPI.Models.Application,System.String,System.String)">IsNotAuthToModify(Application, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotAuthToModify(Application application, string apiKey, string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GamificationAPI.Models.Application.html">Application</a></td>
+        <td><span class="parametername">application</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>

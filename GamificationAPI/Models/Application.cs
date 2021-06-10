@@ -29,7 +29,7 @@ namespace GamificationAPI.Models
 
         public ICollection<Rule> Rules { get; set; } = new List<Rule>();
 
-        public bool IsNotAuthToModify(Application application, string apiKey, string apiPassword)
+        public bool IsNotAuth(Application application, string apiKey, string apiPassword)
         {
             return (application.ApiKey != apiKey || application.ApiPassword != apiPassword);
         }

@@ -719,6 +719,19 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.DTO.PlayerDTO.NumberOfPoints
   nameWithType: PlayerDTO.NumberOfPoints
+- uid: GamificationAPI.DTO.PlayerDTO.ProfilePicture
+  name: ProfilePicture
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_ProfilePicture
+  commentId: P:GamificationAPI.DTO.PlayerDTO.ProfilePicture
+  fullName: GamificationAPI.DTO.PlayerDTO.ProfilePicture
+  nameWithType: PlayerDTO.ProfilePicture
+- uid: GamificationAPI.DTO.PlayerDTO.ProfilePicture*
+  name: ProfilePicture
+  href: api/GamificationAPI.DTO.PlayerDTO.html#GamificationAPI_DTO_PlayerDTO_ProfilePicture_
+  commentId: Overload:GamificationAPI.DTO.PlayerDTO.ProfilePicture
+  isSpec: "True"
+  fullName: GamificationAPI.DTO.PlayerDTO.ProfilePicture
+  nameWithType: PlayerDTO.ProfilePicture
 - uid: GamificationAPI.DTO.RuleDTO
   name: RuleDTO
   href: api/GamificationAPI.DTO.RuleDTO.html
@@ -886,6 +899,51 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Migrations.RenameApiSecretToApiPassword.Up
   nameWithType: RenameApiSecretToApiPassword.Up
+- uid: GamificationAPI.Migrations.UpdatedPlayer
+  name: UpdatedPlayer
+  href: api/GamificationAPI.Migrations.UpdatedPlayer.html
+  commentId: T:GamificationAPI.Migrations.UpdatedPlayer
+  fullName: GamificationAPI.Migrations.UpdatedPlayer
+  nameWithType: UpdatedPlayer
+- uid: GamificationAPI.Migrations.UpdatedPlayer.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  name: BuildTargetModel(ModelBuilder)
+  href: api/GamificationAPI.Migrations.UpdatedPlayer.html#GamificationAPI_Migrations_UpdatedPlayer_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  commentId: M:GamificationAPI.Migrations.UpdatedPlayer.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  fullName: GamificationAPI.Migrations.UpdatedPlayer.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  nameWithType: UpdatedPlayer.BuildTargetModel(ModelBuilder)
+- uid: GamificationAPI.Migrations.UpdatedPlayer.BuildTargetModel*
+  name: BuildTargetModel
+  href: api/GamificationAPI.Migrations.UpdatedPlayer.html#GamificationAPI_Migrations_UpdatedPlayer_BuildTargetModel_
+  commentId: Overload:GamificationAPI.Migrations.UpdatedPlayer.BuildTargetModel
+  isSpec: "True"
+  fullName: GamificationAPI.Migrations.UpdatedPlayer.BuildTargetModel
+  nameWithType: UpdatedPlayer.BuildTargetModel
+- uid: GamificationAPI.Migrations.UpdatedPlayer.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Down(MigrationBuilder)
+  href: api/GamificationAPI.Migrations.UpdatedPlayer.html#GamificationAPI_Migrations_UpdatedPlayer_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:GamificationAPI.Migrations.UpdatedPlayer.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: GamificationAPI.Migrations.UpdatedPlayer.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: UpdatedPlayer.Down(MigrationBuilder)
+- uid: GamificationAPI.Migrations.UpdatedPlayer.Down*
+  name: Down
+  href: api/GamificationAPI.Migrations.UpdatedPlayer.html#GamificationAPI_Migrations_UpdatedPlayer_Down_
+  commentId: Overload:GamificationAPI.Migrations.UpdatedPlayer.Down
+  isSpec: "True"
+  fullName: GamificationAPI.Migrations.UpdatedPlayer.Down
+  nameWithType: UpdatedPlayer.Down
+- uid: GamificationAPI.Migrations.UpdatedPlayer.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  name: Up(MigrationBuilder)
+  href: api/GamificationAPI.Migrations.UpdatedPlayer.html#GamificationAPI_Migrations_UpdatedPlayer_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  commentId: M:GamificationAPI.Migrations.UpdatedPlayer.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  fullName: GamificationAPI.Migrations.UpdatedPlayer.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  nameWithType: UpdatedPlayer.Up(MigrationBuilder)
+- uid: GamificationAPI.Migrations.UpdatedPlayer.Up*
+  name: Up
+  href: api/GamificationAPI.Migrations.UpdatedPlayer.html#GamificationAPI_Migrations_UpdatedPlayer_Up_
+  commentId: Overload:GamificationAPI.Migrations.UpdatedPlayer.Up
+  isSpec: "True"
+  fullName: GamificationAPI.Migrations.UpdatedPlayer.Up
+  nameWithType: UpdatedPlayer.Up
 - uid: GamificationAPI.Models
   name: GamificationAPI.Models
   href: api/GamificationAPI.Models.html
@@ -976,19 +1034,19 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Models.Application.Id
   nameWithType: Application.Id
-- uid: GamificationAPI.Models.Application.IsNotAuthToModify(GamificationAPI.Models.Application,System.String,System.String)
-  name: IsNotAuthToModify(Application, String, String)
-  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_IsNotAuthToModify_GamificationAPI_Models_Application_System_String_System_String_
-  commentId: M:GamificationAPI.Models.Application.IsNotAuthToModify(GamificationAPI.Models.Application,System.String,System.String)
-  fullName: GamificationAPI.Models.Application.IsNotAuthToModify(GamificationAPI.Models.Application, System.String, System.String)
-  nameWithType: Application.IsNotAuthToModify(Application, String, String)
-- uid: GamificationAPI.Models.Application.IsNotAuthToModify*
-  name: IsNotAuthToModify
-  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_IsNotAuthToModify_
-  commentId: Overload:GamificationAPI.Models.Application.IsNotAuthToModify
+- uid: GamificationAPI.Models.Application.IsNotAuth(GamificationAPI.Models.Application,System.String,System.String)
+  name: IsNotAuth(Application, String, String)
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_IsNotAuth_GamificationAPI_Models_Application_System_String_System_String_
+  commentId: M:GamificationAPI.Models.Application.IsNotAuth(GamificationAPI.Models.Application,System.String,System.String)
+  fullName: GamificationAPI.Models.Application.IsNotAuth(GamificationAPI.Models.Application, System.String, System.String)
+  nameWithType: Application.IsNotAuth(Application, String, String)
+- uid: GamificationAPI.Models.Application.IsNotAuth*
+  name: IsNotAuth
+  href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_IsNotAuth_
+  commentId: Overload:GamificationAPI.Models.Application.IsNotAuth
   isSpec: "True"
-  fullName: GamificationAPI.Models.Application.IsNotAuthToModify
-  nameWithType: Application.IsNotAuthToModify
+  fullName: GamificationAPI.Models.Application.IsNotAuth
+  nameWithType: Application.IsNotAuth
 - uid: GamificationAPI.Models.Application.Name
   name: Name
   href: api/GamificationAPI.Models.Application.html#GamificationAPI_Models_Application_Name
@@ -1364,6 +1422,19 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Models.Player.NumberOfPoints
   nameWithType: Player.NumberOfPoints
+- uid: GamificationAPI.Models.Player.ProfilePicture
+  name: ProfilePicture
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_ProfilePicture
+  commentId: P:GamificationAPI.Models.Player.ProfilePicture
+  fullName: GamificationAPI.Models.Player.ProfilePicture
+  nameWithType: Player.ProfilePicture
+- uid: GamificationAPI.Models.Player.ProfilePicture*
+  name: ProfilePicture
+  href: api/GamificationAPI.Models.Player.html#GamificationAPI_Models_Player_ProfilePicture_
+  commentId: Overload:GamificationAPI.Models.Player.ProfilePicture
+  isSpec: "True"
+  fullName: GamificationAPI.Models.Player.ProfilePicture
+  nameWithType: Player.ProfilePicture
 - uid: GamificationAPI.Models.Rule
   name: Rule
   href: api/GamificationAPI.Models.Rule.html

@@ -54,7 +54,7 @@ namespace GamificationAPI.Controllers
                 return NotFound();
             }
 
-            if (application.IsNotAuthToModify(application, apiKey, apiPassword))
+            if (application.IsNotAuth(application, apiKey, apiPassword))
             {
                 return BadRequest();
             }
@@ -164,13 +164,16 @@ namespace GamificationAPI.Controllers
         //public async Task<ActionResult<Application>> DeleteApplication(long id)
         public async Task<ActionResult> DeleteApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)
         {
-            var application = await _context.Application.FindAsync(id);
+            var application = await _context.Application
+                .Include(m => m.Badges)
+                .FirstAsync(m => m.Id == id);
+
             if (application == null)
             {
                 return NotFound();
             }
 
-            if (application.IsNotAuthToModify(application, apiKey, apiPassword)) 
+            if (application.IsNotAuth(application, apiKey, apiPassword)) 
             {
                 return BadRequest();
             }

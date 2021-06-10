@@ -3,6 +3,7 @@ using GamificationAPI.DTO;
 using GamificationAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace GamificationAPI.Controllers
     public class BadgesController : ControllerBase
     {
         private readonly GamificationAPIContext _context;
+
+        private string query = "SELECT * FROM Badge WHERE Id = {0}";
 
         public BadgesController(GamificationAPIContext context)
         {
@@ -30,12 +33,25 @@ namespace GamificationAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BadgeDTO>>> GetBadge([FromHeader] string apiKey, [FromHeader] string apiPassword)
         {
-            //return await _context.Badge.ToListAsync();
-            return await _context.Badge
-                .Select(b => b)
-                .Where(b => b.Application.ApiKey == apiKey && b.Application.ApiPassword == apiPassword)
-                .Select(b => BadgeToDTO(b))
-                .ToListAsync();
+            try
+            {
+                Application application = await _context.Application.FirstAsync(a => a.ApiKey == apiKey && a.ApiPassword == apiPassword);
+                
+                if (application == null)
+                {
+                    return BadRequest();
+                }
+
+                return await _context.Badge
+                    .Select(b => b)
+                    .Where(b => b.Application.ApiKey == apiKey && b.Application.ApiPassword == apiPassword)
+                    .Select(b => BadgeToDTO(b))
+                    .ToListAsync();
+            }
+            catch (InvalidOperationException e)
+            {
+                return BadRequest();
+            }           
         }
 
         /// <summary>
@@ -49,19 +65,23 @@ namespace GamificationAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<BadgeDTO>> GetBadge(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)
         {
-            var badge = await _context.Badge.FindAsync(id);
+            var badge = await _context.Badge
+                .FromSqlRaw(query, id)
+                .Include(a => a.Application)
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
 
             if (badge == null)
             {
                 return NotFound();
             }
 
-            if (badge.Application.IsNotAuthToModify(badge.Application, apiKey, apiPassword))
+            if (badge.Application.IsNotAuth(badge.Application, apiKey, apiPassword))
             {
                 return BadRequest();
             }
 
-            return BadgeToDTO(badge); 
+            return BadgeToDTO(badge);
         }
 
         /// <summary>
@@ -85,11 +105,23 @@ namespace GamificationAPI.Controllers
                 return BadRequest();
             }
 
-            if (badge.Application.IsNotAuthToModify(badge.Application, apiKey, apiPassword))
+            var badgeOld = await _context.Badge
+                .FromSqlRaw(query, id)
+                .Include(a => a.Application)
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
+
+            if (badgeOld == null)
+            {
+                return NotFound();
+            }
+
+            if (badgeOld.Application.IsNotAuth(badgeOld.Application, apiKey, apiPassword))
             {
                 return BadRequest();
             }
 
+            badge.Application = badgeOld.Application;
             badge.Application.Badges.Remove(badge.Application.Badges.First(b => b.Id == id));
             badge.Application.Badges.Add(badge);
 
@@ -113,33 +145,47 @@ namespace GamificationAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Badge>> PostBadge(Badge badge, [FromHeader] string apiKey, [FromHeader] string apiPassword)
         {
-            Application application = await _context.Application.FirstAsync(a => a.ApiKey == apiKey && a.ApiPassword == apiPassword);
-
-            if (application == null)
+            try
             {
+                Application application = await _context.Application
+                    .Include(m => m.Badges)
+                    .FirstAsync(a => a.ApiKey == apiKey && a.ApiPassword == apiPassword);
+
+                if (application == null)
+                {
+                    return NotFound();
+                }
+
+                application.Badges.Add(badge);
+                badge.Application = application;
+                
+                _context.Badge.Add(badge);
+                await _context.SaveChangesAsync();
+
+                //return CreatedAtAction("GetBadge", new { id = badge.Id }, badge);
+                return CreatedAtAction(nameof(GetBadge), new { id = badge.Id }, new { Status = "created", url = "/badge/" + badge.Id });
+            } catch (InvalidOperationException e) {
                 return BadRequest();
             }
-
-            badge.Application = application;
-            application.Badges.Add(badge);
-
-            _context.Badge.Add(badge);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetBadge", new { id = badge.Id }, badge);
         }
 
         // DELETE: api/Badges/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Badge>> DeleteBadge(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)
+        //public async Task<ActionResult<Badge>> DeleteBadge(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)
+        public async Task<ActionResult> DeleteBadge(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)
         {
-            var badge = await _context.Badge.FindAsync(id);
+            var badge = await _context.Badge
+                .FromSqlRaw(query, id)
+                .Include(a => a.Application)
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
+           
             if (badge == null)
             {
                 return NotFound();
             }
 
-            if (badge.Application.IsNotAuthToModify(badge.Application, apiKey, apiPassword))
+            if (badge.Application.IsNotAuth(badge.Application, apiKey, apiPassword))
             {
                 return BadRequest();
             }
@@ -149,7 +195,8 @@ namespace GamificationAPI.Controllers
             _context.Badge.Remove(badge);
             await _context.SaveChangesAsync();
 
-            return badge;
+            //return badge;
+            return Ok();
         }
 
         private bool BadgeExists(long id) => 

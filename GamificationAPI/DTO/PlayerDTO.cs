@@ -20,6 +20,8 @@ namespace GamificationAPI.DTO
 		[Required]
 		public String LastName { get; set; }
 
+		public string ProfilePicture { get; set; }
+
 		[EmailAddress]
 		public String Email { get; set; }
 

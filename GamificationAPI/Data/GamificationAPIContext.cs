@@ -27,6 +27,5 @@ namespace GamificationAPI.Data
 
         public DbSet<GamificationAPI.Models.Rule> Rule { get; set; }
         #endregion
-
     }
 }

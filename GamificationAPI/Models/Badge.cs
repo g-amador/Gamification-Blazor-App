@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace GamificationAPI.Models
 {
     /// <summary>
-    /// A badge is a distinction, win by a player when he does something significant (on event).
+    /// A badge is a distinction, won by a player when he does something significant (on event).
     /// </summary>
     public class Badge
     {

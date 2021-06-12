@@ -761,7 +761,7 @@ public class PlayersController : ControllerBase</code></pre>
     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_PlayersController__ctor_GamificationAPI_Data_GamificationAPIContext_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.PlayersController.%23ctor(GamificationAPI.Data.GamificationAPIContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/PlayersController.cs/#L17">View Source</a>
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/PlayersController.cs/#L19">View Source</a>
   </span>
   <a id="GamificationAPI_Controllers_PlayersController__ctor_" data-uid="GamificationAPI.Controllers.PlayersController.#ctor*"></a>
   <h4 id="GamificationAPI_Controllers_PlayersController__ctor_GamificationAPI_Data_GamificationAPIContext_" data-uid="GamificationAPI.Controllers.PlayersController.#ctor(GamificationAPI.Data.GamificationAPIContext)">PlayersController(GamificationAPIContext)</h4>
@@ -788,6 +788,309 @@ public class PlayersController : ControllerBase</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_PlayersController_DeletePlayer_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.PlayersController.DeletePlayer(System.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/PlayersController.cs/#L190">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_PlayersController_DeletePlayer_" data-uid="GamificationAPI.Controllers.PlayersController.DeletePlayer*"></a>
+  <h4 id="GamificationAPI_Controllers_PlayersController_DeletePlayer_System_Int64_System_String_System_String_" data-uid="GamificationAPI.Controllers.PlayersController.DeletePlayer(System.Int64,System.String,System.String)">DeletePlayer(Int64, String, String)</h4>
+  <div class="markdown level1 summary"><p>Delete a player</p>
+<p>Delete a player, all events link to a player will be deleted in cascade.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpDelete(&quot;{id}&quot;)]
+public Task&lt;ActionResult&lt;Player&gt;&gt; DeletePlayer(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.Models.Player.html">Player</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_PlayersController_GetPlayer_System_Int64_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.PlayersController.GetPlayer(System.Int64%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/PlayersController.cs/#L66">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_PlayersController_GetPlayer_" data-uid="GamificationAPI.Controllers.PlayersController.GetPlayer*"></a>
+  <h4 id="GamificationAPI_Controllers_PlayersController_GetPlayer_System_Int64_System_String_System_String_" data-uid="GamificationAPI.Controllers.PlayersController.GetPlayer(System.Int64,System.String,System.String)">GetPlayer(Int64, String, String)</h4>
+  <div class="markdown level1 summary"><p>Get player details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{id}&quot;)]
+public Task&lt;ActionResult&lt;PlayerDTO&gt;&gt; GetPlayer(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.DTO.PlayerDTO.html">PlayerDTO</a>&gt;&gt;</td>
+        <td><p>The detail of a player, including the numberOfPoints and list of all his badges</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_PlayersController_GetPlayer_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.PlayersController.GetPlayer(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/PlayersController.cs/#L31">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_PlayersController_GetPlayer_" data-uid="GamificationAPI.Controllers.PlayersController.GetPlayer*"></a>
+  <h4 id="GamificationAPI_Controllers_PlayersController_GetPlayer_System_String_System_String_" data-uid="GamificationAPI.Controllers.PlayersController.GetPlayer(System.String,System.String)">GetPlayer(String, String)</h4>
+  <div class="markdown level1 summary"><p>Get list of players.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet]
+public Task&lt;ActionResult&lt;IEnumerable&lt;PlayerDTO&gt;&gt;&gt; GetPlayer([FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="GamificationAPI.DTO.PlayerDTO.html">PlayerDTO</a>&gt;&gt;&gt;</td>
+        <td><p>The list of all players of an application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_PlayersController_PostPlayer_GamificationAPI_Models_Player_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/PlayersController.cs/#L152">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_PlayersController_PostPlayer_" data-uid="GamificationAPI.Controllers.PlayersController.PostPlayer*"></a>
+  <h4 id="GamificationAPI_Controllers_PlayersController_PostPlayer_GamificationAPI_Models_Player_System_String_System_String_" data-uid="GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player,System.String,System.String)">PostPlayer(Player, String, String)</h4>
+  <div class="markdown level1 summary"><p>Add a new player.</p>
+<p>Create a new player with his basic informations. To manage points and badges, please go to events resources</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost]
+public Task&lt;ActionResult&lt;Player&gt;&gt; PostPlayer(Player player, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="GamificationAPI.Models.Player.html">Player</a></td>
+        <td><span class="parametername">player</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.ActionResult</span>&lt;<a class="xref" href="GamificationAPI.Models.Player.html">Player</a>&gt;&gt;</td>
+        <td><p>The new player's id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_PlayersController_PutPlayer_System_Int64_GamificationAPI_Models_Player_System_String_System_String_.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64%2CGamificationAPI.Models.Player%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/PlayersController.cs/#L100">View Source</a>
+  </span>
+  <a id="GamificationAPI_Controllers_PlayersController_PutPlayer_" data-uid="GamificationAPI.Controllers.PlayersController.PutPlayer*"></a>
+  <h4 id="GamificationAPI_Controllers_PlayersController_PutPlayer_System_Int64_GamificationAPI_Models_Player_System_String_System_String_" data-uid="GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64,GamificationAPI.Models.Player,System.String,System.String)">PutPlayer(Int64, Player, String, String)</h4>
+  <div class="markdown level1 summary"><p>Update player information.</p>
+<p>Update basic informations of a player. The points and badges can only be updated by events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPut(&quot;{id}&quot;)]
+public Task&lt;IActionResult&gt; PutPlayer(long id, Player player, [FromHeader] string apiKey, [FromHeader] string apiPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="GamificationAPI.Models.Player.html">Player</a></td>
+        <td><span class="parametername">player</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">apiPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -799,7 +1102,7 @@ public class PlayersController : ControllerBase</code></pre>
                     <a href="https://github.com/g-amador/gamification-api/new/main/apiSpec/new?filename=GamificationAPI_Controllers_PlayersController.md&amp;value=---%0Auid%3A%20GamificationAPI.Controllers.PlayersController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/PlayersController.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/g-amador/gamification-api/blob/main/GamificationAPI/Controllers/PlayersController.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

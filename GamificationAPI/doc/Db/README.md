@@ -52,5 +52,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 DBCC CHECKIDENT ('[dbo].[Application]', RESEED, 0);
+DBCC CHECKIDENT ('[dbo].[Badge]', RESEED, 0);
+DBCC CHECKIDENT ('[dbo].[Player]', RESEED, 0);
 GO
 ```

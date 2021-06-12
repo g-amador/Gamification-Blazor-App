@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.ApplicationsController.html",
-          "hash": "RWH1CK1RMNG56JVZD1NCh2OgczaEXsstLVnv7b4KpjU="
+          "hash": "tekrPqWn+q4/G1FgWyqZio+bbb7ROBCYpc48OFDs14o="
         }
       },
       "is_incremental": true,
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.BadgesController.html",
-          "hash": "oXCGnuCRvkGeZJV1+WbrVep29JrFb8cfdKStDXkXwQ8="
+          "hash": "7Q3tQfGCrfWETzhBFHRnMINLCCuM3U/WIt0zFA2Omk4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Controllers.PlayersController.html",
-          "hash": "BFrlqIFE6Rtyc7te4fqVwxzFNVhvCEqSW67Rb0xjkTM="
+          "hash": "xbtAKG18mlpIMWodoL7FVe/kdEAHlEhlsQcCxiPNc4M="
         }
       },
       "is_incremental": true,
@@ -96,7 +96,7 @@
           "hash": "E9okk5xJlvpK4N2adgsqhseIXL7d9griWW19h68J0UA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.Badge.html",
-          "hash": "v2zUJBF3On4XF2z9fvixxInvcc7SOukc0dS9IHBd3HQ="
+          "hash": "8xjHAJJyBv7Y9Ro6cHNjVX4q/noONNqBLMxSYYA3NEE="
         }
       },
       "is_incremental": true,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/GamificationAPI.Models.html",
-          "hash": "KpIIrEjKny5RLgj1nzYIltUnVnvFyybrRgpMUUKjgoQ="
+          "hash": "bK4S0ZAZj0IzffxJAdRbyB/AVLxaau8osi+U44yU/t8="
         }
       },
       "is_incremental": true,
@@ -455,7 +455,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 33,
-          "skipped_file_count": 32
+          "skipped_file_count": 33
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

@@ -282,6 +282,64 @@ references:
   isSpec: "True"
   fullName: GamificationAPI.Controllers.PlayersController.PlayersController
   nameWithType: PlayersController.PlayersController
+- uid: GamificationAPI.Controllers.PlayersController.DeletePlayer(System.Int64,System.String,System.String)
+  name: DeletePlayer(Int64, String, String)
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_DeletePlayer_System_Int64_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.PlayersController.DeletePlayer(System.Int64,System.String,System.String)
+  fullName: GamificationAPI.Controllers.PlayersController.DeletePlayer(System.Int64, System.String, System.String)
+  nameWithType: PlayersController.DeletePlayer(Int64, String, String)
+- uid: GamificationAPI.Controllers.PlayersController.DeletePlayer*
+  name: DeletePlayer
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_DeletePlayer_
+  commentId: Overload:GamificationAPI.Controllers.PlayersController.DeletePlayer
+  isSpec: "True"
+  fullName: GamificationAPI.Controllers.PlayersController.DeletePlayer
+  nameWithType: PlayersController.DeletePlayer
+- uid: GamificationAPI.Controllers.PlayersController.GetPlayer(System.Int64,System.String,System.String)
+  name: GetPlayer(Int64, String, String)
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_GetPlayer_System_Int64_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.PlayersController.GetPlayer(System.Int64,System.String,System.String)
+  fullName: GamificationAPI.Controllers.PlayersController.GetPlayer(System.Int64, System.String, System.String)
+  nameWithType: PlayersController.GetPlayer(Int64, String, String)
+- uid: GamificationAPI.Controllers.PlayersController.GetPlayer(System.String,System.String)
+  name: GetPlayer(String, String)
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_GetPlayer_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.PlayersController.GetPlayer(System.String,System.String)
+  fullName: GamificationAPI.Controllers.PlayersController.GetPlayer(System.String, System.String)
+  nameWithType: PlayersController.GetPlayer(String, String)
+- uid: GamificationAPI.Controllers.PlayersController.GetPlayer*
+  name: GetPlayer
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_GetPlayer_
+  commentId: Overload:GamificationAPI.Controllers.PlayersController.GetPlayer
+  isSpec: "True"
+  fullName: GamificationAPI.Controllers.PlayersController.GetPlayer
+  nameWithType: PlayersController.GetPlayer
+- uid: GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player,System.String,System.String)
+  name: PostPlayer(Player, String, String)
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PostPlayer_GamificationAPI_Models_Player_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player,System.String,System.String)
+  fullName: GamificationAPI.Controllers.PlayersController.PostPlayer(GamificationAPI.Models.Player, System.String, System.String)
+  nameWithType: PlayersController.PostPlayer(Player, String, String)
+- uid: GamificationAPI.Controllers.PlayersController.PostPlayer*
+  name: PostPlayer
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PostPlayer_
+  commentId: Overload:GamificationAPI.Controllers.PlayersController.PostPlayer
+  isSpec: "True"
+  fullName: GamificationAPI.Controllers.PlayersController.PostPlayer
+  nameWithType: PlayersController.PostPlayer
+- uid: GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64,GamificationAPI.Models.Player,System.String,System.String)
+  name: PutPlayer(Int64, Player, String, String)
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PutPlayer_System_Int64_GamificationAPI_Models_Player_System_String_System_String_
+  commentId: M:GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64,GamificationAPI.Models.Player,System.String,System.String)
+  fullName: GamificationAPI.Controllers.PlayersController.PutPlayer(System.Int64, GamificationAPI.Models.Player, System.String, System.String)
+  nameWithType: PlayersController.PutPlayer(Int64, Player, String, String)
+- uid: GamificationAPI.Controllers.PlayersController.PutPlayer*
+  name: PutPlayer
+  href: api/GamificationAPI.Controllers.PlayersController.html#GamificationAPI_Controllers_PlayersController_PutPlayer_
+  commentId: Overload:GamificationAPI.Controllers.PlayersController.PutPlayer
+  isSpec: "True"
+  fullName: GamificationAPI.Controllers.PlayersController.PutPlayer
+  nameWithType: PlayersController.PutPlayer
 - uid: GamificationAPI.Controllers.RulesController
   name: RulesController
   href: api/GamificationAPI.Controllers.RulesController.html

@@ -31,6 +31,7 @@ namespace GamificationAPI.Controllers
             //return await _context.Application.ToListAsync();
             return await _context.Application
                 .Select(a => ApplicationToDTO(a))
+                .AsNoTracking()
                 .ToListAsync();            
         }
 
@@ -91,19 +92,19 @@ namespace GamificationAPI.Controllers
             }
 
             #region TODO: update locally and on database associations (pass to context)
-            foreach (Badge b in application.Badges)
+            foreach (var b in application.Badges)
             {
                 b.Application = application;
             }
-            /*foreach (Event e in application.Events)
+            /*foreach (var e in application.Events)
             {
                 e.Application = application;
-            }
-            foreach (Player p in application.Players)
+            }*/
+            foreach (var p in application.Players)
             {
                 p.Application = application;
             }
-            foreach (Rule r in application.Rules)
+            /*foreach (var r in application.Rules)
             {
                 r.Application = application;
             }*/
@@ -134,7 +135,6 @@ namespace GamificationAPI.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        //public async Task<ActionResult<Application>> PostApplication(Application application)
         public async Task<ActionResult<string>> PostApplication(Application application)
         {
             bool isNotUniqueApiKey = await _context.Application.AnyAsync(a => a.ApiKey == application.ApiKey);
@@ -146,7 +146,6 @@ namespace GamificationAPI.Controllers
             _context.Application.Add(application);
             await _context.SaveChangesAsync();
 
-            //return CreatedAtAction("GetApplication", new { id = application.Id }, application);
             return CreatedAtAction(nameof(GetApplication), new { id = application.Id }, new { Status = "created", url = "/application/" + application.Id });
         }
 
@@ -161,12 +160,12 @@ namespace GamificationAPI.Controllers
         /// <returns></returns>
         // DELETE: api/Applications/5
         [HttpDelete("{id}")]
-        //public async Task<ActionResult<Application>> DeleteApplication(long id)
         public async Task<ActionResult> DeleteApplication(long id, [FromHeader] string apiKey, [FromHeader] string apiPassword)
         {
             var application = await _context.Application
-                .Include(m => m.Badges)
-                .FirstAsync(m => m.Id == id);
+                .Include(a => a.Badges)
+                .Include(a => a.Players)
+                .FirstOrDefaultAsync(a => a.Id == id);
 
             if (application == null)
             {
@@ -179,24 +178,24 @@ namespace GamificationAPI.Controllers
             }
 
             #region TODO: update locally and on database associations (pass to context)
-            foreach (Badge b in application.Badges)
+            foreach (var b in application.Badges)
             {
                 _context.Badge.Remove(b);
             }
-            /*foreach (Event e in application.Events)
+            /*foreach (var e in application.Events)
             {
                 _context.Event.Remove(e);
-            }
-            foreach (Player p in application.Players)
+            }*/
+            foreach (var p in application.Players)
             {
                 _context.Player.Remove(p);
             }
-            foreach (Rule r in application.Rules)
+            /*foreach (var r in application.Rules)
             {
                 _context.Rule.Remove(r);
-            }
+            }*/
 
-            application.Badges.Clear();
+            /*application.Badges.Clear();
             application.Events.Clear();
             application.Players.Clear();
             application.Rules.Clear();*/

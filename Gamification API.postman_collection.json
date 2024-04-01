@@ -1,0 +1,1020 @@
+{
+	"info": {
+		"_postman_id": "396fe986-36da-4318-a1da-648a7ba4df2f",
+		"name": "Gamification API",
+		"description": "This API has build to give you a simple way to add gamification to your project. You can manage players and give points and badges to players when some events raises.EndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1608680"
+	},
+	"item": [
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "Get list of applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/Applications",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new application",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Gamification Demo Wrong\",\r\n    \"description\":\"Gamification Demo for customer X \",\r\n    \"apiKey\":\"GamificationDemoWrong\",\r\n    \"apiPassword\":\"passwordWrong\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Applications",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Applications"
+							]
+						},
+						"description": "This is the first thing you must do to use this API.\n\nGive a name, a description and a unique key and a secure password. The application id is return.\n\n**Response**\n\n- 201\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n  \"status\": \"created\",\n  \"url\": \"/application/{id}\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get application",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/Applications/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Applications",
+								"1"
+							]
+						},
+						"description": "Return the name, description and the key of an application. You must provide the apiKey and apiPassword in the http header.\n\n**Response**\n\n- 201\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{ \n    \"name\":\"\", \n    \"description\":\"\", \n    \"apiKey\": \"\", \n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update application information",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemoWrong",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "passwordWrong",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Gamification Demo\",\r\n    \"description\":\"Gamification Demo for customer X\",\r\n    \"apiKey\":\"GamificationDemo\",\r\n    \"apiPassword\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/Applications/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Applications",
+								"1"
+							]
+						},
+						"description": "You can update all informations of your application (including apiKey and apiPassword).\n\n**Response**\n\n- 200"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an application",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"name": "cache-control",
+								"sortOrder": 2,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added \"Cache-Control: no-cache\" as a precautionary measure to prevent the server from returning stale response when one makes repeated requests.\n\nYou can remove this header in the app settings or enter a new one with a different value.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "postman-token",
+								"sortOrder": 3,
+								"infoTitle": "We recommend using this header",
+								"info": "The Postman-Token header appends a random UUID to every outgoing request. Postman adds this header for API developers to better debug requests sent and to ensure separate requests appear distinct to the receiving server.\n\nYou can remove this header in the app settings.",
+								"allowedToToggle": false,
+								"disableEdit": true,
+								"previewSettingsLink": "Go to settings",
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "host",
+								"sortOrder": 6,
+								"infoTitle": "We recommend using this header",
+								"info": "The Host header is added to identify the domain name for which a request is being sent to the server. This header is implicitly sent by every HTTP client.\n\nYou can remove the header or enter a new one with a different value. It is most likely that without this header, your request will return an HTTP 400 error.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "user-agent",
+								"sortOrder": 7,
+								"infoTitle": "We recommend using this header",
+								"info": "The User-Agent header is added to help the server identify Postman as the HTTP requesting application or client.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.32.1",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept",
+								"sortOrder": 8,
+								"infoTitle": "We recommend using this header",
+								"info": "The \"Accept: */*\" header is added to tell the server that Postman can understand and process all forms of response content types.\n\nIt is recommended that this header be sent, but you can remove the header or enter a new one with a different value.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept",
+								"value": "*/*",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "accept-encoding",
+								"sortOrder": 9,
+								"infoTitle": "We recommend using this header",
+								"info": "The Accept-Encoding header is added to indicate to the server that Postman HTTP client supports a defined list of content-encoding or compression algorithms as response.\n\nYou can remove the header or enter a new one with a different value. Doing that may not accurately render the response within the app.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"name": "connection",
+								"sortOrder": 10,
+								"infoTitle": "We recommend using this header",
+								"info": "Postman added the Connection header to indicate the server to keep the underlying network connection open once the current response is received. This allows Postman to reuse the same connection for faster response times in subsequent requests to the same server.\n\nYou can remove this header or enter a new one with a different value, such as `Connection: Close` to control this behaviour.",
+								"allowedToToggle": true,
+								"disableEdit": true,
+								"key": "Connection",
+								"value": "keep-alive",
+								"system": true,
+								"type": "text"
+							},
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text",
+								"id": 0
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text",
+								"id": 1
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/Applications/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Applications",
+								"1"
+							]
+						},
+						"description": "**Be careful**, when an application is deleted, all the attach resources are deleted in cascade!\n\n**Response**\n\n- 200"
+					},
+					"response": []
+				}
+			],
+			"description": "The application is the entry point of the API. All others resources are link to an application. Each application has a unique apiKey and an apiPassword. Those are use for authentification and must be pass on every request (in the http header)."
+		},
+		{
+			"name": "Players",
+			"item": [
+				{
+					"name": "Get list of players",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/players",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"players"
+							]
+						},
+						"description": "Return the list of all players of an application.\n\n**Response**\n\n- 200\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n    \"id\": ,\n    \"firstName\": \"\",\n    \"lastName\": \"\",\n    \"email\": \"\",\n    \"numberOfPoints\": ,\n    \"badges\": [\n        \"id\": ,\n        \"name\":\"\",\n        \"description\": \"\",\n        \"icon\": \"\"\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new player",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nickName\":\"MPower\",\r\n    \"firstName\":\"Max\",\r\n    \"lastName\":\"Power\",\r\n    \"email\":\"max.power@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/players",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"players"
+							]
+						},
+						"description": "Create a new player with his basic informations. Return the new player's id.\n\n_To manage points and badges, please go to events resources_\n\n**Response**\n\n- 201\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n  \"status\": \"created\",\n  \"url\": \"/players/{id}\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get player details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/players/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"players",
+								"1"
+							]
+						},
+						"description": "Return the detail of a player, including the numberOfPoints and list of all his badges.\n\n**Response**\n\n- 200\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n    \"id\": ,\n    \"firstName\": \"\",\n    \"lastName\": \"\",\n    \"email\": \"\",\n    \"numberOfPoints\": ,\n    \"badges\": [\n        \"id\": ,\n        \"name\":\"\",\n        \"description\": \"\",\n        \"icon\": \"\"\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update player information",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nickName\":\"JDoe\",\r\n    \"firstName\":\"John\",\r\n    \"lastName\":\"Doe\",\r\n    \"email\":\"john.doe@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/players/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"players",
+								"1"
+							]
+						},
+						"description": "Update basic informations of a player.\n\n_The points and badges can only be updated by events._\n\n**Response**\n\n- 200"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a player",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/players/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"players",
+								"1"
+							]
+						},
+						"description": "Delete a player, all events link to a player will be deleted in cascade.\n\n**Response**\n\n- 200"
+					},
+					"response": []
+				}
+			],
+			"description": "The player is an user of the application. He can win points and badges when events happening."
+		},
+		{
+			"name": "Badges",
+			"item": [
+				{
+					"name": "Get list of badges",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/badges",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"badges"
+							]
+						},
+						"description": "Return the list of all badges of the application.\n\n**Response**\n\n- 200\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n    \"items\":\n    [\n        \"id\": ,\n        \"name\":\"\",\n        \"description\": \"\",\n        \"icon\": \"\"\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new badge",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Gamification Demo Wrong Test Badge\",\r\n    \"description\":\"Gamification Wrong Test Badge for customer X\",\r\n    \"icon\":\"data:image/gif;base64,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\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/badges",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"badges"
+							]
+						},
+						"description": "Create a new badge with the path to an icon representing the badge.\n\n**Response**\n\n- 201\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n  \"status\": \"created\",\n  \"url\": \"/badges/{id}\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get badge details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/badges/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"badges",
+								"1"
+							]
+						},
+						"description": "Return all details of a badge.\n\n**Response**\n\n- 200\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n    \"id\": ,\n    \"name\": \"\",\n    \"description\": \"\",\n    \"icon\": \"\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update badge information",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Gamification Demo Test Badge\",\r\n    \"description\":\"Gamification Test Badge for customer X\",\r\n    \"icon\":\"data:image/gif;base64,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\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/badges/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"badges",
+								"1"
+							]
+						},
+						"description": "Update badge informations and icon path.\n\n**Response**\n\n- 200"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a badge",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/badges/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"badges",
+								"1"
+							]
+						},
+						"description": "Delete a badge, all link to this badge by rules will be set to null.\n\n**Response**\n\n- 200"
+					},
+					"response": []
+				}
+			],
+			"description": "A badge is a distinction, win by a player when he does something significant (on event)."
+		},
+		{
+			"name": "Rules",
+			"item": [
+				{
+					"name": "Get list of rules",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/rules",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"rules"
+							]
+						},
+						"description": "Return the list of all rules of an application.\n\n**Response**\n\n- 200\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n    \"items\":\n    [\n        \"id\": ,\n        \"badgeId\": ,\n        \"numberOfPoints\": ,\n        \"onEventType\": \"\"\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Add new rule",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"badgeId\": ,\r\n    \"numberOfPoints\": ,\r\n    \"onEventType\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/rules",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"rules"
+							]
+						},
+						"description": "Add a new rule, the badgeId is optional, the numberOfPoints is required but he can be set to 0. Return the new rule's id.\n\n**Response**\n\n- 201\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n  \"status\": \"created\",\n  \"url\": \"/rules/{id}\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get rule details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/rules/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"rules",
+								"1"
+							]
+						},
+						"description": "Return the details of a rule.\n\n**Response**\n\n- 200\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n    \"id\": ,\n    \"badgeId\": ,\n    \"numberOfPoints\": ,\n    \"onEventType\": \"\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update rule information",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"badgeId\": ,\r\n    \"numberOfPoints\": ,\r\n    \"onEventType\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/rules/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"rules",
+								"1"
+							]
+						},
+						"description": "Update a rule, this doesn't change badges and points give to players on past events.\n\n**Response**\n\n- 200"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a rule",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/rules/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"rules",
+								"1"
+							]
+						},
+						"description": "Delete a rule, this doesn't remove badges and points give to players on past events.\n\n**Response**\n\n- 200"
+					},
+					"response": []
+				}
+			],
+			"description": "A rule determine how many points or/and which badge can be win by a player on an event type. Many rules can be create for the same event type."
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Get list of events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"events"
+							]
+						},
+						"description": "Return the list of all the events of an application.\n\n**Response**\n\n- 200\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n    \"items\": [\n        \"id\": ,\n        \"playerId\": ,\n        \"type\": \"\",\n        \"timestemp\": \"\"\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Add new event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"playerId\": ,\r\n    \"type\": \"\",\r\n    \"timestemp\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"events"
+							]
+						},
+						"description": "Add a new event, when an event is create, the rules are browse and the corresponding points and badges are give to the player. If a badge is already win by the player nothing happened.\n\nReturn the event's id.\n\n**Response**\n\n- 201\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n  \"status\": \"created\",\n  \"url\": \"/events/{id}\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get event details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/events/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"events",
+								"1"
+							]
+						},
+						"description": "Return the details of a rule.\n\n**Response**\n\n- 200\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n    \"items\": [\n        \"id\": ,\n        \"playerId\": ,\n        \"type\": \"\",\n        \"timestemp\": \"\"\n    ]\n}\n\n ```"
+					},
+					"response": []
+				}
+			],
+			"description": "When something happening to a player or when a player do something, an event should be created. An event is link to a player and is of a type. Multiple events of the same type and player can be create. An event can't be deleted."
+		},
+		{
+			"name": "Leaderboard",
+			"item": [
+				{
+					"name": "Get LeaderBoard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apiKey",
+								"value": "GamificationDemo",
+								"type": "text"
+							},
+							{
+								"key": "apiPassword",
+								"value": "password",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:5001/api/leaderbord",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"leaderbord"
+							]
+						},
+						"description": "Return the list of the five's best players of an application order by points.\n\n**Response**\n\n- 200\n    \n\nHEADERS\n\n- Content-Type:application/json\n    \n\nBODY\n\n``` json\n{\n    \"name\": \"\",\n    \"description\": \"\",\n    \"ranking\": [\n        \"playerId\": \"\",\n        \"points\": \n    ]\n}\n\n ```"
+					},
+					"response": []
+				}
+			],
+			"description": "The leaderboard return the list of the best players of an application."
+		}
+	]
+}

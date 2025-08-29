@@ -3,6 +3,7 @@ Gamification Blazor APP to integrate in other projects. Allows to manage players
 
 ## Project structure
 
+```
 Gamification-App-Blazor/                    # Solution folder
 │
 ├─ GamificationAppBlazor.Client/            # Blazor client-side Pages/Services
@@ -86,3 +87,4 @@ Gamification-App-Blazor/                    # Solution folder
 │      └─ EventType.cs
 │
 └─ GamificationAppBlazor.sln            # Solution file
+```

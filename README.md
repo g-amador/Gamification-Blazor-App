@@ -10,9 +10,9 @@ Gamification-App-Blazor/                    # Solution folder
 │  │   └─ launchSettings.json
 │  ├─ wwwroot/
 │  │   ├─ css/
-│  │   │   ├─ app.css
-|  |   ├─ icon-192.png
-|  |   └─ index.html
+│  │   │   └─ app.css
+│  │   ├─ icon-192.png
+│  │   └─ index.html
 │  ├─ Layout/
 │  │   └─ MainLayout.razor
 │  ├─ Pages/
@@ -45,9 +45,9 @@ Gamification-App-Blazor/                    # Solution folder
 │  │   └─ ...
 │  ├─ _Imports.razor
 │  ├─ App.razor
-│  └─ Program.cs                        # Blazor WebAssembly UI initialization, client-side DI, HttpClient setup
+│  └─ Program.cs                        # Blazor WebAssembly UI initialization
 │
-├─ GamificationAppBlazor.Server/        # API logic (keep separate for clean architecture)
+├─ GamificationAppBlazor.Server/        # API logic
 │  ├─ Controllers/
 │  │   ├─ ApplicationsController.cs
 │  │   ├─ PlayersController.cs
@@ -72,7 +72,8 @@ Gamification-App-Blazor/                    # Solution folder
 │  │   └─ EventService.cs
 │  ├─ Mappings/
 │  │   └─ AutoMapperProfiles.cs
-│  └─ Program.cs                        # API initialization, Swagger, database, server-side DI, middleware.
+│  └─ Program.cs                        # API initialization, Swagger, database, server-side DI
+│
 ├─ GamificationAppBlazor.Shared/        # Shared Models/DTOs
 │  ├─ DTOs/
 │  │   ├─ ApplicationDto.cs

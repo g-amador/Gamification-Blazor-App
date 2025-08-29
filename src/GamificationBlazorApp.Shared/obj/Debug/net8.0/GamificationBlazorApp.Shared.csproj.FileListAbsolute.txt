@@ -1,0 +1,12 @@
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\bin\Debug\net8.0\GamificationBlazorApp.Shared.deps.json
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\bin\Debug\net8.0\GamificationBlazorApp.Shared.dll
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\bin\Debug\net8.0\GamificationBlazorApp.Shared.pdb
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\obj\Debug\net8.0\GamificationBlazorApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\obj\Debug\net8.0\GamificationBlazorApp.Shared.AssemblyInfoInputs.cache
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\obj\Debug\net8.0\GamificationBlazorApp.Shared.AssemblyInfo.cs
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\obj\Debug\net8.0\GamificationBlazorApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\obj\Debug\net8.0\GamificationBlazorApp.Shared.sourcelink.json
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\obj\Debug\net8.0\GamificationBlazorApp.Shared.dll
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\obj\Debug\net8.0\refint\GamificationBlazorApp.Shared.dll
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\obj\Debug\net8.0\GamificationBlazorApp.Shared.pdb
+C:\Users\goncalo.amador\source\repos\GitHub\Gamification-Blazor-App\src\GamificationBlazorApp.Shared\obj\Debug\net8.0\ref\GamificationBlazorApp.Shared.dll

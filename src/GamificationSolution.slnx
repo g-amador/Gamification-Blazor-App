@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Gamification.API/Gamification.API.csproj" Id="a7ac3b73-447a-44fc-8995-69744ff68205" />
+  <Project Path="Gamification.Application/Gamification.Application.csproj" Id="c5907199-3c65-4783-895c-88a612585372" />
+  <Project Path="Gamification.BlazorUI/Gamification.BlazorUI.csproj" Id="333a31bc-626d-4457-869f-9dc6c226311c" />
+  <Project Path="Gamification.Domain/Gamification.Domain.csproj" Id="f2b0964d-ce24-4032-a3b2-98ed0257cb6d" />
+  <Project Path="Gamification.Infrastructure/Gamification.Infrastructure.csproj" Id="dfc2bc3c-fd28-4f82-b27e-fe385a1e3e53" />
+</Solution>

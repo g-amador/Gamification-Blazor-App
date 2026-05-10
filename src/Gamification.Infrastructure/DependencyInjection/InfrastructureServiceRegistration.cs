@@ -1,6 +1,7 @@
 using Gamification.Application.Interfaces;
 using Gamification.Application.Services;
 using Gamification.Infrastructure.Data;
+using Gamification.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,15 +19,19 @@ public static class InfrastructureServiceRegistration
     {
         if (useInMemory)
         {
+            // Use in-memory database for development/testing
             services.AddDbContext<GamificationDbContext>(options =>
                 options.UseInMemoryDatabase("GamificationDb"));
         }
         else
         {
+            // Use SQL Server in production
             services.AddDbContext<GamificationDbContext>(options =>
                 options.UseSqlServer(connectionString));
         }
 
+        // Register repository + service
+        services.AddScoped<IApplicationRepository, ApplicationRepository>();
         services.AddScoped<IApplicationService, ApplicationService>();
 
         return services;

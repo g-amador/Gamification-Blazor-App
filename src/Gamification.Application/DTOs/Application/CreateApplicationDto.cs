@@ -1,4 +1,4 @@
-namespace Gamification.Application.DTOs;
+namespace Gamification.Application.DTOs.Application;
 
 /// <summary>
 /// Represents the data required to create a new application.

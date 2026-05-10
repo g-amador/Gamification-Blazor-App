@@ -1,4 +1,5 @@
 using Gamification.Infrastructure.DependencyInjection;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
@@ -46,7 +48,7 @@ app.MapGet("/", () => Results.Text("""
                 <h1>Gamification API</h1>
                 <p>Status: Running</p>
                 <p>Environment: Development</p>
-                <p><a href="/openapi">OpenAPI UI</a></p>
+                <p><a href="/scalar">Scalar</a></p>
                 <p><a href="/openapi/v1.json">OpenAPI JSON</a></p>
             </div>
         </body>

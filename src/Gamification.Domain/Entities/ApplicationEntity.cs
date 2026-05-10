@@ -1,7 +1,7 @@
 namespace Gamification.Domain.Entities;
 
 /// <summary>
-/// Represents an application registered in the gamification system.
+/// Represents an application registered in the system.
 /// </summary>
 public class ApplicationEntity
 {
@@ -21,12 +21,12 @@ public class ApplicationEntity
     public string Description { get; set; } = string.Empty;
 
     /// <summary>
-    /// Public API key used to authenticate requests.
+    /// Public API key used for authentication.
     /// </summary>
     public string ApiKey { get; set; } = string.Empty;
 
     /// <summary>
-    /// Private API password used for secure authentication.
+    /// Private API password used for authentication.
     /// </summary>
     public string ApiPassword { get; set; } = string.Empty;
 }

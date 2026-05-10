@@ -1,9 +1,9 @@
-namespace Gamification.Application.DTOs;
+namespace Gamification.Application.DTOs.Application;
 
 /// <summary>
-/// Base class for application creation and update operations.
+/// Represents an application returned by the API.
 /// </summary>
-public class ApplicationBaseDto
+public class ApplicationDto
 {
     /// <summary>
     /// Display name of the application.
@@ -16,12 +16,7 @@ public class ApplicationBaseDto
     public string Description { get; set; } = string.Empty;
 
     /// <summary>
-    /// Public API key for the application.
+    /// Public API key of the application.
     /// </summary>
     public string ApiKey { get; set; } = string.Empty;
-
-    /// <summary>
-    /// Private API password for the application.
-    /// </summary>
-    public string ApiPassword { get; set; } = string.Empty;
 }

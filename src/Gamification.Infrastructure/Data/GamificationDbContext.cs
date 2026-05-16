@@ -20,4 +20,14 @@ public class GamificationDbContext : DbContext
     /// Applications registered in the system.
     /// </summary>
     public DbSet<ApplicationEntity> Applications => Set<ApplicationEntity>();
+
+    /// <summary>
+    /// Players registered in the system.
+    /// </summary>
+    public DbSet<PlayerEntity> Players => Set<PlayerEntity>();
+
+    /// <summary>
+    /// Badges registered in the system.
+    /// </summary>
+    public DbSet<BadgeEntity> Badges => Set<BadgeEntity>();
 }

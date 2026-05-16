@@ -33,6 +33,10 @@ public static class InfrastructureServiceRegistration
         // Register repository + service
         services.AddScoped<IApplicationRepository, ApplicationRepository>();
         services.AddScoped<IApplicationService, ApplicationService>();
+        services.AddScoped<IPlayerRepository, PlayerRepository>();
+        services.AddScoped<IPlayerService, PlayerService>();
+        services.AddScoped<IBadgeRepository, BadgeRepository>();
+        services.AddScoped<IBadgeService, BadgeService>();
 
         return services;
     }

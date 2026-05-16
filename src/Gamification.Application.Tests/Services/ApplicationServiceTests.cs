@@ -1,4 +1,3 @@
-using Gamification.Application.DTOs;
 using Gamification.Application.DTOs.Application;
 using Gamification.Application.Interfaces;
 using Gamification.Application.Services;

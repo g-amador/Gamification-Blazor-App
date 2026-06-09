@@ -39,6 +39,8 @@ public static class InfrastructureServiceRegistration
         services.AddScoped<IBadgeService, BadgeService>();
         services.AddScoped<IRuleRepository, RuleRepository>();
         services.AddScoped<IRuleService, RuleService>();
+        services.AddScoped<IEventRepository, EventRepository>();
+        services.AddScoped<IEventService, EventService>();
 
         return services;
     }

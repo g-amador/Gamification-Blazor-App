@@ -41,6 +41,7 @@ public static class InfrastructureServiceRegistration
         services.AddScoped<IRuleService, RuleService>();
         services.AddScoped<IEventRepository, EventRepository>();
         services.AddScoped<IEventService, EventService>();
+        services.AddScoped<ILeaderboardService, LeaderboardService>();
 
         return services;
     }

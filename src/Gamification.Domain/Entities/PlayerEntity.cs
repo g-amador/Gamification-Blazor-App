@@ -39,5 +39,5 @@ public class PlayerEntity
     /// <summary>
     /// Badges earned by the player.
     /// </summary>
-    public List<BadgeEntity> Badges { get; set; } = new();
+    public List<BadgeEntity> Badges { get; set; } = [];
 }

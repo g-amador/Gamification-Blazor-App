@@ -35,5 +35,5 @@ public class PlayerDto
     /// <summary>
     /// Badges earned by the player.
     /// </summary>
-    public List<BadgeDto> Badges { get; set; } = new();
+    public List<BadgeDto> Badges { get; set; } = [];
 }

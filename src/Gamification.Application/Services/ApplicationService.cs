@@ -19,11 +19,15 @@ public class ApplicationService : IApplicationService
     {
         // Ensure apiKey is unique
         if (await _repo.ApiKeyExistsAsync(dto.ApiKey))
+        {
             throw new InvalidOperationException("apiKey must be unique.");
+        }
 
         // Ensure apiPassword is unique
         if (await _repo.ApiPasswordExistsAsync(dto.ApiPassword))
+        {
             throw new InvalidOperationException("apiPassword must be unique.");
+        }
 
         // Create entity
         var entity = new ApplicationEntity
@@ -52,7 +56,9 @@ public class ApplicationService : IApplicationService
         var entity = await _repo.GetByCredentialsAsync(apiKey, apiPassword);
 
         if (entity is null)
+        {
             return null;
+        }
 
         // Map entity to DTO
         return new ApplicationDto
@@ -69,17 +75,23 @@ public class ApplicationService : IApplicationService
         // Find the application being updated
         var entity = await _repo.GetByCredentialsAsync(apiKey, apiPassword);
         if (entity is null)
+        {
             return false;
+        }
 
         // Check apiKey uniqueness (excluding current app)
         if (entity.ApiKey != dto.ApiKey &&
             await _repo.ApiKeyExistsAsync(dto.ApiKey))
+        {
             throw new InvalidOperationException("apiKey must be unique.");
+        }
 
         // Check apiPassword uniqueness (excluding current app)
         if (entity.ApiPassword != dto.ApiPassword &&
             await _repo.ApiPasswordExistsAsync(dto.ApiPassword))
+        {
             throw new InvalidOperationException("apiPassword must be unique.");
+        }
 
         // Apply updates
         entity.Name = dto.Name;
@@ -100,7 +112,9 @@ public class ApplicationService : IApplicationService
         var entity = await _repo.GetByCredentialsAsync(apiKey, apiPassword);
 
         if (entity is null)
+        {
             return false;
+        }
 
         // Delete entity
         await _repo.DeleteAsync(entity);

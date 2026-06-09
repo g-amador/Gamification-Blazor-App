@@ -55,7 +55,9 @@ public class PlayersController : ControllerBase
 
         var player = await _service.GetByIdAsync(apiKey, apiPassword, id);
         if (player is null)
+        {
             return NotFound();
+        }
 
         return Ok(player);
     }

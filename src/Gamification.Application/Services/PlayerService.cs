@@ -23,7 +23,9 @@ public class PlayerService : IPlayerService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
-            return new List<PlayerListItemDto>();
+        {
+            return [];
+        }
 
         // Load players
         var players = await _playerRepo.GetAllAsync(app.Id);
@@ -45,12 +47,16 @@ public class PlayerService : IPlayerService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
+        {
             return null;
+        }
 
         // Load player
         var player = await _playerRepo.GetByIdAsync(app.Id, playerId);
         if (player is null)
+        {
             return null;
+        }
 
         // Map to DTO
         return new PlayerDto
@@ -76,7 +82,9 @@ public class PlayerService : IPlayerService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
+        {
             throw new InvalidOperationException("Invalid credentials.");
+        }
 
         // Create entity
         var entity = new PlayerEntity
@@ -105,12 +113,16 @@ public class PlayerService : IPlayerService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
+        {
             return false;
+        }
 
         // Load player
         var player = await _playerRepo.GetByIdAsync(app.Id, playerId);
         if (player is null)
+        {
             return false;
+        }
 
         // Update fields
         player.FirstName = dto.FirstName;
@@ -130,12 +142,16 @@ public class PlayerService : IPlayerService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
+        {
             return false;
+        }
 
         // Load player
         var player = await _playerRepo.GetByIdAsync(app.Id, playerId);
         if (player is null)
+        {
             return false;
+        }
 
         // Delete
         await _playerRepo.DeleteAsync(player);

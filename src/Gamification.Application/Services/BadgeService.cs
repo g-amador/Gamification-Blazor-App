@@ -22,7 +22,9 @@ public class BadgeService : IBadgeService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
-            return new List<BadgeListItemDto>();
+        {
+            return [];
+        }
 
         // Load badges
         var badges = await _badgeRepo.GetAllAsync(app.Id);
@@ -43,12 +45,16 @@ public class BadgeService : IBadgeService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
+        {
             return null;
+        }
 
         // Load badge
         var badge = await _badgeRepo.GetByIdAsync(app.Id, badgeId);
         if (badge is null)
+        {
             return null;
+        }
 
         // Map to DTO
         return new BadgeDto
@@ -66,7 +72,9 @@ public class BadgeService : IBadgeService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
+        {
             throw new InvalidOperationException("Invalid credentials.");
+        }
 
         // Create entity
         var entity = new BadgeEntity
@@ -95,12 +103,16 @@ public class BadgeService : IBadgeService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
+        {
             return false;
+        }
 
         // Load badge
         var badge = await _badgeRepo.GetByIdAsync(app.Id, badgeId);
         if (badge is null)
+        {
             return false;
+        }
 
         // Update fields
         badge.Name = dto.Name;
@@ -120,12 +132,16 @@ public class BadgeService : IBadgeService
         // Validate application credentials
         var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
         if (app is null)
+        {
             return false;
+        }
 
         // Load badge
         var badge = await _badgeRepo.GetByIdAsync(app.Id, badgeId);
         if (badge is null)
+        {
             return false;
+        }
 
         // Delete
         await _badgeRepo.DeleteAsync(badge);

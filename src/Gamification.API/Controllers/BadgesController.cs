@@ -55,7 +55,9 @@ public class BadgesController : ControllerBase
 
         var badge = await _service.GetByIdAsync(apiKey, apiPassword, id);
         if (badge is null)
+        {
             return NotFound();
+        }
 
         return Ok(badge);
     }

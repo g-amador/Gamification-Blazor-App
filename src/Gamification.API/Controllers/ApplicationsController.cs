@@ -43,7 +43,9 @@ public class ApplicationsController : ControllerBase
     public async Task<IActionResult> Get()
     {
         if (!TryGetCredentials(out var apiKey, out var apiPassword))
+        {
             return Unauthorized("Missing apiKey or apiPassword headers.");
+        }
 
         var result = await _service.GetByCredentialsAsync(apiKey, apiPassword);
         return result is null ? Unauthorized("Invalid credentials.") : Ok(result);
@@ -58,7 +60,9 @@ public class ApplicationsController : ControllerBase
     public async Task<IActionResult> Update([FromBody] UpdateApplicationDto dto)
     {
         if (!TryGetCredentials(out var apiKey, out var apiPassword))
+        {
             return Unauthorized("Missing apiKey or apiPassword headers.");
+        }
 
         var success = await _service.UpdateAsync(apiKey, apiPassword, dto);
         return success ? Ok() : Unauthorized("Invalid credentials.");
@@ -73,7 +77,9 @@ public class ApplicationsController : ControllerBase
     public async Task<IActionResult> Delete()
     {
         if (!TryGetCredentials(out var apiKey, out var apiPassword))
+        {
             return Unauthorized("Missing apiKey or apiPassword headers.");
+        }
 
         var success = await _service.DeleteAsync(apiKey, apiPassword);
         return success ? Ok() : Unauthorized("Invalid credentials.");

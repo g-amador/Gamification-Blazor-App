@@ -80,7 +80,7 @@ public class PlayerServiceTests
             LastName = "Doe",
             Email = "john@test.com",
             NumberOfPoints = 50,
-            Badges = new List<BadgeEntity>()
+            Badges = []
         };
 
         _playerRepoMock.Setup(r => r.GetByIdAsync(1, 5)).ReturnsAsync(player);

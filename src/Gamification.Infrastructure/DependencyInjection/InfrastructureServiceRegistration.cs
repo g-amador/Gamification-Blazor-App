@@ -37,6 +37,8 @@ public static class InfrastructureServiceRegistration
         services.AddScoped<IPlayerService, PlayerService>();
         services.AddScoped<IBadgeRepository, BadgeRepository>();
         services.AddScoped<IBadgeService, BadgeService>();
+        services.AddScoped<IRuleRepository, RuleRepository>();
+        services.AddScoped<IRuleService, RuleService>();
 
         return services;
     }

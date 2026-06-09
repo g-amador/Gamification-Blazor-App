@@ -30,4 +30,9 @@ public class GamificationDbContext : DbContext
     /// Badges registered in the system.
     /// </summary>
     public DbSet<BadgeEntity> Badges => Set<BadgeEntity>();
+
+    /// <summary>
+    /// Rules registered in the system.
+    /// </summary>
+    public DbSet<RuleEntity> Rules => Set<RuleEntity>();
 }

@@ -131,3 +131,418 @@ GamificationSolution/
     ├── App.razor                                        # Blazor app root
     └── Program.cs                                       # Blazor WebAssembly bootstrap
 ```
+
+
+--- Gamification API ---
+--
+
+This API has build to give you a simple way to add gamification to your project. You can manage players and give points and badges to players when some events raises.
+
+GitHub repository: [github.com/yenyen/TSM_OSF](https://github.com/yenyen/TSM_OSF)
+--
+
+--
+Applications
+The application is the entry point of the API. All others resources are link to an application. Each application has a unique apiKey and an apiPassword. Those are use for authentification and must be pass on every request (in the http header).
+--
+
+***Create a new application***
+
+This is the first thing you must do to use this API.
+
+Give a name, a description and a unique key and a secure password.
+The application id is return.
+
+POST /application
+> Content-Type: application/json
+{ 
+    "name":"", 
+    "description":"", 
+    "apiKey":"",
+    "apiPassword":"" 
+}
+< 201
+< Content-Type: application/json
+{ "status": "created", "url": "/application/{id}" }
+
+***Get application***
+
+Return the name, description and the key of an application. You must provide the apiKey and apiPassword in the http header.
+
+GET /application/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{ 
+    "name":"", 
+    "description":"", 
+    "apiKey": "", 
+}
+
+***Update application information***
+
+You can update all informations of your application (including apiKey and apiPassword).
+
+PUT /application/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+> Content-Type: application/json
+{ 
+    "name":"", 
+    "description":"",
+    "apiKey":""
+    "apiPassword":"" 
+}
+< 200
+
+***Delete an application***
+
+**Be careful**, when an application is deleted, all the attach resources are deleted in cascade!
+
+DELETE /application/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+
+-- 
+Players
+
+The player is an user of the application. He can win points and badges when events happening.
+--
+
+***Get list of players***
+
+Return the list of all players of an application.
+
+GET /players
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{
+    "items": [
+        "id":,
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "numberOfPoints": 
+    ]
+}
+
+***Add a new player***
+
+Create a new player with his basic informations. Return the new player's id.
+
+*To manage points and badges, please go to events resources*
+
+POST /players
+> apiKey: apiKey
+> apiPassword: apiPassword
+> Content-Type: application/json
+{ 
+    "firstName": "",
+    "lastName": "",
+    "email": ""
+}
+< 201
+< Content-Type: application/json
+{ "status": "created", "url": "/players/{id}" }
+
+***Get player details***
+
+Return the detail of a player, including the numberOfPoints and list of all his badges
+
+GET /players/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{
+    "id": ,
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "numberOfPoints": ,
+    "badges": [
+        "id": ,
+        "name":"",
+        "description": "",
+        "icon": ""
+    ]
+}
+
+***Update player information***
+
+Update basic informations of a player.
+
+*The points and badges can only be updated by events.*
+
+PUT /players/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+> Content-Type: application/json
+{ 
+    "firstName": "",
+    "lastName": "",
+    "email": ""
+}
+< 200
+
+***Delete a player***
+
+Delete a player, all events link to a player will be deleted in cascade.
+
+DELETE /players/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+
+--
+Badges
+A badge is a distinction, win by a player when he does something significant (on event).
+--
+
+***Get list of badges***
+
+Return the list of all badges of the application.
+
+GET /badges
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{
+    "items":
+    [
+        "id": ,
+        "name":"",
+        "description": "",
+        "icon": ""
+    ]
+}
+
+***Add a new badge***
+
+Create a new badge with the path to an icon representing the badge.
+
+POST /badges
+> apiKey: apiKey
+> apiPassword: apiPassword
+> Content-Type: application/json
+{ 
+    "name": "",
+    "description": "",
+    "icon": ""
+}
+< 201
+< Content-Type: application/json
+{ "status": "created", "url": "/badges/{id}" }
+
+***Get badge details***
+
+Return all details of a badge.
+
+GET /badges/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{
+    "id": ,
+    "name": "",
+    "description": "",
+    "icon": ""
+}
+
+***Update badge informations***
+
+Update badge informations and icon path.
+
+PUT /badges/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+> Content-Type: application/json
+{ 
+    "name": "",
+    "description": "",
+    "icon": ""
+}
+< 200
+
+***Delete a badge***
+
+Delete a badge, all link to this badge by rules will be set to null.
+
+DELETE /badges/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+
+--
+Rules
+A rule determine how many points or/and which badge can be win by a player on an event type. Many rules can be create for the same event type.
+--
+
+***Get list of rules***
+
+Return the list of all rules of an application.
+
+GET /rules
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{
+    "items":
+    [
+        "id": ,
+        "badgeId": ,
+        "numberOfPoints": ,
+        "onEventType": ""
+    ]
+}
+
+***Add a new rule***
+
+Add a new rule, the badgeId is optional, the numberOfPoints is required but he can be set to 0. Return the new rule's id.
+
+POST /rules
+> apiKey: apiKey
+> apiPassword: apiPassword
+> Content-Type: application/json
+{ 
+    "badgeId": ,
+    "numberOfPoints": ,
+    "onEventType": ""
+}
+< 201
+< Content-Type: application/json
+{ "status": "created", "url": "/rules/{id}" }
+
+***Get rule details***
+
+Return the details of a rule.
+
+GET /rules/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{
+    "id": ,
+    "badgeId": ,
+    "numberOfPoints": ,
+    "onEventType": ""
+}
+
+***Update rule informations***
+
+Update a rule, this doesn't change badges and points give to players on past events.
+
+PUT /rules/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+> Content-Type: application/json
+{ 
+    "badgeId": ,
+    "numberOfPoints": ,
+    "onEventType": ""
+}
+< 200
+
+
+***Delete a rule***
+
+Delete a rule, this doesn't remove badges and points give to players on past events.
+
+DELETE /rules/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+
+--
+Events
+When something happening to a player or when a player do something, 
+an event should be created.
+An event is link to a player and is of a type. 
+Multiple events of the same type and player can be create.
+An event can't be deleted.
+--
+
+***Get list of Events***
+
+Return the list of all the events of an application.
+
+GET /events
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{
+    "items": [
+        "id": ,
+        "playerId": ,
+        "type": "",
+        "timestemp": ""
+    ]
+}
+
+***Add new event***
+
+Add a new event, when an event is create, the rules are browse and 
+the corresponding points and badges are give to the player. If a badge is already win by the player nothing happened.
+
+Return the event's id.
+
+POST /events
+> apiKey: apiKey
+> apiPassword: apiPassword
+> Content-Type: application/json
+{ 
+    "playerId": ,
+    "type": "",
+    "timestemp": ""
+}
+< 201
+< Content-Type: application/json
+{ "status": "created", "url": "/events/{id}" }
+
+***Get Event details***
+
+Return all details of an event
+
+GET /events/{id}
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{
+    "id": "",
+    "playerId": "",
+    "type": "",
+    "timestemp": ""
+}
+
+--
+Leaderboard
+The leaderboard return the list of the best players of an application.
+--
+
+***Get LeaderBoard***
+
+Return the list of the five's best players of an application order by points.
+
+GET /leaderboard
+> apiKey: apiKey
+> apiPassword: apiPassword
+< 200
+< Content-Type: application/json
+{
+    "name": "",
+    "description": "",
+    "ranking": [
+        "playerId": "",
+        "points": 
+    ]
+}

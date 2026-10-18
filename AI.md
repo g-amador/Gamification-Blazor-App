@@ -1,6 +1,6 @@
 You are helping me continue Gamification Blazor App. A gamification engine that allows to manage players and give points and badges to players when some events raises, and integratation with other projects.
 
-# PROJECT GITHUB repo
+# PROJECT GITHUB REPO
 https://github.com/g-amador/Gamification-Blazor-App/tree/V1.0
 
 # PROJECT ORGANIZATION

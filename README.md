@@ -14,36 +14,35 @@ Gamification Blazor APP to integrate in other projects. Allows to manage players
 
 ```text
 Gamification-Blazor-App/
-├── AI.md                           # Prompts for expanding the game
+├── AI.md                           # Source of truth: conventions, rules, current state & roadmap
 ├── ARCHITECTURE.md                 # Detailed project architecture & directory structure
+├── Gamification API.postman_collection.json
 ├── LICENSE                         # License details
 ├── README.md                       # Main project documentation
 └── src/
-    ├── Gamification.Domain
+    ├── GamificationSolution.slnx    # .slnx (XML) solution file — all 6 projects
+
+    ├── Gamification.Domain         # Entities + enums (no EF, no DTOs)
     │   ├── Entities
-    │   └── Enums
     │
-    ├── Gamification.Application
+    ├── Gamification.Application    # DTOs, service + repository interfaces, services
     │   ├── DTOs
     │   ├── Interfaces
     │   └── Services
     │
-    ├── Gamification.Infrastructure
+    ├── Gamification.Infrastructure # DbContext (InMemory today, LocalDB/TSQL later), repositories
     │   ├── Data
-    │   ├── Repositories
-    │   └── DependencyInjection
+    │   ├── DependencyInjection
+    │   └── Repositories
     │
-    ├── Gamification.API
-    │   ├── Controllers
-    │   ├── Middleware
-    │   └── Models
+    ├── Gamification.API            # REST controllers + OpenAPI/Scalar
+    │   └── Controllers
     │
-    ├── Gamification.BlazorUI
-    │   ├── Pages
+    ├── Gamification.BlazorUI       # Blazor WASM UI
     │   ├── Layout
-    │   └── Services
+    │   └── Pages
     │
-    └── Gamification.Application.Tests
+    └── Gamification.Application.Tests  # xUnit + Moq service tests
 ```
 
 For a complete, file-by-file breakdown of the repository, see [ARCHITECTURE.md](https://github.com/g-amador/Gamification-Blazor-App/blob/main/ARCHITECTURE.md).

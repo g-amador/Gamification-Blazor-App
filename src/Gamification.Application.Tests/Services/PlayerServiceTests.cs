@@ -1,4 +1,5 @@
 using Gamification.Application.DTOs.Player;
+using Gamification.Application.Exceptions;
 using Gamification.Application.Interfaces;
 using Gamification.Application.Services;
 using Gamification.Domain.Entities;
@@ -33,8 +34,8 @@ public class PlayerServiceTests
 
         var players = new List<PlayerEntity>
         {
-            new PlayerEntity { Id = 1, FirstName = "John", LastName = "Doe", Email = "a@a.com", NumberOfPoints = 10 },
-            new PlayerEntity { Id = 2, FirstName = "Jane", LastName = "Smith", Email = "b@b.com", NumberOfPoints = 20 }
+            new() { Id = 1, FirstName = "John", LastName = "Doe", Email = "a@a.com", NumberOfPoints = 10 },
+            new() { Id = 2, FirstName = "Jane", LastName = "Smith", Email = "b@b.com", NumberOfPoints = 20 }
         };
 
         _playerRepoMock.Setup(r => r.GetAllAsync(1)).ReturnsAsync(players);
@@ -48,17 +49,15 @@ public class PlayerServiceTests
     }
 
     [Fact]
-    public async Task GetAllAsync_ShouldReturnEmptyList_WhenCredentialsAreInvalid()
+    public async Task GetAllAsync_ShouldThrowUnauthorizedException_WhenCredentialsAreInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
                     .ReturnsAsync((ApplicationEntity?)null);
 
-        // Act
-        var result = await _service.GetAllAsync("bad", "creds");
-
-        // Assert
-        Assert.Empty(result);
+        // Act & Assert
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
+            _service.GetAllAsync("bad", "creds"));
     }
 
     // -------------------------------------------------------------
@@ -113,17 +112,15 @@ public class PlayerServiceTests
     }
 
     [Fact]
-    public async Task GetByIdAsync_ShouldReturnNull_WhenCredentialsAreInvalid()
+    public async Task GetByIdAsync_ShouldThrowUnauthorizedException_WhenCredentialsAreInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
                     .ReturnsAsync((ApplicationEntity?)null);
 
-        // Act
-        var result = await _service.GetByIdAsync("bad", "creds", 1);
-
-        // Assert
-        Assert.Null(result);
+        // Act & Assert
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
+            _service.GetByIdAsync("bad", "creds", 1));
     }
 
     // -------------------------------------------------------------
@@ -155,7 +152,7 @@ public class PlayerServiceTests
     }
 
     [Fact]
-    public async Task CreateAsync_ShouldThrow_WhenCredentialsAreInvalid()
+    public async Task CreateAsync_ShouldThrowUnauthorizedException_WhenCredentialsAreInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
@@ -164,7 +161,7 @@ public class PlayerServiceTests
         var dto = new CreatePlayerDto();
 
         // Act & Assert
-        await Assert.ThrowsAsync<InvalidOperationException>(() =>
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
             _service.CreateAsync("bad", "creds", dto));
     }
 
@@ -220,7 +217,7 @@ public class PlayerServiceTests
     }
 
     [Fact]
-    public async Task UpdateAsync_ShouldReturnFalse_WhenCredentialsInvalid()
+    public async Task UpdateAsync_ShouldThrowUnauthorizedException_WhenCredentialsInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
@@ -228,11 +225,9 @@ public class PlayerServiceTests
 
         var dto = new UpdatePlayerDto();
 
-        // Act
-        var result = await _service.UpdateAsync("bad", "creds", 1, dto);
-
-        // Assert
-        Assert.False(result);
+        // Act & Assert
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
+            _service.UpdateAsync("bad", "creds", 1, dto));
     }
 
     // -------------------------------------------------------------
@@ -278,16 +273,14 @@ public class PlayerServiceTests
     }
 
     [Fact]
-    public async Task DeleteAsync_ShouldReturnFalse_WhenCredentialsInvalid()
+    public async Task DeleteAsync_ShouldThrowUnauthorizedException_WhenCredentialsInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
                     .ReturnsAsync((ApplicationEntity?)null);
 
-        // Act
-        var result = await _service.DeleteAsync("bad", "creds", 1);
-
-        // Assert
-        Assert.False(result);
+        // Act & Assert
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
+            _service.DeleteAsync("bad", "creds", 1));
     }
 }

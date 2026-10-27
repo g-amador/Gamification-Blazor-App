@@ -1,11 +1,15 @@
 using Gamification.Application.DTOs.Badge;
 using Gamification.Application.DTOs.Player;
+using Gamification.Application.Exceptions;
 using Gamification.Application.Interfaces;
 using Gamification.Domain.Entities;
 
 namespace Gamification.Application.Services;
 
-/// <inheritdoc />
+/// <summary>
+/// Implements operations for managing players, the users of an application.
+/// A player can win points and badges when events are happening.
+/// </summary>
 public class PlayerService : IPlayerService
 {
     private readonly IApplicationRepository _appRepo;
@@ -21,11 +25,8 @@ public class PlayerService : IPlayerService
     public async Task<List<PlayerListItemDto>> GetAllAsync(string apiKey, string apiPassword)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return [];
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load players
         var players = await _playerRepo.GetAllAsync(app.Id);
@@ -45,11 +46,8 @@ public class PlayerService : IPlayerService
     public async Task<PlayerDto?> GetByIdAsync(string apiKey, string apiPassword, int playerId)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return null;
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load player
         var player = await _playerRepo.GetByIdAsync(app.Id, playerId);
@@ -77,14 +75,39 @@ public class PlayerService : IPlayerService
     }
 
     /// <inheritdoc />
+    public async Task<PlayerBadgesDto?> GetBadgesAsync(string apiKey, string apiPassword, int playerId)
+    {
+        // Validate application credentials
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
+
+        // Load player with badges
+        var player = await _playerRepo.GetByIdAsync(app.Id, playerId);
+        if (player is null)
+        {
+            return null;
+        }
+
+        // Map to DTO
+        return new PlayerBadgesDto
+        {
+            PlayerId = player.Id,
+            Badges = player.Badges.Select(b => new BadgeDto
+            {
+                Id = b.Id,
+                Name = b.Name,
+                Description = b.Description,
+                Icon = b.Icon
+            }).ToList()
+        };
+    }
+
+    /// <inheritdoc />
     public async Task<PlayerCreatedResponseDto> CreateAsync(string apiKey, string apiPassword, CreatePlayerDto dto)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            throw new InvalidOperationException("Invalid credentials.");
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Create entity
         var entity = new PlayerEntity
@@ -111,11 +134,8 @@ public class PlayerService : IPlayerService
     public async Task<bool> UpdateAsync(string apiKey, string apiPassword, int playerId, UpdatePlayerDto dto)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return false;
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load player
         var player = await _playerRepo.GetByIdAsync(app.Id, playerId);
@@ -140,11 +160,8 @@ public class PlayerService : IPlayerService
     public async Task<bool> DeleteAsync(string apiKey, string apiPassword, int playerId)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return false;
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load player
         var player = await _playerRepo.GetByIdAsync(app.Id, playerId);

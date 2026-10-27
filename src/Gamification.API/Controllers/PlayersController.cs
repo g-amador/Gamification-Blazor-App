@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace Gamification.Api.Controllers;
 
 /// <summary>
-/// Manages players of an application.
+/// Manages the players (users) of an application.
+/// All operations related to the player resource are in this section.
+/// A player is a user of the application; he can win points and badges when events are happening.
 /// </summary>
 [ApiController]
 [Route("players")]
@@ -32,7 +34,8 @@ public class PlayersController : ControllerBase
     }
 
     /// <summary>
-    /// Creates a new player.
+    /// Adds a new player.
+    /// To manage points and badges, please go to the events resource.
     /// </summary>
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreatePlayerDto dto)
@@ -63,7 +66,26 @@ public class PlayersController : ControllerBase
     }
 
     /// <summary>
-    /// Updates a player's basic information.
+    /// Returns all badges of a specific player.
+    /// </summary>
+    [HttpGet("{id:int}/badges")]
+    public async Task<IActionResult> GetBadges(int id)
+    {
+        var apiKey = Request.Headers["apiKey"].ToString();
+        var apiPassword = Request.Headers["apiPassword"].ToString();
+
+        var badges = await _service.GetBadgesAsync(apiKey, apiPassword, id);
+        if (badges is null)
+        {
+            return NotFound();
+        }
+
+        return Ok(badges);
+    }
+
+    /// <summary>
+    /// Updates the information of a player.
+    /// The points and badges can only be updated by events.
     /// </summary>
     [HttpPut("{id:int}")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdatePlayerDto dto)
@@ -76,7 +98,7 @@ public class PlayersController : ControllerBase
     }
 
     /// <summary>
-    /// Deletes a player.
+    /// Deletes a player. All events linked to the player are deleted in cascade.
     /// </summary>
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id)

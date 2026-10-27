@@ -1,37 +1,43 @@
 using Gamification.Application.DTOs.Event;
+using Gamification.Application.Exceptions;
 using Gamification.Application.Interfaces;
 using Gamification.Domain.Entities;
 
 namespace Gamification.Application.Services;
 
-/// <inheritdoc />
+/// <summary>
+/// Implements operations for managing events.
+/// Everything that has to be monitored by the gamification platform is recorded
+/// as an event and has to be posted to the gamification API.
+/// </summary>
 public class EventService : IEventService
 {
     private readonly IApplicationRepository _appRepo;
     private readonly IEventRepository _eventRepo;
     private readonly IPlayerRepository _playerRepo;
     private readonly IRuleRepository _ruleRepo;
+    private readonly IEventTypeRepository _eventTypeRepo;
 
     public EventService(
         IApplicationRepository appRepo,
         IEventRepository eventRepo,
         IPlayerRepository playerRepo,
-        IRuleRepository ruleRepo)
+        IRuleRepository ruleRepo,
+        IEventTypeRepository eventTypeRepo)
     {
         _appRepo = appRepo;
         _eventRepo = eventRepo;
         _playerRepo = playerRepo;
         _ruleRepo = ruleRepo;
+        _eventTypeRepo = eventTypeRepo;
     }
 
     /// <inheritdoc />
     public async Task<List<EventListItemDto>> GetAllAsync(string apiKey, string apiPassword)
     {
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return [];
-        }
+        // Validate application credentials
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         var events = await _eventRepo.GetAllAsync(app.Id);
 
@@ -39,7 +45,8 @@ public class EventService : IEventService
         {
             Id = e.Id,
             PlayerId = e.PlayerId,
-            Type = e.Type,
+            EventTypeId = e.EventTypeId,
+            EventTypeName = e.EventType.Name,
             Timestamp = e.Timestamp
         }).ToList();
     }
@@ -47,11 +54,9 @@ public class EventService : IEventService
     /// <inheritdoc />
     public async Task<EventDetailsDto?> GetByIdAsync(string apiKey, string apiPassword, int eventId)
     {
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return null;
-        }
+        // Validate application credentials
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         var ev = await _eventRepo.GetByIdAsync(app.Id, eventId);
         if (ev is null)
@@ -63,7 +68,8 @@ public class EventService : IEventService
         {
             Id = ev.Id,
             PlayerId = ev.PlayerId,
-            Type = ev.Type,
+            EventTypeId = ev.EventTypeId,
+            EventTypeName = ev.EventType.Name,
             Timestamp = ev.Timestamp
         };
     }
@@ -71,11 +77,9 @@ public class EventService : IEventService
     /// <inheritdoc />
     public async Task<EventCreatedResponseDto> CreateAsync(string apiKey, string apiPassword, CreateEventDto dto)
     {
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            throw new InvalidOperationException("Invalid credentials.");
-        }
+        // Validate application credentials
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load player
         var player = await _playerRepo.GetByIdAsync(app.Id, dto.PlayerId);
@@ -84,21 +88,28 @@ public class EventService : IEventService
             throw new InvalidOperationException("Player not found.");
         }
 
+        // Load the event type referenced by the event
+        var eventType = await _eventTypeRepo.GetByIdAsync(app.Id, dto.EventTypeId);
+        if (eventType is null)
+        {
+            throw new InvalidOperationException("Event type not found.");
+        }
+
         // Create event
         var ev = new EventEntity
         {
             PlayerId = dto.PlayerId,
-            Type = dto.Type,
+            EventTypeId = dto.EventTypeId,
             Timestamp = dto.Timestamp,
             ApplicationId = app.Id
         };
 
         await _eventRepo.AddAsync(ev);
 
-        // Apply rules
+        // Apply matching rules (rules reference the same event type id)
         var rules = await _ruleRepo.GetAllAsync(app.Id);
 
-        foreach (var rule in rules.Where(r => r.OnEventType == dto.Type))
+        foreach (var rule in rules.Where(r => r.EventTypeId == dto.EventTypeId))
         {
             // Add points
             player.NumberOfPoints += rule.NumberOfPoints;
@@ -114,9 +125,8 @@ public class EventService : IEventService
             }
         }
 
-        // Save everything
-        await _playerRepo.UpdateAsync(player);
-        await _playerRepo.SaveChangesAsync();
+        // Save everything in one atomic save: the event insert and the rule
+        // awards (points and badges) are persisted together or not at all
         await _eventRepo.SaveChangesAsync();
 
         return new EventCreatedResponseDto

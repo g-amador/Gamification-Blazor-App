@@ -18,9 +18,10 @@ public class EventEntity
     public PlayerEntity Player { get; set; } = null!;
 
     /// <summary>
-    /// Type of the event.
+    /// Type of the event, referencing the application's event types.
     /// </summary>
-    public string Type { get; set; } = string.Empty;
+    public int EventTypeId { get; set; }
+    public EventTypeEntity EventType { get; set; } = null!;
 
     /// <summary>
     /// Timestamp of the event.

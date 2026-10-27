@@ -24,7 +24,8 @@ public class RuleEntity
     /// <summary>
     /// Event type that triggers this rule.
     /// </summary>
-    public string OnEventType { get; set; } = string.Empty;
+    public int EventTypeId { get; set; }
+    public EventTypeEntity EventType { get; set; } = null!;
 
     /// <summary>
     /// Application the rule belongs to.

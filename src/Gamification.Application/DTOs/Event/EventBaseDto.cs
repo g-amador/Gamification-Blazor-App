@@ -11,9 +11,9 @@ public class EventBaseDto
     public int PlayerId { get; set; }
 
     /// <summary>
-    /// Type of the event.
+    /// Identifier of the event type of the event (defined with the event types resource).
     /// </summary>
-    public string Type { get; set; } = string.Empty;
+    public int EventTypeId { get; set; }
 
     /// <summary>
     /// Timestamp of the event.

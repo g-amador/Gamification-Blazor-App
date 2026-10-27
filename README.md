@@ -77,8 +77,10 @@ The API runs on **SQL Server LocalDB** (`(localdb)\MSSQLLocalDB`) by default —
 Gamification-Blazor-App/
 ├── AI.md                             # Machine/agent briefing: conventions, current state, roadmap
 ├── ARCHITECTURE.md                   # Detailed, file-level architecture of the repository
+├── Directory.Packages.props          # Central package management — single source for NuGet versions
 ├── Gamification API.postman_collection.json   # Postman collection: one call per REST method
 ├── LICENSE                           # License details
+├── nuget.config                      # Repo-local package sources (nuget.org only)
 ├── README.md                         # This file
 └── src/
     ├── GamificationSolution.slnx     # .slnx (XML) solution — all 6 projects

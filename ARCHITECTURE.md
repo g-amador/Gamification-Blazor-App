@@ -35,8 +35,10 @@ Gamification.API ───────► Gamification.Infrastructure ───�
 Gamification-Blazor-App/
 ├── AI.md                                        # Development rules, conventions, current state
 ├── ARCHITECTURE.md                              # This file: physical structure (file level)
+├── Directory.Packages.props                     # Central Package Management — all NuGet versions
 ├── Gamification API.postman_collection.json     # Postman collection: one call per REST method
 ├── LICENSE
+├── nuget.config                                 # Repo-local package sources (nuget.org only)
 ├── README.md
 └── src/
     ├── GamificationSolution.slnx                # .slnx (XML) solution — all 6 projects

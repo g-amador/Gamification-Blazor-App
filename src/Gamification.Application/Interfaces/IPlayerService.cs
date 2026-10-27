@@ -8,27 +8,34 @@ namespace Gamification.Application.Interfaces;
 public interface IPlayerService
 {
     /// <summary>
-    /// Retrieves all players of an application.
+    /// Retrieves all the users (players) of an application.
     /// </summary>
     Task<List<PlayerListItemDto>> GetAllAsync(string apiKey, string apiPassword);
 
     /// <summary>
-    /// Retrieves detailed information about a player.
+    /// Retrieves the basic information about a specific user (player).
     /// </summary>
     Task<PlayerDto?> GetByIdAsync(string apiKey, string apiPassword, int playerId);
 
     /// <summary>
-    /// Creates a new player.
+    /// Retrieves all badges of a specific user (player).
+    /// </summary>
+    Task<PlayerBadgesDto?> GetBadgesAsync(string apiKey, string apiPassword, int playerId);
+
+    /// <summary>
+    /// Adds a new user (player) to the application.
     /// </summary>
     Task<PlayerCreatedResponseDto> CreateAsync(string apiKey, string apiPassword, CreatePlayerDto dto);
 
     /// <summary>
-    /// Updates a player's basic information.
+    /// Updates the information of a user (player).
+    /// The points and badges can only be updated by events.
     /// </summary>
     Task<bool> UpdateAsync(string apiKey, string apiPassword, int playerId, UpdatePlayerDto dto);
 
     /// <summary>
-    /// Deletes a player.
+    /// Deletes a user (player) from the application.
+    /// All events linked to the player are deleted in cascade.
     /// </summary>
     Task<bool> DeleteAsync(string apiKey, string apiPassword, int playerId);
 }

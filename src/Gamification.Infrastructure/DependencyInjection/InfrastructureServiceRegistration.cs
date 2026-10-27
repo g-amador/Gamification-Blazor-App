@@ -42,6 +42,10 @@ public static class InfrastructureServiceRegistration
         services.AddScoped<IEventRepository, EventRepository>();
         services.AddScoped<IEventService, EventService>();
         services.AddScoped<ILeaderboardService, LeaderboardService>();
+        services.AddScoped<IEventTypeRepository, EventTypeRepository>();
+        services.AddScoped<IEventTypeService, EventTypeService>();
+        services.AddScoped<IBadgeCategoryRepository, BadgeCategoryRepository>();
+        services.AddScoped<IBadgeCategoryService, BadgeCategoryService>();
 
         return services;
     }

@@ -1,19 +1,51 @@
+using Gamification.Api.Middleware;
+using Gamification.Infrastructure.Data;
 using Gamification.Infrastructure.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+    // Scalar renders grouped headings in tag-declaration order;
+    // sort the tags alphabetically so groups appear in a stable order.
+    options.AddDocumentTransformer((document, context, cancellationToken) =>
+    {
+        document.Tags = new SortedSet<OpenApiTag>(
+            document.Tags ?? new HashSet<OpenApiTag>(),
+            Comparer<OpenApiTag>.Create((a, b) =>
+                string.Compare(a.Name, b.Name, StringComparison.OrdinalIgnoreCase)));
+        return Task.CompletedTask;
+    });
+});
 
-// Use InMemory for now
+// Database provider selection: LocalDB (SQL Server) by default,
+// EF InMemory when the Database:UseInMemory flag is set to true
+var useInMemory = builder.Configuration.GetValue("Database:UseInMemory", false);
 builder.Services.AddInfrastructure(
     connectionString: builder.Configuration.GetConnectionString("DefaultConnection"),
-    useInMemory: true
+    useInMemory: useInMemory
 );
 
 var app = builder.Build();
+
+// Apply EF Core migrations when running against a relational database
+if (!useInMemory)
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<GamificationDbContext>();
+        db.Database.Migrate();
+    }
+}
+
+// Translate application exceptions (UnauthorizedException → 401 ProblemDetails)
+app.UseMiddleware<GlobalExceptionHandler>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -25,7 +57,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
-// Landing page
+// Landing page (HTML only — not part of the API reference)
 app.MapGet("/", () => Results.Text("""
     <html>
         <head>
@@ -53,7 +85,7 @@ app.MapGet("/", () => Results.Text("""
             </div>
         </body>
     </html>
-""", "text/html"));
+""", "text/html")).ExcludeFromDescription();
 
 
 app.MapControllers();

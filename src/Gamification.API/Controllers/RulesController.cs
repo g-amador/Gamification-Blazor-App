@@ -5,7 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace Gamification.Api.Controllers;
 
 /// <summary>
-/// Manages rules of an application.
+/// Manages the rules of an application.
+/// All operations related to the rule resource are in this section.
+/// A rule defines when badges or points should be granted to a player.
+/// Many rules can be created for the same event type.
 /// </summary>
 [ApiController]
 [Route("rules")]
@@ -32,7 +35,8 @@ public class RulesController : ControllerBase
     }
 
     /// <summary>
-    /// Creates a new rule.
+    /// Adds a new rule for the application. The badgeId is optional,
+    /// the number of points is required but can be set to 0.
     /// </summary>
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateRuleDto dto)
@@ -63,7 +67,7 @@ public class RulesController : ControllerBase
     }
 
     /// <summary>
-    /// Updates a rule.
+    /// Updates a rule. This doesn't change badges and points given to players on past events.
     /// </summary>
     [HttpPut("{id:int}")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateRuleDto dto)
@@ -76,7 +80,7 @@ public class RulesController : ControllerBase
     }
 
     /// <summary>
-    /// Deletes a rule.
+    /// Deletes a rule. This doesn't remove badges and points given to players on past events.
     /// </summary>
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id)

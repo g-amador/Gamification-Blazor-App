@@ -1,4 +1,5 @@
 using Gamification.Application.DTOs.Rule;
+using Gamification.Application.Exceptions;
 using Gamification.Application.Interfaces;
 using Gamification.Application.Services;
 using Gamification.Domain.Entities;
@@ -10,13 +11,15 @@ public class RuleServiceTests
 {
     private readonly Mock<IApplicationRepository> _appRepoMock;
     private readonly Mock<IRuleRepository> _ruleRepoMock;
+    private readonly Mock<IEventTypeRepository> _eventTypeRepoMock;
     private readonly RuleService _service;
 
     public RuleServiceTests()
     {
         _appRepoMock = new Mock<IApplicationRepository>();
         _ruleRepoMock = new Mock<IRuleRepository>();
-        _service = new RuleService(_appRepoMock.Object, _ruleRepoMock.Object);
+        _eventTypeRepoMock = new Mock<IEventTypeRepository>();
+        _service = new RuleService(_appRepoMock.Object, _ruleRepoMock.Object, _eventTypeRepoMock.Object);
     }
 
     // -------------------------------------------------------------
@@ -33,8 +36,8 @@ public class RuleServiceTests
 
         var rules = new List<RuleEntity>
         {
-            new RuleEntity { Id = 1, BadgeId = 10, NumberOfPoints = 50, OnEventType = "LOGIN" },
-            new RuleEntity { Id = 2, BadgeId = null, NumberOfPoints = 20, OnEventType = "PURCHASE" }
+            new() { Id = 1, BadgeId = 10, NumberOfPoints = 50, EventTypeId = 1, EventType = new EventTypeEntity { Id = 1, Name = "LOGIN" } },
+            new() { Id = 2, BadgeId = null, NumberOfPoints = 20, EventTypeId = 2, EventType = new EventTypeEntity { Id = 2, Name = "PURCHASE" } }
         };
 
         _ruleRepoMock.Setup(r => r.GetAllAsync(1)).ReturnsAsync(rules);
@@ -44,21 +47,20 @@ public class RuleServiceTests
 
         // Assert
         Assert.Equal(2, result.Count);
-        Assert.Equal("LOGIN", result[0].OnEventType);
+        Assert.Equal(1, result[0].EventTypeId);
+        Assert.Equal("LOGIN", result[0].EventTypeName);
     }
 
     [Fact]
-    public async Task GetAllAsync_ShouldReturnEmptyList_WhenCredentialsInvalid()
+    public async Task GetAllAsync_ShouldThrowUnauthorizedException_WhenCredentialsInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
                     .ReturnsAsync((ApplicationEntity?)null);
 
-        // Act
-        var result = await _service.GetAllAsync("bad", "creds");
-
-        // Assert
-        Assert.Empty(result);
+        // Act & Assert
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
+            _service.GetAllAsync("bad", "creds"));
     }
 
     // -------------------------------------------------------------
@@ -78,7 +80,8 @@ public class RuleServiceTests
             Id = 5,
             BadgeId = 10,
             NumberOfPoints = 100,
-            OnEventType = "LEVEL_UP"
+            EventTypeId = 3,
+            EventType = new EventTypeEntity { Id = 3, Name = "LEVEL_UP" }
         };
 
         _ruleRepoMock.Setup(r => r.GetByIdAsync(1, 5)).ReturnsAsync(rule);
@@ -88,7 +91,8 @@ public class RuleServiceTests
 
         // Assert
         Assert.NotNull(result);
-        Assert.Equal("LEVEL_UP", result!.OnEventType);
+        Assert.Equal(3, result!.EventTypeId);
+        Assert.Equal("LEVEL_UP", result.EventTypeName);
         Assert.Equal(100, result.NumberOfPoints);
     }
 
@@ -111,17 +115,15 @@ public class RuleServiceTests
     }
 
     [Fact]
-    public async Task GetByIdAsync_ShouldReturnNull_WhenCredentialsInvalid()
+    public async Task GetByIdAsync_ShouldThrowUnauthorizedException_WhenCredentialsInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
                     .ReturnsAsync((ApplicationEntity?)null);
 
-        // Act
-        var result = await _service.GetByIdAsync("bad", "creds", 1);
-
-        // Assert
-        Assert.Null(result);
+        // Act & Assert
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
+            _service.GetByIdAsync("bad", "creds", 1));
     }
 
     // -------------------------------------------------------------
@@ -136,11 +138,14 @@ public class RuleServiceTests
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("key", "pass"))
                     .ReturnsAsync(app);
 
+        _eventTypeRepoMock.Setup(r => r.GetByIdAsync(1, 1))
+                          .ReturnsAsync(new EventTypeEntity { Id = 1, Name = "LOGIN" });
+
         var dto = new CreateRuleDto
         {
             BadgeId = 10,
             NumberOfPoints = 50,
-            OnEventType = "LOGIN"
+            EventTypeId = 1
         };
 
         // Act
@@ -153,7 +158,29 @@ public class RuleServiceTests
     }
 
     [Fact]
-    public async Task CreateAsync_ShouldThrow_WhenCredentialsInvalid()
+    public async Task CreateAsync_ShouldThrow_WhenEventTypeNotFound()
+    {
+        // Arrange
+        var app = new ApplicationEntity { Id = 1 };
+        _appRepoMock.Setup(r => r.GetByCredentialsAsync("key", "pass"))
+                    .ReturnsAsync(app);
+
+        _eventTypeRepoMock.Setup(r => r.GetByIdAsync(1, 99))
+                          .ReturnsAsync((EventTypeEntity?)null);
+
+        var dto = new CreateRuleDto
+        {
+            NumberOfPoints = 50,
+            EventTypeId = 99
+        };
+
+        // Act & Assert
+        await Assert.ThrowsAsync<InvalidOperationException>(() =>
+            _service.CreateAsync("key", "pass", dto));
+    }
+
+    [Fact]
+    public async Task CreateAsync_ShouldThrowUnauthorizedException_WhenCredentialsInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
@@ -162,7 +189,7 @@ public class RuleServiceTests
         var dto = new CreateRuleDto();
 
         // Act & Assert
-        await Assert.ThrowsAsync<InvalidOperationException>(() =>
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
             _service.CreateAsync("bad", "creds", dto));
     }
 
@@ -181,11 +208,14 @@ public class RuleServiceTests
         var rule = new RuleEntity { Id = 10, NumberOfPoints = 10 };
         _ruleRepoMock.Setup(r => r.GetByIdAsync(1, 10)).ReturnsAsync(rule);
 
+        _eventTypeRepoMock.Setup(r => r.GetByIdAsync(1, 2))
+                          .ReturnsAsync(new EventTypeEntity { Id = 2, Name = "PURCHASE" });
+
         var dto = new UpdateRuleDto
         {
             BadgeId = 20,
             NumberOfPoints = 200,
-            OnEventType = "PURCHASE"
+            EventTypeId = 2
         };
 
         // Act
@@ -193,6 +223,7 @@ public class RuleServiceTests
 
         // Assert
         Assert.True(result);
+        Assert.Equal(2, rule.EventTypeId);
         _ruleRepoMock.Verify(r => r.UpdateAsync(rule), Times.Once);
         _ruleRepoMock.Verify(r => r.SaveChangesAsync(), Times.Once);
     }
@@ -218,7 +249,7 @@ public class RuleServiceTests
     }
 
     [Fact]
-    public async Task UpdateAsync_ShouldReturnFalse_WhenCredentialsInvalid()
+    public async Task UpdateAsync_ShouldThrowUnauthorizedException_WhenCredentialsInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
@@ -226,11 +257,9 @@ public class RuleServiceTests
 
         var dto = new UpdateRuleDto();
 
-        // Act
-        var result = await _service.UpdateAsync("bad", "creds", 1, dto);
-
-        // Assert
-        Assert.False(result);
+        // Act & Assert
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
+            _service.UpdateAsync("bad", "creds", 1, dto));
     }
 
     // -------------------------------------------------------------
@@ -276,16 +305,14 @@ public class RuleServiceTests
     }
 
     [Fact]
-    public async Task DeleteAsync_ShouldReturnFalse_WhenCredentialsInvalid()
+    public async Task DeleteAsync_ShouldThrowUnauthorizedException_WhenCredentialsInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
                     .ReturnsAsync((ApplicationEntity?)null);
 
-        // Act
-        var result = await _service.DeleteAsync("bad", "creds", 1);
-
-        // Assert
-        Assert.False(result);
+        // Act & Assert
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
+            _service.DeleteAsync("bad", "creds", 1));
     }
 }

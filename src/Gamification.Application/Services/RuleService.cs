@@ -1,30 +1,34 @@
 using Gamification.Application.DTOs.Rule;
+using Gamification.Application.Exceptions;
 using Gamification.Application.Interfaces;
 using Gamification.Domain.Entities;
 
 namespace Gamification.Application.Services;
 
-/// <inheritdoc />
+/// <summary>
+/// Implements operations for managing rules.
+/// A rule defines when badges or points should be granted to a player.
+/// Many rules can be created for the same event type.
+/// </summary>
 public class RuleService : IRuleService
 {
     private readonly IApplicationRepository _appRepo;
     private readonly IRuleRepository _ruleRepo;
+    private readonly IEventTypeRepository _eventTypeRepo;
 
-    public RuleService(IApplicationRepository appRepo, IRuleRepository ruleRepo)
+    public RuleService(IApplicationRepository appRepo, IRuleRepository ruleRepo, IEventTypeRepository eventTypeRepo)
     {
         _appRepo = appRepo;
         _ruleRepo = ruleRepo;
+        _eventTypeRepo = eventTypeRepo;
     }
 
     /// <inheritdoc />
     public async Task<List<RuleListItemDto>> GetAllAsync(string apiKey, string apiPassword)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return [];
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load rules
         var rules = await _ruleRepo.GetAllAsync(app.Id);
@@ -35,7 +39,8 @@ public class RuleService : IRuleService
             Id = r.Id,
             BadgeId = r.BadgeId,
             NumberOfPoints = r.NumberOfPoints,
-            OnEventType = r.OnEventType
+            EventTypeId = r.EventTypeId,
+            EventTypeName = r.EventType.Name
         }).ToList();
     }
 
@@ -43,11 +48,8 @@ public class RuleService : IRuleService
     public async Task<RuleDetailsDto?> GetByIdAsync(string apiKey, string apiPassword, int ruleId)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return null;
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load rule
         var rule = await _ruleRepo.GetByIdAsync(app.Id, ruleId);
@@ -62,7 +64,8 @@ public class RuleService : IRuleService
             Id = rule.Id,
             BadgeId = rule.BadgeId,
             NumberOfPoints = rule.NumberOfPoints,
-            OnEventType = rule.OnEventType
+            EventTypeId = rule.EventTypeId,
+            EventTypeName = rule.EventType.Name
         };
     }
 
@@ -70,10 +73,14 @@ public class RuleService : IRuleService
     public async Task<RuleCreatedResponseDto> CreateAsync(string apiKey, string apiPassword, CreateRuleDto dto)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
+
+        // The rule must reference an event type of the application
+        var eventType = await _eventTypeRepo.GetByIdAsync(app.Id, dto.EventTypeId);
+        if (eventType is null)
         {
-            throw new InvalidOperationException("Invalid credentials.");
+            throw new InvalidOperationException("Event type not found.");
         }
 
         // Create entity
@@ -81,7 +88,7 @@ public class RuleService : IRuleService
         {
             BadgeId = dto.BadgeId,
             NumberOfPoints = dto.NumberOfPoints,
-            OnEventType = dto.OnEventType,
+            EventTypeId = dto.EventTypeId,
             ApplicationId = app.Id
         };
 
@@ -101,11 +108,8 @@ public class RuleService : IRuleService
     public async Task<bool> UpdateAsync(string apiKey, string apiPassword, int ruleId, UpdateRuleDto dto)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return false;
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load rule
         var rule = await _ruleRepo.GetByIdAsync(app.Id, ruleId);
@@ -114,10 +118,17 @@ public class RuleService : IRuleService
             return false;
         }
 
+        // The rule must reference an event type of the application
+        var eventType = await _eventTypeRepo.GetByIdAsync(app.Id, dto.EventTypeId);
+        if (eventType is null)
+        {
+            throw new InvalidOperationException("Event type not found.");
+        }
+
         // Update fields
         rule.BadgeId = dto.BadgeId;
         rule.NumberOfPoints = dto.NumberOfPoints;
-        rule.OnEventType = dto.OnEventType;
+        rule.EventTypeId = dto.EventTypeId;
 
         // Save
         await _ruleRepo.UpdateAsync(rule);
@@ -130,11 +141,8 @@ public class RuleService : IRuleService
     public async Task<bool> DeleteAsync(string apiKey, string apiPassword, int ruleId)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return false;
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load rule
         var rule = await _ruleRepo.GetByIdAsync(app.Id, ruleId);

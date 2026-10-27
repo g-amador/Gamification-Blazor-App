@@ -16,7 +16,7 @@ public class RuleBaseDto
     public int NumberOfPoints { get; set; }
 
     /// <summary>
-    /// Event type that triggers this rule.
+    /// Event type, by id, that triggers this rule (defined with the event types resource).
     /// </summary>
-    public string OnEventType { get; set; } = string.Empty;
+    public int EventTypeId { get; set; }
 }

@@ -18,8 +18,9 @@ public class RuleRepository : IRuleRepository
     /// <inheritdoc />
     public Task<List<RuleEntity>> GetAllAsync(int applicationId)
     {
-        // Return all rules for the application
+        // Return all rules for the application, with their event type
         return _db.Rules
+            .Include(r => r.EventType)
             .Where(r => r.ApplicationId == applicationId)
             .ToListAsync();
     }
@@ -27,8 +28,9 @@ public class RuleRepository : IRuleRepository
     /// <inheritdoc />
     public Task<RuleEntity?> GetByIdAsync(int applicationId, int ruleId)
     {
-        // Return rule by id
+        // Return rule by id, with its event type
         return _db.Rules
+            .Include(r => r.EventType)
             .FirstOrDefaultAsync(r => r.ApplicationId == applicationId && r.Id == ruleId);
     }
 

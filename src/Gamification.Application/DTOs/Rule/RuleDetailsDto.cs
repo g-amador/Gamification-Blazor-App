@@ -21,7 +21,12 @@ public class RuleDetailsDto
     public int NumberOfPoints { get; set; }
 
     /// <summary>
-    /// Event type that triggers this rule.
+    /// Identifier of the event type that triggers this rule.
     /// </summary>
-    public string OnEventType { get; set; } = string.Empty;
+    public int EventTypeId { get; set; }
+
+    /// <summary>
+    /// Name of the event type that triggers this rule (read convenience only).
+    /// </summary>
+    public string EventTypeName { get; set; } = string.Empty;
 }

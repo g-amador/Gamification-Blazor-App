@@ -1,9 +1,13 @@
 using Gamification.Application.DTOs.Leaderboard;
+using Gamification.Application.Exceptions;
 using Gamification.Application.Interfaces;
 
 namespace Gamification.Application.Services;
 
-/// <inheritdoc />
+/// <summary>
+/// Implements operations for retrieving the leaderboard.
+/// The leaderboard returns the list of the best players of an application.
+/// </summary>
 public class LeaderboardService : ILeaderboardService
 {
     private readonly IApplicationRepository _appRepo;
@@ -16,14 +20,11 @@ public class LeaderboardService : ILeaderboardService
     }
 
     /// <inheritdoc />
-    public async Task<LeaderboardResponseDto?> GetAsync(string apiKey, string apiPassword)
+    public async Task<LeaderboardResponseDto> GetAsync(string apiKey, string apiPassword)
     {
         // Validate application credentials
-        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (app is null)
-        {
-            return null;
-        }
+        var app = await _appRepo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Load all players
         var players = await _playerRepo.GetAllAsync(app.Id);

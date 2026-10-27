@@ -1,3 +1,4 @@
+using Gamification.Application.Exceptions;
 using Gamification.Application.Interfaces;
 using Gamification.Application.Services;
 using Gamification.Domain.Entities;
@@ -38,12 +39,12 @@ public class LeaderboardServiceTests
 
         var players = new List<PlayerEntity>
         {
-            new PlayerEntity { Id = 1, NumberOfPoints = 100 },
-            new PlayerEntity { Id = 2, NumberOfPoints = 200 },
-            new PlayerEntity { Id = 3, NumberOfPoints = 50 },
-            new PlayerEntity { Id = 4, NumberOfPoints = 300 },
-            new PlayerEntity { Id = 5, NumberOfPoints = 150 },
-            new PlayerEntity { Id = 6, NumberOfPoints = 400 }
+            new() { Id = 1, NumberOfPoints = 100 },
+            new() { Id = 2, NumberOfPoints = 200 },
+            new() { Id = 3, NumberOfPoints = 50 },
+            new() { Id = 4, NumberOfPoints = 300 },
+            new() { Id = 5, NumberOfPoints = 150 },
+            new() { Id = 6, NumberOfPoints = 400 }
         };
 
         _playerRepoMock.Setup(r => r.GetAllAsync(1)).ReturnsAsync(players);
@@ -65,17 +66,15 @@ public class LeaderboardServiceTests
     }
 
     [Fact]
-    public async Task GetAsync_ShouldReturnNull_WhenCredentialsInvalid()
+    public async Task GetAsync_ShouldThrowUnauthorizedException_WhenCredentialsInvalid()
     {
         // Arrange
         _appRepoMock.Setup(r => r.GetByCredentialsAsync("bad", "creds"))
                     .ReturnsAsync((ApplicationEntity?)null);
 
-        // Act
-        var result = await _service.GetAsync("bad", "creds");
-
-        // Assert
-        Assert.Null(result);
+        // Act & Assert
+        await Assert.ThrowsAsync<UnauthorizedException>(() =>
+            _service.GetAsync("bad", "creds"));
     }
 
     [Fact]
@@ -88,8 +87,8 @@ public class LeaderboardServiceTests
 
         var players = new List<PlayerEntity>
         {
-            new PlayerEntity { Id = 1, NumberOfPoints = 10 },
-            new PlayerEntity { Id = 2, NumberOfPoints = 20 }
+            new() { Id = 1, NumberOfPoints = 10 },
+            new() { Id = 2, NumberOfPoints = 20 }
         };
 
         _playerRepoMock.Setup(r => r.GetAllAsync(1)).ReturnsAsync(players);

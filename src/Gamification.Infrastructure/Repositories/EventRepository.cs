@@ -18,7 +18,9 @@ public class EventRepository : IEventRepository
     /// <inheritdoc />
     public Task<List<EventEntity>> GetAllAsync(int applicationId)
     {
+        // Return all events for the application, with their event type
         return _db.Events
+            .Include(e => e.EventType)
             .Where(e => e.ApplicationId == applicationId)
             .ToListAsync();
     }
@@ -26,7 +28,9 @@ public class EventRepository : IEventRepository
     /// <inheritdoc />
     public Task<EventEntity?> GetByIdAsync(int applicationId, int eventId)
     {
+        // Return event by id, with its event type
         return _db.Events
+            .Include(e => e.EventType)
             .FirstOrDefaultAsync(e => e.ApplicationId == applicationId && e.Id == eventId);
     }
 

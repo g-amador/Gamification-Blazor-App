@@ -16,6 +16,13 @@ public class ApplicationRepository : IApplicationRepository
     }
 
     /// <inheritdoc />
+    public Task<List<ApplicationEntity>> GetAllAsync()
+    {
+        // Return all applications registered on the server
+        return _db.Applications.ToListAsync();
+    }
+
+    /// <inheritdoc />
     public Task<ApplicationEntity?> GetByCredentialsAsync(string apiKey, string apiPassword)
     {
         // Query by API credentials

@@ -8,6 +8,11 @@ namespace Gamification.Application.Interfaces;
 public interface IApplicationRepository
 {
     /// <summary>
+    /// Retrieves all applications registered on the server.
+    /// </summary>
+    Task<List<ApplicationEntity>> GetAllAsync();
+
+    /// <summary>
     /// Retrieves an application using its apiKey and apiPassword.
     /// </summary>
     Task<ApplicationEntity?> GetByCredentialsAsync(string apiKey, string apiPassword);

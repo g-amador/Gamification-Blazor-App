@@ -12,6 +12,11 @@ namespace Gamification.Application.Interfaces;
 public interface IApplicationService
 {
     /// <summary>
+    /// Retrieves all applications registered on the server.
+    /// </summary>
+    Task<List<ApplicationListItemDto>> GetAllAsync();
+
+    /// <summary>
     /// Creates a new application.
     /// This is the first operation required before using the API.
     /// </summary>

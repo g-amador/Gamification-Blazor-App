@@ -1,10 +1,18 @@
 using Gamification.Application.DTOs.Application;
+using Gamification.Application.Exceptions;
 using Gamification.Application.Interfaces;
 using Gamification.Domain.Entities;
 
 namespace Gamification.Application.Services;
 
 /// <inheritdoc />
+/// <summary>
+/// Implements operations for managing applications.
+/// The application is the entry point of the API.
+/// All other resources are linked to an application.
+/// Each application has a unique apiKey and apiPassword
+/// that must be provided in the HTTP headers for authentication.
+/// </summary>
 public class ApplicationService : IApplicationService
 {
     private readonly IApplicationRepository _repo;
@@ -12,6 +20,21 @@ public class ApplicationService : IApplicationService
     public ApplicationService(IApplicationRepository repo)
     {
         _repo = repo;
+    }
+
+    /// <inheritdoc />
+    public async Task<List<ApplicationListItemDto>> GetAllAsync()
+    {
+        // Load all applications registered on the server
+        var entities = await _repo.GetAllAsync();
+
+        // Map to summary DTOs (name, description and key are never exposed in lists)
+        return entities.Select(a => new ApplicationListItemDto
+        {
+            Id = a.Id,
+            Name = a.Name,
+            Description = a.Description
+        }).ToList();
     }
 
     /// <inheritdoc />
@@ -57,7 +80,7 @@ public class ApplicationService : IApplicationService
 
         if (entity is null)
         {
-            return null;
+            throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
         }
 
         // Map entity to DTO
@@ -73,11 +96,8 @@ public class ApplicationService : IApplicationService
     public async Task<bool> UpdateAsync(string apiKey, string apiPassword, UpdateApplicationDto dto)
     {
         // Find the application being updated
-        var entity = await _repo.GetByCredentialsAsync(apiKey, apiPassword);
-        if (entity is null)
-        {
-            return false;
-        }
+        var entity = await _repo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Check apiKey uniqueness (excluding current app)
         if (entity.ApiKey != dto.ApiKey &&
@@ -109,12 +129,8 @@ public class ApplicationService : IApplicationService
     public async Task<bool> DeleteAsync(string apiKey, string apiPassword)
     {
         // Retrieve entity by credentials
-        var entity = await _repo.GetByCredentialsAsync(apiKey, apiPassword);
-
-        if (entity is null)
-        {
-            return false;
-        }
+        var entity = await _repo.GetByCredentialsAsync(apiKey, apiPassword)
+            ?? throw new UnauthorizedException("Invalid or missing apiKey/apiPassword credentials.");
 
         // Delete entity
         await _repo.DeleteAsync(entity);

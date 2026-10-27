@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Packages.props" />
+  </Folder>
   <Project Path="Gamification.API/Gamification.API.csproj" Id="a7ac3b73-447a-44fc-8995-69744ff68205" />
   <Project Path="Gamification.Application.Tests/Gamification.Application.Tests.csproj" Id="f33e1aa2-afab-4e8b-9459-f7a561c30a35" />
   <Project Path="Gamification.Application/Gamification.Application.csproj" Id="c5907199-3c65-4783-895c-88a612585372" />

@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace Gamification.Api.Controllers;
 
 /// <summary>
-/// Manages badges of an application.
+/// Manages the badges of an application.
+/// All operations related to the badge resource are in this section.
+/// A badge is a distinction, won by a player when he does something significant (an event).
 /// </summary>
 [ApiController]
 [Route("badges")]
@@ -32,7 +34,7 @@ public class BadgesController : ControllerBase
     }
 
     /// <summary>
-    /// Creates a new badge.
+    /// Adds a new badge for the application. The categoryId is optional.
     /// </summary>
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateBadgeDto dto)
@@ -45,7 +47,7 @@ public class BadgesController : ControllerBase
     }
 
     /// <summary>
-    /// Returns detailed information about a badge.
+    /// Returns information of the given badge, including categoryId when set.
     /// </summary>
     [HttpGet("{id:int}")]
     public async Task<IActionResult> GetById(int id)
@@ -63,7 +65,7 @@ public class BadgesController : ControllerBase
     }
 
     /// <summary>
-    /// Updates a badge.
+    /// Updates a badge. The categoryId is optional.
     /// </summary>
     [HttpPut("{id:int}")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateBadgeDto dto)
@@ -76,7 +78,7 @@ public class BadgesController : ControllerBase
     }
 
     /// <summary>
-    /// Deletes a badge.
+    /// Deletes a badge. All links to this badge by rules are set to null.
     /// </summary>
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id)

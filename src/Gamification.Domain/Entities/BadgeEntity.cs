@@ -30,4 +30,10 @@ public class BadgeEntity
     /// </summary>
     public int ApplicationId { get; set; }
     public ApplicationEntity Application { get; set; } = null!;
+
+    /// <summary>
+    /// Optional category that groups this badge together with other badges.
+    /// </summary>
+    public int? CategoryId { get; set; }
+    public BadgeCategoryEntity? Category { get; set; }
 }

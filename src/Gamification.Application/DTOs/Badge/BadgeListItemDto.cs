@@ -24,4 +24,9 @@ public class BadgeListItemDto
     /// Path or URL to the badge icon.
     /// </summary>
     public string Icon { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Optional identifier of the category that groups this badge together with other badges.
+    /// </summary>
+    public int? CategoryId { get; set; }
 }
